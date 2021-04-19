@@ -1,0 +1,22 @@
+1. Load project_simu.csc
+2. Start simulation
+3. Execute the next command to retrieve the name (<container-name>) of the current docker container running contiki :
+    docker ps
+(
+    4. Execute the next command to search the ip address (<container-ip>) of this container:
+    docker container inspect <container-name>
+)
+
+5. Go to cd contiki-ng/tools/serial-io/ and execute : 
+    ( sudo ./tunslip6 -a <container-ip> -p <port> bbbb::1/64 )
+
+    sudo ./tunslip6 -a 172.17.0.2 -p 60004 bbbb::1/64
+
+6. Check correct binding
+    ping6 bbbb::c30c:0:0:1 // client
+    ping6 bbbb::c30c:0:0:2 // client
+    ping6 bbbb::c30c:0:0:3 // client
+    ping6 bbbb::c30c:0:0:4 // border router
+    ping6 bbbb::c30c:0:0:5 // server
+
+7. echo blablabla | nc -u bbbb::c30c:0:0:1 3000 

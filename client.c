@@ -20,11 +20,6 @@
 #endif
 
 #define MAX_PAYLOAD_LEN 120
-
-static struct uip_udp_conn *server_conn;
-static char buf[MAX_PAYLOAD_LEN];
-static uint16_t len;
-
 #define SERVER_REPLY 1
 
 /*---------------------------------------------------------------------------*/
@@ -35,28 +30,38 @@ AUTOSTART_PROCESSES(&udp_server_process);
 /*---------------------------------------------------------------------------*/
 
 static struct uip_udp_conn *server_conn;
-static char buf[MAX_PAYLOAD_LEN];
+static char buffer[MAX_PAYLOAD_LEN];
 static uint16_t len;
 
 /*---------------------------------------------------------------------------*/
 
 static void udpip_handler(void)
 {
-    memset(buf, 0, MAX_PAYLOAD_LEN);
-    if(uip_newdata()) 
+    memset(buffer, 0, MAX_PAYLOAD_LEN);
+    if( uip_newdata() ) // Is new incoming data available? 
     {
         leds_on(LEDS_RED);
+
         len = uip_datalen();
-        memcpy(buf, uip_appdata, len);
+        
         PRINTF("%u bytes from [", len);
         PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
         PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
+
+// !!!
+        memcpy(buffer, uip_appdata, len);
+        printf("1CONTENT of the buffer : %s \n", buffer);
+
+        PRINTF("2CONTENT of the buffer : %s \n", buffer);
+
+// !!!
+
 
         #if SERVER_REPLY
             uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
             server_conn->rport = UIP_UDP_BUF->srcport;
 
-            uip_udp_packet_send(server_conn, buf, len);
+            uip_udp_packet_send(server_conn, buffer, len);
             /* Restore server connection to allow data from any node */
             uip_create_unspecified(&server_conn->ripaddr);
             server_conn->rport = 0;
@@ -91,3 +96,15 @@ PROCESS_THREAD(udp_server_process, ev, data)
 
     PROCESS_END();
 }
+
+
+
+/* 
+https://contiki-ng.readthedocs.io/en/latest/_api/group__uipappfunc.html#ga04b053a623aac7cd4195157d470661b3
+
+
+TO SEND DATA on the current connection:
+void uip_send ( const void * data, int len ) 
+
+
+*/
