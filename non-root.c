@@ -14,9 +14,9 @@
 #include "dev/watchdog.h"
 
 #if USE_RPL_CLASSIC
-    #include "net/routing/rpl-classic/rpl-dag-root.h"
+#include "net/routing/rpl-classic/rpl-dag-root.h"
 #else
-    #include "net/routing/rpl-lite/rpl-dag-root.h"
+#include "net/routing/rpl-lite/rpl-dag-root.h"
 #endif
 
 #define MAX_PAYLOAD_LEN 120
@@ -51,29 +51,28 @@ static void
 tcpip_handler(void)
 {
     memset(buf, 0, MAX_PAYLOAD_LEN);
-    if(uip_newdata())  // Is new incoming data available? 
-    {
+    if(uip_newdata()) {
         leds_on(LEDS_RED);
         len = uip_datalen();
         memcpy(buf, uip_appdata, len);
 
+
         PRINTF("%u bytes from [", len);
-            PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
+        PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
         PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
 
-        PRINTF("Contenu du buffer : %s", buf); // Ajouté par Merlin
+        PRINTF("%s", buf);
+
 
     #if SERVER_REPLY
         uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
         server_conn->rport = UIP_UDP_BUF->srcport;
 
         uip_udp_packet_send(server_conn, buf, len);
-
         /* Restore server connection to allow data from any node */
         uip_create_unspecified(&server_conn->ripaddr);
         server_conn->rport = 0;
     #endif
-
     }
     leds_off(LEDS_RED);
     return;

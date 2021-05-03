@@ -3,14 +3,14 @@
 3. Execute the next command to retrieve the name (<container-name>) of the current docker container running contiki :
     docker ps
 (
-    4. Execute the next command to search the ip address (<container-ip>) of this container:
+    4. Execute the next command to search the ip address (<container-ip> : 172.17.0.1) of this container:
     docker container inspect <container-name>
 )
 
-5. Go to cd contiki-ng/tools/serial-io/ and execute : 
+5. Go to cd contiki-ng/tools/serial-io/ and execute : //172.17.0.2
     ( sudo ./tunslip6 -a <container-ip> -p <port> bbbb::1/64 )
 
-    sudo ./tunslip6 -a 172.17.0.2 -p 60004 bbbb::1/64
+    sudo ./tunslip6 -a 172.17.0.2 -p 60001 bbbb::1/64
 
 6. Check correct binding
     ping6 bbbb::c30c:0:0:1 // client

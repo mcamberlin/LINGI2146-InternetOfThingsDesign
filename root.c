@@ -14,9 +14,9 @@
 #include "dev/watchdog.h"
 
 #if USE_RPL_CLASSIC
-    #include "net/routing/rpl-classic/rpl-dag-root.h"
+#include "net/routing/rpl-classic/rpl-dag-root.h"
 #else
-    #include "net/routing/rpl-lite/rpl-dag-root.h"
+#include "net/routing/rpl-lite/rpl-dag-root.h"
 #endif
 
 #define MAX_PAYLOAD_LEN 120
@@ -27,9 +27,12 @@ static uint16_t len;
 
 #define SERVER_REPLY 1
 
+/* Should we act as RPL root? */
 #define SERVER_RPL_ROOT 1
 
+#if SERVER_RPL_ROOT
 static uip_ipaddr_t ipaddr;
+#endif
 
 /*---------------------------------------------------------------------------*/
 
@@ -44,38 +47,34 @@ static uint16_t len;
 
 /*---------------------------------------------------------------------------*/
 
-static void udpip_handler(void)
+static void
+tcpip_handler(void)
 {
     memset(buf, 0, MAX_PAYLOAD_LEN);
-    if(uip_newdata())  // Is new incoming data available? 
-    {
+    if(uip_newdata()) {
         leds_on(LEDS_RED);
         len = uip_datalen();
         memcpy(buf, uip_appdata, len);
-
         PRINTF("%u bytes from [", len);
-            PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
+        PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
         PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-
-        PRINTF("Contenu du buffer : %s", buf); // Ajouté par Merlin
-
     #if SERVER_REPLY
         uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
         server_conn->rport = UIP_UDP_BUF->srcport;
 
         uip_udp_packet_send(server_conn, buf, len);
-
         /* Restore server connection to allow data from any node */
         uip_create_unspecified(&server_conn->ripaddr);
         server_conn->rport = 0;
     #endif
-
     }
     leds_off(LEDS_RED);
     return;
 }
 
 /*---------------------------------------------------------------------------*/
+
+#if SERVER_RPL_ROOT
 static void
 print_local_addresses(void)
 {
@@ -99,7 +98,8 @@ print_local_addresses(void)
 
 /*---------------------------------------------------------------------------*/
 
-void create_dag()
+void
+create_dag()
 {
 
     uip_ip6addr(&ipaddr, UIP_DS6_DEFAULT_PREFIX, 0, 0, 0, 0, 0, 0, 0);
@@ -131,6 +131,7 @@ void create_dag()
     }
 #endif
 }
+#endif /* SERVER_RPL_ROOT */
 
 /*---------------------------------------------------------------------------*/
 
@@ -140,9 +141,9 @@ PROCESS_THREAD(udp_server_process, ev, data)
     PROCESS_BEGIN();
     PRINTF("Starting the server\n");
 
-    // Special statements for the root  
+#if SERVER_RPL_ROOT
     create_dag();
-
+#endif
     server_conn = udp_new(NULL, UIP_HTONS(0), NULL);
     udp_bind(server_conn, UIP_HTONS(3000));
 
@@ -152,7 +153,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
         PROCESS_YIELD();
         if(ev == tcpip_event) {
             PRINTF("WOW");
-            udpip_handler();
+            tcpip_handler();
         }
     }
 
