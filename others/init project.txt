@@ -3,8 +3,8 @@
 3. Execute the next command to retrieve the name (<container-name>) of the current docker container running contiki :
     docker ps
 (
-    4. Execute the next command to search the ip address (<container-ip> : 172.17.0.1) of this container:
-    docker container inspect <container-name>
+4. Execute the next command to search the ip address (<container-ip> : 172.17.0.1) of this container:
+docker container inspect <container-name>
 )
 
 5. Go to cd contiki-ng/tools/serial-io/ and execute : //172.17.0.2
