@@ -16,7 +16,7 @@ docker container inspect <container-name>
     ping6 bbbb::c30c:0:0:1 // client
     ping6 bbbb::c30c:0:0:2 // client
     ping6 bbbb::c30c:0:0:3 // client
-    ping6 bbbb::c30c:0:0:4 // border router
+    ping6 bbbb::c30c:0:0:4 // client
     ping6 bbbb::c30c:0:0:5 // server
 
 7. echo blablabla | nc -u bbbb::c30c:0:0:1 3000 

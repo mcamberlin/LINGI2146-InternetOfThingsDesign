@@ -1,3 +1,10 @@
+// ===========================================================================
+//      Temperature sensor:
+// 
+// -> toutes les 3 secondes, envoie au border router la temperature (un nombre 
+// aléatoire)
+// ===========================================================================
+
 #include "contiki.h"
 #include "contiki-lib.h"
 #include "contiki-net.h"
@@ -36,7 +43,8 @@ static struct uip_udp_conn *server_conn;
 static char buf[MAX_PAYLOAD_LEN];
 static uint16_t len;
 
-static void tcpip_handler(void)
+// previously called tcp_ip_handler
+static void read_data(void)
 {
     memset(buf, 0, MAX_PAYLOAD_LEN);
     if(uip_newdata()) {
@@ -65,7 +73,8 @@ static void tcpip_handler(void)
     return;
 }
 
-static void send_data_from_mote_to_prompt()
+// Needs changes
+static void send_data_from_mote_to_root()
 {
     int nbCharInMessage = 16;
     uint16_t lengthMessage = sizeof(char) * nbCharInMessage;
@@ -87,16 +96,11 @@ static void send_data_from_mote_to_prompt()
 }
 
 /*---------------------------------------------------------------------------*/
-
 PROCESS_THREAD(udp_server_process, ev, data)
 {
-
     PROCESS_BEGIN();
     PRINTF("Starting the server\n");
-
-#if SERVER_RPL_ROOT
-    create_dag();
-#endif
+    
     server_conn = udp_new(NULL, UIP_HTONS(0), NULL);
     udp_bind(server_conn, UIP_HTONS(3000));
 
@@ -104,17 +108,17 @@ PROCESS_THREAD(udp_server_process, ev, data)
 
     while(1) 
     {
+        /*
+        // every 3 secondes, send temperatures:
+        PRINTF("========================================================================= \n\n");
+        send_data_from_mote_to_root();
+        PRINTF("\n========================================================================= \n\n");
+        */
+
         PROCESS_YIELD();
         if(ev == tcpip_event) 
         {
-            PRINTF("\n ========================================================================= \n");
-            tcpip_handler();
-            PRINTF("========================================================================= \n\n");
-            
-            PRINTF("========================================================================= \n\n");
-            send_data();
-            PRINTF("\n========================================================================= \n\n");
-
+            read_data();
         }
     }
 
