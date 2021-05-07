@@ -15,3 +15,5 @@ Token = identifiant du message pour le retransmettre éventuellement / pour iden
 111111 = pour identifier le début du Payload
 len = size of payload
 Payload 
+
+1 bit pour dire si c'est une requete ou une reponse.

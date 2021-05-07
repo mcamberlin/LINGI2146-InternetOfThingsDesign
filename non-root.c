@@ -65,7 +65,7 @@ static void tcpip_handler(void)
     return;
 }
 
-static void send_data_from_mote_to_prompt()
+static void send_data_from_mote_to_server()
 {
     int nbCharInMessage = 16;
     uint16_t lengthMessage = sizeof(char) * nbCharInMessage;
@@ -112,7 +112,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
             PRINTF("========================================================================= \n\n");
             
             PRINTF("========================================================================= \n\n");
-            send_data();
+            send_data_from_mote_to_server();
             PRINTF("\n========================================================================= \n\n");
 
         }

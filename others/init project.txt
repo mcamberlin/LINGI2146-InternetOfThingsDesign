@@ -18,5 +18,8 @@ docker container inspect <container-name>
     ping6 bbbb::c30c:0:0:3 // client
     ping6 bbbb::c30c:0:0:4 // client
     ping6 bbbb::c30c:0:0:5 // server
+    ping6 bbbb::206:6:6:6 // temperatureSensor
 
-7. echo blablabla | nc -u bbbb::c30c:0:0:1 3000 
+
+7. 
+echo blablabla | nc -u bbbb::206:6:6:6 3000 
