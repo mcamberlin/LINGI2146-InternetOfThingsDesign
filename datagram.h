@@ -16,11 +16,10 @@
 
 typedef struct 
 {
-    u_int8_t code:4 ;       // query or answer ?
-    u_int8_t type_info:4;   // type of information in the payload: temperature information, door information,...
-    u_int8_t id:4;          // ID of a specific sensors 
-    u_int8_t size:4;       // size du payload in Byte
-    int payload;           // payload de 4 bytes
+    u_int8_t code ;       // query or answer ?
+    u_int8_t type_info;   // type of information in the payload: temperature information, door information,...
+    u_int8_t id;            // ID of a specific sensors 
+    char payload[4];        // payload de 4 bytes
 } datagram;
 
 
