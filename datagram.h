@@ -20,7 +20,7 @@ typedef struct
     u_int8_t type_info:4;   // type of information in the payload: temperature information, door information,...
     u_int8_t id:4;          // ID of a specific sensors 
     u_int8_t size:4;       // size du payload in Byte
-    char* payload;
+    int payload;           // payload de 4 bytes
 } datagram;
 
 

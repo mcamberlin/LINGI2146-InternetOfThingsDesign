@@ -45,6 +45,9 @@ static struct uip_udp_conn *server_conn;
 static char buf[MAX_PAYLOAD_LEN];
 static uint16_t len;
 
+datagram dtg_to_send;           // datagram used as a buffer to send to the server
+datagram received_dtg;          // datagram used as a buffer to receive and interpret the message from the sever
+
 // previously called tcp_ip_handler
 static void read_data(void)
 {
@@ -52,56 +55,49 @@ static void read_data(void)
     if(uip_newdata()) 
     {
         len = uip_datalen();
-        memcpy(buf, uip_appdata, len);
+        memcpy(received_dtg, uip_appdata, len);
 
         PRINTF("%u bytes from [", len);
         PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
         PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-        PRINTF("QUERY ASKED : %s", buf);
+        PRINTF("QUERY ASKED : %d", received_dtg.code); //print the code for the query
 
     }
     return;
 }
 
 
-static datagram* create_temperature_response(float temperature)
+void create_temperature_response(float temperature)
 {
-    char* payload = malloc(sizeof(float));
-    sprintf(payload, "%.2f", temperature);
-
-    datagram* d = malloc(sizeof(datagram));
-    d->code = 0;                // code pour une reponse
-    d->type_info = 0;           // pour une temperature
-    d->id = 0;                  // capteur de temperature numéro 0
-    d->size = sizeof(float);    // taille du payload: uniquement la température
-    d->payload = payload;
-
-    return d;
-
+    dtg_to_send.code = 0;                // code pour une reponse
+    dtg_to_send.type_info = 0;           // pour un float
+    dtg_to_send.id = 0;                  // capteur de temperature numéro 0
+    dtg_to_send.size = sizeof(float);    // taille du payload: uniquement la température
+    sprintf(dtg_to_send.payload, "%.2f", temperature);
 }
 
 static void send_data_from_mote_to_server()
 {
     float temperature = 17 + ((float)rand()/(float)(RAND_MAX)) * 7;  
     // random temperature between 17 and 24° [C]
-    datagram* dtg = create_temperature_response(temperature);
-    int length = sizeof(datagram) + dtg->size;
-    char message[length];
-    datagram_encode(dtg, message);
+    create_temperature_response(temperature);
+    int length = sizeof(dtg_to_send);
+    // char message[length];
+    // datagram_encode(dtg_to_send, message);
 
     uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
     server_conn->rport = UIP_UDP_BUF->srcport;
 
-    uip_udp_packet_send(server_conn, message, length);
+    uip_udp_packet_send(server_conn, dtg_to_send, length); //envoie dtg_to_send car taille fixe 
 
 
     PRINTF("%u bytes sent to [", length);
     PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
     PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-    PRINTF("ANSWER : %s", message);
+    //PRINTF("ANSWER : %s", message);
 
-    free(dtg->payload);
-    free(dtg);
+    //free(dtg_to_send->payload);
+    //free(dtg_to_send);
 
     // Restore server connection to allow data from any node 
     uip_create_unspecified(&server_conn->ripaddr);
@@ -129,7 +125,8 @@ PROCESS_THREAD(udp_server_process, ev, data)
             PRINTF("========================================================================= \n\n");
             read_data();
             PRINTF("\n========================================================================= \n\n");
-            send_data_from_mote_to_server();
+            if(received_dtg.code == 0)
+                send_data_from_mote_to_server();
             PRINTF("\n========================================================================= \n\n");
         }
     }
