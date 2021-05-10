@@ -63,33 +63,39 @@ static void read_data(void)
     return;
 }
 
-// Needs changes
+
+static datagram* create_temperature_response(float temperature)
+{
+    char* payload = malloc(sizeof(float));
+    sprintf(payload, "%.2f", temperature);
+
+    datagram* d = malloc(sizeof(datagram));
+    d->code = 0;                // code pour une reponse
+    d->type_info = 0;           // pour une temperature
+    d->id = 0;                  // capteur de temperature numéro 0
+    d->size = sizeof(float);    // taille du payload: uniquement la température
+    d->payload = payload;
+
+    return d;
+
+}
+
 static void send_data_from_mote_to_server()
 {
-    char* payload = malloc(sizeof(float);
-    float temperature = 17 + ((float)rand()/(float)(RAND_MAX)) * 7;  // temperature between 17 and 24° [C]
-    //sprintf(message, "temperature : %.2f\n", temperature);
-    memcpy(payload, temperature, sizeof(float));
-
-    datagram* dtg = malloc(sizeof(datagram))
-    dtg->code = 0;
-    dtg->type_info = 0; // pour la temperature
-    dtg->id = 0;        // capteur de temperature 0
-    dtg->size = sizeof(float);
-    dtg->payload = payload;
-
-    int length = sizeof(datagram)-1+dtg->size;
+    float temperature = 17 + ((float)rand()/(float)(RAND_MAX)) * 7;  
+    // random temperature between 17 and 24° [C]
+    datagram* dtg = create_temperature_response(temperature);
+    int length = sizeof(datagram) + dtg->size;
     char message[length];
-
-    datagram_encode(dtg, message, &length);
+    datagram_encode(dtg, message);
 
     uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
     server_conn->rport = UIP_UDP_BUF->srcport;
 
-    uip_udp_packet_send(server_conn, dtg, length);
+    uip_udp_packet_send(server_conn, message, length);
 
 
-    PRINTF("%u bytes sent to [", lengthMessage);
+    PRINTF("%u bytes sent to [", length);
     PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
     PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
     PRINTF("ANSWER : %s", message);
@@ -97,16 +103,17 @@ static void send_data_from_mote_to_server()
     free(dtg->payload);
     free(dtg);
 
-    /* Restore server connection to allow data from any node */
+    // Restore server connection to allow data from any node 
     uip_create_unspecified(&server_conn->ripaddr);
     server_conn->rport = 0;    
 }
+
 
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(udp_server_process, ev, data)
 {
     PROCESS_BEGIN();
-    PRINTF("Starting the server\n");
+    PRINTF("Starting the temperature sensor\n");
     
     server_conn = udp_new(NULL, UIP_HTONS(0), NULL);
     udp_bind(server_conn, UIP_HTONS(3000));

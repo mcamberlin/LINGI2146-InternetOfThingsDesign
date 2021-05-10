@@ -61,7 +61,7 @@
     </motetype>
     <motetype>
       org.contikios.cooja.contikimote.ContikiMoteType
-      <identifier>mtype245</identifier>
+      <identifier>mtype909</identifier>
       <description>TemperatureSensor #3</description>
       <source>[CONFIG_DIR]/temperatureSensor.c</source>
       <commands>make temperatureSensor.cooja TARGET=cooja</commands>
@@ -193,16 +193,16 @@
         org.contikios.cooja.contikimote.interfaces.ContikiEEPROM
         <eeprom>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</eeprom>
       </interface_config>
-      <motetype_identifier>mtype245</motetype_identifier>
+      <motetype_identifier>mtype909</motetype_identifier>
     </mote>
   </simulation>
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>0</z>
-    <height>160</height>
-    <location_x>400</location_x>
-    <location_y>0</location_y>
+    <z>1</z>
+    <height>119</height>
+    <location_x>3</location_x>
+    <location_y>4</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.LogListener
@@ -240,18 +240,6 @@
     <minimized>true</minimized>
   </plugin>
   <plugin>
-    org.contikios.cooja.plugins.Notes
-    <plugin_config>
-      <notes>Enter notes here</notes>
-      <decorations>true</decorations>
-    </plugin_config>
-    <width>1680</width>
-    <z>5</z>
-    <height>160</height>
-    <location_x>680</location_x>
-    <location_y>0</location_y>
-  </plugin>
-  <plugin>
     org.contikios.cooja.serialsocket.SerialSocketServer
     <mote_arg>4</mote_arg>
     <plugin_config>
@@ -261,8 +249,8 @@
     <width>362</width>
     <z>4</z>
     <height>116</height>
-    <location_x>16</location_x>
-    <location_y>428</location_y>
+    <location_x>284</location_x>
+    <location_y>4</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.LogListener
@@ -271,11 +259,11 @@
       <formatted_time />
       <coloring />
     </plugin_config>
-    <width>1285</width>
-    <z>2</z>
-    <height>553</height>
-    <location_x>406</location_x>
-    <location_y>166</location_y>
+    <width>1695</width>
+    <z>3</z>
+    <height>771</height>
+    <location_x>647</location_x>
+    <location_y>2</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.Visualizer
@@ -286,13 +274,13 @@
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.AddressVisualizerSkin</skin>
-      <viewport>4.433602360357597 0.0 0.0 4.433602360357597 45.595785929965494 14.776969846433698</viewport>
+      <viewport>4.35419287985538 0.0 0.0 4.35419287985538 243.93468866871928 124.96458643851287</viewport>
     </plugin_config>
-    <width>400</width>
-    <z>3</z>
-    <height>400</height>
-    <location_x>1</location_x>
-    <location_y>1</location_y>
+    <width>639</width>
+    <z>0</z>
+    <height>540</height>
+    <location_x>6</location_x>
+    <location_y>125</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.MoteInterfaceViewer
@@ -301,11 +289,11 @@
       <interface>Serial port</interface>
       <scrollpos>0,0</scrollpos>
     </plugin_config>
-    <width>1180</width>
-    <z>1</z>
-    <height>290</height>
-    <location_x>406</location_x>
-    <location_y>688</location_y>
+    <width>1694</width>
+    <z>2</z>
+    <height>493</height>
+    <location_x>645</location_x>
+    <location_y>778</location_y>
   </plugin>
 </simconf>
 
