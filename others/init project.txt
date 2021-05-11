@@ -8,5 +8,5 @@
             docker container inspect <container-name>
     )   
 4. Open a new terminal and RUN: cd contiki-ng/LINGI2146-InternetOfThingsDesign/ && python3 init.py
-5. Open a new terminal and RUN: python3 server.py
+5. Open a new terminal and RUN: gcc -Wall -Werror -c test datagram.c datagram.h server.c && ./test
 6. echo blablabla | nc -u bbbb::206:6:6:6 3000 

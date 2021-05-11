@@ -7,64 +7,45 @@
 char addressTemperatureSensor[] = "bbbb::c30c:0:0:3";
 
 
-void askTemperature()
+void askTemperature(int i)
 {
     //create datagram to encode
     datagram* dtg = calloc(1,sizeof(datagram));
     dtg->code = 1;
-    dtg->type_info = 5;
-    dtg->id = 9;
-    dtg->payload = calloc(1,sizeof(char)*4);
-    sprintf(dtg->payload,"1234");
+    dtg->type_info = 4; // type_info temperature
+    dtg->id = i;        // ask to the ith temperature sensor     
+    sprintf(dtg->payload,"---");
 
     // encoding
-    char* buf = calloc(1,sizeof(datagram) + 5);
+    char* buf = calloc(1,sizeof(datagram) + 4);
     datagram_encode(dtg, buf);
-
+    free(dtg);
 
     char query[120];
     sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressTemperatureSensor);
     //printf("%s\n",query);
 
     system(query);
+    free(buf);
 }
 
-void server()
+int main()
 {
     printf("Start SERVER\n");
     while(1)
     {
-        askTemperature();
+        askTemperature(1);
         sleep(3);
     }
-
+    exit(EXIT_SUCCESS);
+    return 1;
 }
 
-
-int main()
-{
-    // test encode et decode
-
-    /*
-    datagram* rcvd = calloc(1,sizeof(datagram));
-    datagram_decode(buf, rcvd);
-
-    // is equal ?
-    printf("%d - %d\n",     dtg->code,           rcvd->code);
-    printf("%d - %d\n",     dtg->type_info,      rcvd->type_info);
-    printf("%d - %d\n",     dtg->id,             rcvd->id);
-    printf("%s - %s \n",    dtg->payload,        rcvd->payload);
-    */
-
-    /*
+/*
     system("ping -c 1 192.168.1.1 & ");
     sleep(3);
     char buffer[123];
     read(0, &buffer, 123);
     system("echo Merlin");
     printf(" ================= \n %s\n", buffer);
-    */
-    server();
-    exit(EXIT_SUCCESS);
-    return 1;
-}
+*/

@@ -54,13 +54,7 @@ void datagram_decode(const char* data, datagram* dtg)
 	memcpy(dtg->payload, data+ptr, 4);
 }
 
-void free_datagram(datagram* dtg)
-{
-    free(dtg->payload);
-    free(dtg);
-}
-
-
+/*
 int main()
 {
     // test encode et decode
@@ -68,7 +62,7 @@ int main()
     //create datagram to encode
     datagram* dtg = calloc(1,sizeof(datagram));
     dtg->code = 1;
-    dtg->type_info = 0;
+    dtg->type_info = 10;
     dtg->id = 9;
     sprintf(dtg->payload,"1234");
 
@@ -85,17 +79,11 @@ int main()
     printf("%d - %d\n",     dtg->id,             rcvd->id);
     printf("%s - %s \n",    dtg->payload,        rcvd->payload);
 
-    /*
-    system("ping -c 1 192.168.1.1 & ");
-    sleep(3);
-    char buffer[123];
-    read(0, &buffer, 123);
-    system("echo Merlin");
-    printf(" ================= \n %s\n", buffer);
-    */
+    
     exit(EXIT_SUCCESS);
     return 1;
 }
 
 
+*/
 //gcc -o test datagram.c && ./test
