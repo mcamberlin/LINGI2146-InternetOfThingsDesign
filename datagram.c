@@ -1,7 +1,9 @@
 #include "datagram.h"
 #include <stdio.h> 
 #include <stdint.h>
-#include <stdlib.h> 
+#include <stdlib.h> // 
+#include <unistd.h>
+
 
 /**
  * datagram -> buffer
@@ -49,7 +51,6 @@ void datagram_decode(const char* data, datagram* dtg)
     ptr += 1;
     
     // payload 
-    dtg->payload = (char*) calloc(sizeof(char), 4);
 	memcpy(dtg->payload, data+ptr, 4);
 }
 
@@ -58,6 +59,7 @@ void free_datagram(datagram* dtg)
     free(dtg->payload);
     free(dtg);
 }
+
 
 int main()
 {
@@ -68,7 +70,6 @@ int main()
     dtg->code = 1;
     dtg->type_info = 0;
     dtg->id = 9;
-    dtg->payload = calloc(1,sizeof(char)*4);
     sprintf(dtg->payload,"1234");
 
     // encoding
@@ -84,8 +85,17 @@ int main()
     printf("%d - %d\n",     dtg->id,             rcvd->id);
     printf("%s - %s \n",    dtg->payload,        rcvd->payload);
 
+    /*
+    system("ping -c 1 192.168.1.1 & ");
+    sleep(3);
+    char buffer[123];
+    read(0, &buffer, 123);
+    system("echo Merlin");
+    printf(" ================= \n %s\n", buffer);
+    */
     exit(EXIT_SUCCESS);
     return 1;
 }
+
 
 //gcc -o test datagram.c && ./test

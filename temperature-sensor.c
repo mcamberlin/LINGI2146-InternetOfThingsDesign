@@ -4,9 +4,11 @@
 // -> answer to the server the current temperature when asked
 // ===========================================================================
 
+
 #include "contiki.h"
 #include "contiki-lib.h"
 #include "contiki-net.h"
+
 #include <stdlib.h>
 #include<stdio.h>
 #include "datagram.h"
@@ -21,9 +23,11 @@
 #define MAX_PAYLOAD_LEN 120 // en Bytes
 
 // NE PAS DEPLACER LES INCLUDES... DEMANDE A BEN AHOUM PQ...
+
 #include "dev/leds.h"
 #include "net/ipv6/uip-debug.h"
 #include "dev/watchdog.h"
+
 
 #if USE_RPL_CLASSIC
     #include "net/routing/rpl-classic/rpl-dag-root.h"
@@ -35,6 +39,30 @@
     static uip_ipaddr_t ipaddr;
 #endif
 
+
+/**
+ * data -> datagram
+*/
+void datagram_decode(const char* data, datagram* dtg)
+{
+    int ptr=0; //pointeur servant à parcourir data byte par byte
+   
+    // first byte : code
+    dtg->code = *(data+ptr);
+	ptr += 1;
+	
+    // second byte : type_info
+	dtg->type_info = *(data+ptr);
+    ptr += 1;
+    
+    // third byte : id
+	dtg->id = *(data+ptr);
+    ptr += 1;
+    
+    // payload 
+	memcpy(dtg->payload, data+ptr, 4);
+}
+
 /*---------------------------------------------------------------------------*/
 
 PROCESS(udp_server_process, "UDP server process");
@@ -45,8 +73,8 @@ static struct uip_udp_conn *server_conn;
 static char buf[MAX_PAYLOAD_LEN];
 static uint16_t len;
 
-static datagram dtg_to_send;           // datagram used as a buffer to send to the server
-static datagram received_dtg;          // datagram used as a buffer to receive and interpret the message from the sever
+static datagram dtg;
+static char payload[5];
 
 // previously called tcp_ip_handler
 static void read_data(void)
@@ -55,29 +83,24 @@ static void read_data(void)
     if(uip_newdata()) 
     {
         len = uip_datalen();
-        memcpy((void*) &received_dtg, uip_appdata, len);
+        memcpy(buf, uip_appdata, len);
         PRINTF("===================================================\n");
-        PRINTF("%u bytes from [", len);
-        PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
-        PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-        PRINTF("%s", (char*) &received_dtg);
+        PRINTF("%u bytes from [", len); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
         
-        char code = ( (char*) &received_dtg) [0] ;
-        char type_info = ( (char*) &received_dtg) [1];
-        char id = ( (char*) &received_dtg) [2];       
+        datagram_decode(buf, &dtg);
 
-        PRINTF("QUERY ASKED : \n");
-        PRINTF("\t code : %c \n", code);
-        PRINTF("\t type_info : %c\n", type_info);
-        PRINTF("\t id : %c\n", id); 
-        PRINTF("\t payload : %s\n", received_dtg.payload);
+        PRINTF("code : %d\n", dtg.code);
+        PRINTF("type_info : %d\n",dtg.type_info);
+        PRINTF("id : %d\n",dtg.id);;
+        //PRINTF("payload : %s\n",dtg.payload);
+
         PRINTF("===================================================\n");
 
     }
     return;
 }
 
-
+/*
 void create_temperature_response(int temperature)
 {
     dtg_to_send.code = 0;                // code pour une reponse
@@ -116,7 +139,7 @@ static void send_data_from_mote_to_server()
     uip_create_unspecified(&server_conn->ripaddr);
     server_conn->rport = 0;    
 }
-
+*/
 
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(udp_server_process, ev, data)
@@ -137,7 +160,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
             PRINTF("========================================================================= \n\n");
             read_data();
             PRINTF("\n========================================================================= \n\n");
-            send_data_from_mote_to_server();
+            //send_data_from_mote_to_server();
             PRINTF("\n========================================================================= \n\n");
         }
     }
