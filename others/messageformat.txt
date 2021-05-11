@@ -1,19 +1,10 @@
     0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    | T |  Code     |           Message ID              |
+    |      Code     |    type_info  |       ID      |
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    |                      Token (if any) ...                       |
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    |1 1 1 1 1 1 1 1|       LEN |       Payload                     |
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                Payload             |              
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-T = acknowledge ?
-Code = 404 / ...
-Message ID = ID unique pour identifier un message
-Token = identifiant du message pour le retransmettre éventuellement / pour identifier une conversation entre 2 IoT
-111111 = pour identifier le début du Payload
-len = size of payload
-Payload 
-
-1 bit pour dire si c'est une requete ou une reponse.
+    // acknowledge ??
