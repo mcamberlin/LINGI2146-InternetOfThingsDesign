@@ -34,9 +34,6 @@
     #include "net/routing/rpl-lite/rpl-dag-root.h"
 #endif
 
-#if SERVER_RPL_ROOT
-    static uip_ipaddr_t ipaddr;
-#endif
 
 /**
  * datagram -> buffer
@@ -97,47 +94,23 @@ static uint16_t len;
 
 static datagram dtg;
 static char buf[sizeof(datagram)];
-static int current_id;
 
 static datagram response;
 static char message[sizeof(datagram)];
 
+/*---------------------------------------------------------------------------*/
 
-// previously called tcp_ip_handler
-static void read_data(void)
-{
-    memset(buf, 0, sizeof(datagram));
+static int current_id;
+static int state = 0; //0 switch off, switch on
 
-    if(uip_newdata()) 
-    {
-        len = uip_datalen();
-        memcpy(buf, uip_appdata, len);
-        PRINTF("===================================================\n");
-        PRINTF("%u bytes read from [", len); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-        
-        datagram_decode(buf, &dtg);
-
-        current_id = dtg.id;
-        PRINTF("code : %d\n", dtg.code);
-        PRINTF("type_info : %d\n",dtg.type_info);
-        PRINTF("id : %d\n",dtg.id);
-        PRINTF("payload : %s\n",dtg.payload);
-        PRINTF("===================================================\n");
-
-    }
-    return;
-}
-
-
-static void response_from_temperature_sensor()
+static void change_lamp_state()
 {
     // create a datagram response
     response.code = 2; // reponse code
-    response.type_info = 4; // type_info temperature 
+    response.type_info = 2; // type_info temperature 
     response.id = current_id; // id of sensor
-
-    int temperature = 17 + rand()%7; // random temperature between 17 and 24° [C]
-    sprintf(response.payload, "%d", temperature);
+    state = !state;
+    sprintf(response.payload, "%d", state);
 
     datagram_encode(&response,message);
 
@@ -150,7 +123,7 @@ static void response_from_temperature_sensor()
     PRINTF("%u bytes sent to [", sizeof(datagram));
     PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
     PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-    PRINTF("ANSWER \n");
+    PRINTF("ANSWER change_lamp_state\n");
     PRINTF("code : %d\n", response.code);
     PRINTF("type_info : %d\n",response.type_info);
     PRINTF("id : %d\n",response.id);
@@ -160,6 +133,73 @@ static void response_from_temperature_sensor()
     // Restore server connection to allow data from any node 
     uip_create_unspecified(&server_conn->ripaddr);
     server_conn->rport = 0;    
+}
+
+static void reply_lamp_state()
+{
+    // create a datagram response
+    response.code = 2; // reponse code
+    response.type_info = 2; // type_info temperature 
+    response.id = current_id; // id of sensor
+    sprintf(response.payload, "%d", state);
+
+    datagram_encode(&response,message);
+
+    uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
+    server_conn->rport = UIP_UDP_BUF->srcport;
+
+    uip_udp_packet_send(server_conn, message, 7); 
+
+    PRINTF("===================================================\n");
+    PRINTF("%u bytes sent to [", sizeof(datagram));
+    PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
+    PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
+    PRINTF("ANSWER reply_lamp_state\n");
+    PRINTF("code : %d\n", response.code);
+    PRINTF("type_info : %d\n",response.type_info);
+    PRINTF("id : %d\n",response.id);
+    PRINTF("payload : %s\n",response.payload);
+    PRINTF("===================================================\n");
+
+    // Restore server connection to allow data from any node 
+    uip_create_unspecified(&server_conn->ripaddr);
+    server_conn->rport = 0;    
+}
+
+static void read_data(void)
+{
+    memset(buf, 0, sizeof(datagram));
+
+    if(uip_newdata()) 
+    {
+        len = uip_datalen();
+        memcpy(buf, uip_appdata, len);
+        PRINTF("===================================================\n");
+        PRINTF("%u bytes read from [", len); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
+        
+        datagram_decode(buf, &dtg);
+        current_id = dtg.id;
+
+        if(dtg.type_info == 2)
+        // chang state of lamp
+        {
+            change_lamp_state();
+        }
+        else if(dtg.type_info == 3)
+        // query state of lamp
+        {
+            reply_lamp_state();
+        }
+        
+
+        PRINTF("code : %d\n", dtg.code);
+        PRINTF("type_info : %d\n",dtg.type_info);
+        PRINTF("id : %d\n",dtg.id);
+        PRINTF("payload : %s\n",dtg.payload);
+        PRINTF("===================================================\n");
+
+    }
+    return;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -180,8 +220,6 @@ PROCESS_THREAD(udp_server_process, ev, data)
         {
             PRINTF("========================================================================= \n\n");
             read_data();
-            PRINTF("\n========================================================================= \n\n");
-            response_from_temperature_sensor();
             PRINTF("\n========================================================================= \n\n");
         }
     }

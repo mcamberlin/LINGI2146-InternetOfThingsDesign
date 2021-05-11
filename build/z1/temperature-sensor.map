@@ -2630,196 +2630,197 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
                 0x0000e438       0xe8 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memmove.o)
                 0x0000e438                memmove
 
-.rodata         0x0000e520     0x18fd
+.rodata         0x0000e520     0x1901
                 0x0000e520                . = ALIGN (0x2)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.process_thread_udp_server_process
-                0x0000e520      0x14e temperature-sensor.o
+                0x0000e520      0x153 temperature-sensor.o
+ *fill*         0x0000e673        0x1 00
  .rodata.autostart_processes
-                0x0000e66e        0x4 temperature-sensor.o
-                0x0000e66e                autostart_processes
- .rodata        0x0000e672       0x13 temperature-sensor.o
- .rodata        0x0000e685       0xf3 build/z1/obj/contiki-main.o
+                0x0000e674        0x4 temperature-sensor.o
+                0x0000e674                autostart_processes
+ .rodata        0x0000e678       0x13 temperature-sensor.o
+ .rodata        0x0000e68b       0xf3 build/z1/obj/contiki-main.o
  .rodata.platform_init_stage_three
-                0x0000e778       0x30 build/z1/contiki-ng-z1.a(platform.o)
- .rodata        0x0000e7a8        0xf build/z1/contiki-ng-z1.a(ctimer.o)
- .rodata        0x0000e7b7        0xc build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000e77e       0x30 build/z1/contiki-ng-z1.a(platform.o)
+ .rodata        0x0000e7ae        0xf build/z1/contiki-ng-z1.a(ctimer.o)
+ .rodata        0x0000e7bd        0xc build/z1/contiki-ng-z1.a(etimer.o)
  .rodata.log_6addr
-                0x0000e7c3        0x3 build/z1/contiki-ng-z1.a(log.o)
+                0x0000e7c9        0x3 build/z1/contiki-ng-z1.a(log.o)
  .rodata.log_lladdr
-                0x0000e7c6       0x14 build/z1/contiki-ng-z1.a(log.o)
+                0x0000e7cc       0x14 build/z1/contiki-ng-z1.a(log.o)
  .rodata.process_thread_stack_check_process
-                0x0000e7da       0x5e build/z1/contiki-ng-z1.a(stack-check.o)
- .rodata        0x0000e838        0xc build/z1/contiki-ng-z1.a(stack-check.o)
+                0x0000e7e0       0x5e build/z1/contiki-ng-z1.a(stack-check.o)
+ .rodata        0x0000e83e        0xc build/z1/contiki-ng-z1.a(stack-check.o)
  .rodata.linkaddr_null
-                0x0000e844        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
-                0x0000e844                linkaddr_null
- .rodata        0x0000e84c        0x5 build/z1/contiki-ng-z1.a(csma.o)
- *fill*         0x0000e851        0x1 00
+                0x0000e84a        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
+                0x0000e84a                linkaddr_null
+ .rodata        0x0000e852        0x5 build/z1/contiki-ng-z1.a(csma.o)
+ *fill*         0x0000e857        0x1 00
  .rodata.csma_driver
-                0x0000e852       0x1a build/z1/contiki-ng-z1.a(csma.o)
-                0x0000e852                csma_driver
- .rodata        0x0000e86c        0xd build/z1/contiki-ng-z1.a(tcpip.o)
- .rodata        0x0000e879        0xb build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e858       0x1a build/z1/contiki-ng-z1.a(csma.o)
+                0x0000e858                csma_driver
+ .rodata        0x0000e872        0xd build/z1/contiki-ng-z1.a(tcpip.o)
+ .rodata        0x0000e87f        0xb build/z1/contiki-ng-z1.a(sicslowpan.o)
  .rodata.sicslowpan_driver
-                0x0000e884        0xe build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e884                sicslowpan_driver
+                0x0000e88a        0xe build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e88a                sicslowpan_driver
  .rodata.llprefix
-                0x0000e892        0x2 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e892                llprefix
+                0x0000e898        0x2 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e898                llprefix
  .rodata.unc_mxconf
-                0x0000e894        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e894                unc_mxconf
+                0x0000e89a        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e89a                unc_mxconf
  .rodata.unc_ctxconf
-                0x0000e898        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e898                unc_ctxconf
+                0x0000e89e        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e89e                unc_ctxconf
  .rodata.unc_llconf
-                0x0000e89c        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e89c                unc_llconf
+                0x0000e8a2        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8a2                unc_llconf
  .rodata.ttl_values
-                0x0000e8a0        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8a6        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .rodata.uiplib_ipaddr_snprint
-                0x0000e8a4       0x2a build/z1/contiki-ng-z1.a(uiplib.o)
+                0x0000e8aa       0x2a build/z1/contiki-ng-z1.a(uiplib.o)
  .rodata.uiplib_ipaddr_print
-                0x0000e8ce        0x3 build/z1/contiki-ng-z1.a(uiplib.o)
- .rodata.init   0x0000e8d1       0x25 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e8d4        0x3 build/z1/contiki-ng-z1.a(uiplib.o)
+ .rodata.init   0x0000e8d7       0x25 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_link_callback
-                0x0000e8f6       0x38 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e8fc       0x38 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_reset_prefix
-                0x0000e92e       0x1c build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e934       0x1c build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_set_prefix_from_addr
-                0x0000e94a       0x4d build/z1/contiki-ng-z1.a(rpl.o)
- .rodata        0x0000e997        0x9 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e950       0x4d build/z1/contiki-ng-z1.a(rpl.o)
+ .rodata        0x0000e99d        0x9 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_lite_driver
-                0x0000e9a0       0x52 build/z1/contiki-ng-z1.a(rpl.o)
-                0x0000e9a0                rpl_lite_driver
+                0x0000e9a6       0x52 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e9a6                rpl_lite_driver
  .rodata.dao_ack_input
-                0x0000e9f2       0x8a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000e9f8       0x8a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dao_input
-                0x0000ea7c       0xb4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ea82       0xb4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dio_input
-                0x0000eb30      0x20e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000eb36      0x20e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dis_input
-                0x0000ed3e       0x40 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ed44       0x40 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_update_nbr_table
-                0x0000ed7e       0x24 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ed84       0x24 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dis_output
-                0x0000eda2       0x12 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000eda8       0x12 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dio_output
-                0x0000edb4       0x5c build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000edba       0x5c build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dao_output
-                0x0000ee10      0x11a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ee16      0x11a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dao_ack_output
-                0x0000ef2a       0x2f build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ef30       0x2f build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.init_dag
-                0x0000ef59       0x55 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000ef5f       0x55 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.process_dio_init_dag
-                0x0000efae       0xcd build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000efb4       0xcd build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_state_to_str
-                0x0000f07b        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f081        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_leave
-                0x0000f083       0x1c build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f089       0x1c build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_periodic
-                0x0000f09f       0x58 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f0a5       0x58 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_local_repair
-                0x0000f0f7       0x20 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f0fd       0x20 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_global_repair
-                0x0000f117       0x59 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f11d       0x59 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_update_state
-                0x0000f170       0xe8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f176       0xe8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dio
-                0x0000f258      0x1ae build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f25e      0x1ae build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dis
-                0x0000f406       0x2b build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f40c       0x2b build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dao
-                0x0000f431       0x23 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f437       0x23 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dao_ack
-                0x0000f454       0x48 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f45a       0x48 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_init_root
-                0x0000f49c       0x3e build/z1/contiki-ng-z1.a(rpl-dag.o)
- .rodata        0x0000f4da       0x27 build/z1/contiki-ng-z1.a(rpl-dag.o)
- *fill*         0x0000f501        0x1 00
+                0x0000f4a2       0x3e build/z1/contiki-ng-z1.a(rpl-dag.o)
+ .rodata        0x0000f4e0       0x27 build/z1/contiki-ng-z1.a(rpl-dag.o)
+ *fill*         0x0000f507        0x1 00
  .rodata.CSWTCH.34
-                0x0000f502        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f508        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_root_set_prefix
-                0x0000f50a       0x2c build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x0000f510       0x2c build/z1/contiki-ng-z1.a(rpl-dag-root.o)
  .rodata.rpl_dag_root_start
-                0x0000f536       0x39 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x0000f53c       0x39 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
  .rodata.rpl_dag_root_print_links
-                0x0000f56f       0x56 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
- *fill*         0x0000f5c5        0x3 00
+                0x0000f575       0x56 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+ *fill*         0x0000f5cb        0x1 00
  .rodata.get_value
-                0x0000f5c8       0x64 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f5cc       0x64 build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.set_value
-                0x0000f62c       0x20 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f630       0x20 build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.cc2420_driver
-                0x0000f64c       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000f64c                cc2420_driver
- .rodata        0x0000f684        0xe build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f650       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f650                cc2420_driver
+ .rodata        0x0000f688        0xe build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.output_power
-                0x0000f692       0x10 build/z1/contiki-ng-z1.a(cc2420.o)
- .rodata        0x0000f6a2        0x8 build/z1/contiki-ng-z1.a(sensors.o)
- .rodata        0x0000f6aa       0x25 build/z1/contiki-ng-z1.a(adxl345.o)
- *fill*         0x0000f6cf        0x1 00
+                0x0000f696       0x10 build/z1/contiki-ng-z1.a(cc2420.o)
+ .rodata        0x0000f6a6        0x8 build/z1/contiki-ng-z1.a(sensors.o)
+ .rodata        0x0000f6ae       0x25 build/z1/contiki-ng-z1.a(adxl345.o)
+ *fill*         0x0000f6d3        0x1 00
  .rodata.adxl345
-                0x0000f6d0        0xe build/z1/contiki-ng-z1.a(adxl345.o)
-                0x0000f6d0                adxl345
- .rodata        0x0000f6de        0xe build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000f6d4        0xe build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000f6d4                adxl345
+ .rodata        0x0000f6e2        0xe build/z1/contiki-ng-z1.a(tmp102.o)
  .rodata.tmp102
-                0x0000f6ec        0xe build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000f6ec                tmp102
+                0x0000f6f0        0xe build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000f6f0                tmp102
  .rodata.framer_802154
-                0x0000f6fa        0xc build/z1/contiki-ng-z1.a(framer-802154.o)
-                0x0000f6fa                framer_802154
+                0x0000f6fe        0xc build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000f6fe                framer_802154
  .rodata.CSWTCH.16
-                0x0000f706        0x2 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000f70a        0x2 build/z1/contiki-ng-z1.a(frame802154.o)
  .rodata.uip_sr_link_snprint
-                0x0000f708       0x44 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000f70c       0x44 build/z1/contiki-ng-z1.a(uip-sr.o)
  .rodata.update_state
-                0x0000f74c       0x3a build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000f750       0x3a build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
  .rodata.rpl_nbr_policy_find_removable
-                0x0000f786       0xa6 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000f78a       0xa6 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
  .rodata.rpl_neighbor_snprint
-                0x0000f82c       0x58 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f830       0x58 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_print_list
-                0x0000f884       0x9a build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f888       0x9a build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_set_preferred_parent
-                0x0000f91e       0x15 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f922       0x15 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_remove_all
-                0x0000f933       0x17 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f937       0x17 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_select_best
-                0x0000f94a       0x36 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f94e       0x36 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.resend_dao
-                0x0000f980        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f984        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.handle_periodic_timer
-                0x0000f98c        0x9 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f990        0x9 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.rpl_timers_dio_reset
-                0x0000f995       0x2e build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f999       0x2e build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.handle_probing_timer
-                0x0000f9c3       0x45 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f9c7       0x45 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.update_hbh_header
-                0x0000fa08       0x8d build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fa0c       0x8d build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_srh_get_next_hop
-                0x0000fa95       0x11 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fa99       0x11 build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_srh_update
-                0x0000faa6       0xbe build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000faaa       0xbe build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_hbh_update
-                0x0000fb64       0xcf build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fb68       0xcf build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_update
-                0x0000fc33      0x1a9 build/z1/contiki-ng-z1.a(rpl-ext-header.)
- .rodata.reset  0x0000fddc       0x24 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
- .rodata        0x0000fe00        0x7 build/z1/contiki-ng-z1.a(button-sensor.o)
- *fill*         0x0000fe07        0x1 00
+                0x0000fc37      0x1a9 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+ .rodata.reset  0x0000fde0       0x24 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+ .rodata        0x0000fe04        0x7 build/z1/contiki-ng-z1.a(button-sensor.o)
+ *fill*         0x0000fe0b        0x1 00
  .rodata.button_sensor
-                0x0000fe08        0xe build/z1/contiki-ng-z1.a(button-sensor.o)
-                0x0000fe08                button_sensor
+                0x0000fe0c        0xe build/z1/contiki-ng-z1.a(button-sensor.o)
+                0x0000fe0c                button_sensor
  .rodata.vuprintf
-                0x0000fe16        0x7 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
+                0x0000fe1a        0x7 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
  *(.near.rodata .near.rodata.*)
-                0x0000fe1e                . = ALIGN (0x2)
-                0x0000fe1e                _etext = .
+                0x0000fe22                . = ALIGN (0x2)
+                0x0000fe22                _etext = .
 
-.data           0x00001100      0x148 load address 0x0000fe1e
+.data           0x00001100      0x148 load address 0x0000fe22
                 0x00001100                . = ALIGN (0x2)
                 0x00001100                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -2913,10 +2914,10 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
  *(.near.data .near.data.*)
                 0x00001248                . = ALIGN (0x2)
                 0x00001248                _edata = .
-                0x0000fe1e                __data_load_start = LOADADDR (.data)
+                0x0000fe22                __data_load_start = LOADADDR (.data)
                 0x00000148                __data_size = SIZEOF (.data)
 
-.bss            0x00001248     0x16ec load address 0x0000ff66
+.bss            0x00001248     0x16ec load address 0x0000ff6a
                 0x00001248                __bss_start = .
  *(.bss .bss.*)
  .bss.server_conn
@@ -3241,7 +3242,7 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
                 0x00002934                __bss_end = .
                 0x000016ec                __bss_size = SIZEOF (.bss)
 
-.noinit         0x00002934        0x2 load address 0x0000ff66
+.noinit         0x00002934        0x2 load address 0x0000ff6a
                 0x00002934                . = ALIGN (0x2)
                 0x00002934                __noinit_start = .
  *(.noinit .noinit.*)
@@ -3802,8 +3803,8 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
  .debug_ranges  0x000000e8       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memmove.o)
  .debug_ranges  0x000000f8       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memset.o)
                 0x00003100                PROVIDE (__stack, (ORIGIN (ram) + 0x2000))
-                0x0000fe1e                __data_start_rom = _etext
-                0x0000ff66                __data_end_rom = (_etext + SIZEOF (.data))
+                0x0000fe22                __data_start_rom = _etext
+                0x0000ff6a                __data_end_rom = (_etext + SIZEOF (.data))
 OUTPUT(build/z1/temperature-sensor.z1 elf32-msp430)
 
 .gnu.attributes

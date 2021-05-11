@@ -1,7 +1,7 @@
 // ===========================================================================
-//      Temperature sensor:
+//      Proximity sensor:
 // 
-// -> answer to the server the current temperature when asked
+// -> answer to the server the current proximity when asked
 // ===========================================================================
 
 
@@ -128,15 +128,15 @@ static void read_data(void)
 }
 
 
-static void response_from_temperature_sensor()
+static void response_from_proximity_sensor()
 {
     // create a datagram response
     response.code = 2; // reponse code
-    response.type_info = 4; // type_info temperature 
+    response.type_info = 4; // type_info proximity 
     response.id = current_id; // id of sensor
 
-    int temperature = 17 + rand()%7; // random temperature between 17 and 24° [C]
-    sprintf(response.payload, "%d", temperature);
+    int distance = rand(); // random proximity 
+    sprintf(response.payload, "%d", distance);
 
     datagram_encode(&response,message);
 
@@ -180,7 +180,7 @@ PROCESS_THREAD(udp_server_process, ev, data)
             PRINTF("========================================================================= \n\n");
             read_data();
             PRINTF("\n========================================================================= \n\n");
-            response_from_temperature_sensor();
+            response_from_proximity_sensor();
             PRINTF("\n========================================================================= \n\n");
         }
     }
