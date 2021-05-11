@@ -112,7 +112,7 @@ static void read_data(void)
         len = uip_datalen();
         memcpy(buf, uip_appdata, len);
         PRINTF("===================================================\n");
-        PRINTF("%u bytes read from [", len); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
+        PRINTF("%u bytes sent from [", len); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
         
         datagram_decode(buf, &dtg);
 
@@ -141,15 +141,16 @@ static void response_from_temperature_sensor()
     datagram_encode(&response,message);
 
     uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
+
+    //uint16_t rport = 3001;
     server_conn->rport = UIP_UDP_BUF->srcport;
+    PRINTF("=============================> => => %d\n",UIP_UDP_BUF->srcport);
 
     uip_udp_packet_send(server_conn, message, 7); 
 
     PRINTF("===================================================\n");
-    PRINTF("%u bytes sent to [", sizeof(datagram));
-    PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
-    PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-    PRINTF("ANSWER \n");
+    PRINTF("%u bytes sent to [", sizeof(datagram)); PRINT6ADDR(&UIP_IP_BUF->srcipaddr); PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
+    PRINTF("ANSWER response_from_temperature_sensor\n");
     PRINTF("code : %d\n", response.code);
     PRINTF("type_info : %d\n",response.type_info);
     PRINTF("id : %d\n",response.id);

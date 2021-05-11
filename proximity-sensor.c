@@ -149,7 +149,7 @@ static void response_from_proximity_sensor()
     PRINTF("%u bytes sent to [", sizeof(datagram));
     PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
     PRINTF("]:%u\n", UIP_HTONS(UIP_UDP_BUF->srcport));
-    PRINTF("ANSWER \n");
+    PRINTF("ANSWER response_from_proximity_sensor \n");
     PRINTF("code : %d\n", response.code);
     PRINTF("type_info : %d\n",response.type_info);
     PRINTF("id : %d\n",response.id);

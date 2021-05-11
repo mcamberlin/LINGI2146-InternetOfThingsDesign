@@ -25,6 +25,6 @@ void datagram_encode(datagram* dtg, char* buf);
 
 void datagram_decode(const char* data, datagram* dtg);
 
-void free_datagram(datagram* dtg);
+void print_dtg(datagram* dtg_received);
 
 #endif

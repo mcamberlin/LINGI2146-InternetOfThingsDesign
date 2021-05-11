@@ -54,6 +54,15 @@ void datagram_decode(const char* data, datagram* dtg)
 	memcpy(dtg->payload, data+ptr, 4);
 }
 
+void print_dtg(datagram* dtg_received)
+{
+    printf("PRINT DATAGRAM\n");
+    printf("%d\n", dtg_received->code);
+    printf("%d\n", dtg_received->type_info);
+    printf("%d\n", dtg_received->id);
+    printf("%s\n", dtg_received->payload);
+}
+
 /*
 int main()
 {

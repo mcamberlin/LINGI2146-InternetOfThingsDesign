@@ -88,8 +88,10 @@ void Input(void* ptr)
     }
 }
 
-int main(void) {
-    if (pthread_mutex_init(&lock_data, NULL) != 0) {
+int main(void) 
+{
+    if (pthread_mutex_init(&lock_data, NULL) != 0) 
+    {
         printf("\n mutex init has failed\n");
         return 1;
     }
