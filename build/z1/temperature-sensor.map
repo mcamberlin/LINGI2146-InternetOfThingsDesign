@@ -1193,7 +1193,7 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
 .rela.plt
  *(.rela.plt)
 
-.text           0x00003100     0xb3a4
+.text           0x00003100     0xb43a
                 0x00003100                . = ALIGN (0x2)
  *(.init .init.*)
  *(.init0)
@@ -1333,1493 +1333,1493 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
                 0x000037de       0x26 temperature-sensor.o
                 0x000037de                datagram_decode
  .any.text.process_thread_udp_server_process
-                0x00003804      0x274 temperature-sensor.o
+                0x00003804      0x27e temperature-sensor.o
  .any.text.putchar
-                0x00003a78       0x10 build/z1/contiki-ng-z1.a(uart0-putchar.o)
-                0x00003a78                putchar
+                0x00003a82       0x10 build/z1/contiki-ng-z1.a(uart0-putchar.o)
+                0x00003a82                putchar
  .any.text.platform_init_stage_one
-                0x00003a88       0x12 build/z1/contiki-ng-z1.a(platform.o)
-                0x00003a88                platform_init_stage_one
+                0x00003a92       0x12 build/z1/contiki-ng-z1.a(platform.o)
+                0x00003a92                platform_init_stage_one
  .any.text.platform_init_stage_two
-                0x00003a9a       0xba build/z1/contiki-ng-z1.a(platform.o)
-                0x00003a9a                platform_init_stage_two
+                0x00003aa4       0xba build/z1/contiki-ng-z1.a(platform.o)
+                0x00003aa4                platform_init_stage_two
  .any.text.platform_init_stage_three
-                0x00003b54       0x72 build/z1/contiki-ng-z1.a(platform.o)
-                0x00003b54                platform_init_stage_three
+                0x00003b5e       0x72 build/z1/contiki-ng-z1.a(platform.o)
+                0x00003b5e                platform_init_stage_three
  .any.text.platform_idle
-                0x00003bc6       0x54 build/z1/contiki-ng-z1.a(platform.o)
-                0x00003bc6                platform_idle
+                0x00003bd0       0x54 build/z1/contiki-ng-z1.a(platform.o)
+                0x00003bd0                platform_idle
  .any.text.msp430_init_dco
-                0x00003c1a       0x28 build/z1/contiki-ng-z1.a(msp430.o)
-                0x00003c1a                msp430_init_dco
+                0x00003c24       0x28 build/z1/contiki-ng-z1.a(msp430.o)
+                0x00003c24                msp430_init_dco
  .any.text.splhigh_
-                0x00003c42        0x8 build/z1/contiki-ng-z1.a(msp430.o)
-                0x00003c42                splhigh_
+                0x00003c4c        0x8 build/z1/contiki-ng-z1.a(msp430.o)
+                0x00003c4c                splhigh_
  .any.text.msp430_sync_dco
-                0x00003c4a       0x6e build/z1/contiki-ng-z1.a(msp430.o)
-                0x00003c4a                msp430_sync_dco
+                0x00003c54       0x6e build/z1/contiki-ng-z1.a(msp430.o)
+                0x00003c54                msp430_sync_dco
  .any.text.msp430_cpu_init
-                0x00003cb8       0x2e build/z1/contiki-ng-z1.a(msp430.o)
-                0x00003cb8                msp430_cpu_init
+                0x00003cc2       0x2e build/z1/contiki-ng-z1.a(msp430.o)
+                0x00003cc2                msp430_cpu_init
  .any.text.clock_time
-                0x00003ce6       0x1a build/z1/contiki-ng-z1.a(clock.o)
-                0x00003ce6                clock_time
+                0x00003cf0       0x1a build/z1/contiki-ng-z1.a(clock.o)
+                0x00003cf0                clock_time
  .any.text.clock_init
-                0x00003d00       0x28 build/z1/contiki-ng-z1.a(clock.o)
-                0x00003d00                clock_init
+                0x00003d0a       0x28 build/z1/contiki-ng-z1.a(clock.o)
+                0x00003d0a                clock_init
  .any.text.clock_delay
-                0x00003d28        0xc build/z1/contiki-ng-z1.a(clock.o)
-                0x00003d28                clock_delay
+                0x00003d32        0xc build/z1/contiki-ng-z1.a(clock.o)
+                0x00003d32                clock_delay
  .any.text.clock_wait
-                0x00003d34       0x24 build/z1/contiki-ng-z1.a(clock.o)
-                0x00003d34                clock_wait
+                0x00003d3e       0x24 build/z1/contiki-ng-z1.a(clock.o)
+                0x00003d3e                clock_wait
  .any.text.clock_seconds
-                0x00003d58       0x1a build/z1/contiki-ng-z1.a(clock.o)
-                0x00003d58                clock_seconds
+                0x00003d62       0x1a build/z1/contiki-ng-z1.a(clock.o)
+                0x00003d62                clock_seconds
  .any.text.watchdog_start
-                0x00003d72       0x14 build/z1/contiki-ng-z1.a(watchdog.o)
-                0x00003d72                watchdog_start
+                0x00003d7c       0x14 build/z1/contiki-ng-z1.a(watchdog.o)
+                0x00003d7c                watchdog_start
  .any.text.watchdog_periodic
-                0x00003d86       0x12 build/z1/contiki-ng-z1.a(watchdog.o)
-                0x00003d86                watchdog_periodic
+                0x00003d90       0x12 build/z1/contiki-ng-z1.a(watchdog.o)
+                0x00003d90                watchdog_periodic
  .any.text.watchdog_stop
-                0x00003d98       0x16 build/z1/contiki-ng-z1.a(watchdog.o)
-                0x00003d98                watchdog_stop
+                0x00003da2       0x16 build/z1/contiki-ng-z1.a(watchdog.o)
+                0x00003da2                watchdog_stop
  .any.text.watchdog_init
-                0x00003dae       0x12 build/z1/contiki-ng-z1.a(watchdog.o)
-                0x00003dae                watchdog_init
+                0x00003db8       0x12 build/z1/contiki-ng-z1.a(watchdog.o)
+                0x00003db8                watchdog_init
  .any.text.autostart_start
-                0x00003dc0       0x16 build/z1/contiki-ng-z1.a(autostart.o)
-                0x00003dc0                autostart_start
+                0x00003dca       0x16 build/z1/contiki-ng-z1.a(autostart.o)
+                0x00003dca                autostart_start
  .any.text.process_thread_ctimer_process
-                0x00003dd6       0xa0 build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003de0       0xa0 build/z1/contiki-ng-z1.a(ctimer.o)
  .any.text.ctimer_init
-                0x00003e76       0x18 build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003e76                ctimer_init
+                0x00003e80       0x18 build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003e80                ctimer_init
  .any.text.ctimer_set_with_process
-                0x00003e8e       0x4a build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003e8e                ctimer_set_with_process
+                0x00003e98       0x4a build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003e98                ctimer_set_with_process
  .any.text.ctimer_set
-                0x00003ed8       0x10 build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003ed8                ctimer_set
+                0x00003ee2       0x10 build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003ee2                ctimer_set
  .any.text.ctimer_reset
-                0x00003ee8       0x2c build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003ee8                ctimer_reset
+                0x00003ef2       0x2c build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003ef2                ctimer_reset
  .any.text.ctimer_stop
-                0x00003f14       0x28 build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003f14                ctimer_stop
+                0x00003f1e       0x28 build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003f1e                ctimer_stop
  .any.text.ctimer_expired
-                0x00003f3c       0x30 build/z1/contiki-ng-z1.a(ctimer.o)
-                0x00003f3c                ctimer_expired
+                0x00003f46       0x30 build/z1/contiki-ng-z1.a(ctimer.o)
+                0x00003f46                ctimer_expired
  .any.text.energest_init
-                0x00003f6c        0x2 build/z1/contiki-ng-z1.a(energest.o)
-                0x00003f6c                energest_init
+                0x00003f76        0x2 build/z1/contiki-ng-z1.a(energest.o)
+                0x00003f76                energest_init
  .any.text.energest_flush
-                0x00003f6e        0x2 build/z1/contiki-ng-z1.a(energest.o)
-                0x00003f6e                energest_flush
+                0x00003f78        0x2 build/z1/contiki-ng-z1.a(energest.o)
+                0x00003f78                energest_flush
  .any.text.update_time
-                0x00003f70       0x70 build/z1/contiki-ng-z1.a(etimer.o)
+                0x00003f7a       0x70 build/z1/contiki-ng-z1.a(etimer.o)
  .any.text.etimer_request_poll
-                0x00003fe0        0xa build/z1/contiki-ng-z1.a(etimer.o)
-                0x00003fe0                etimer_request_poll
+                0x00003fea        0xa build/z1/contiki-ng-z1.a(etimer.o)
+                0x00003fea                etimer_request_poll
  .any.text.process_thread_etimer_process
-                0x00003fea       0xc4 build/z1/contiki-ng-z1.a(etimer.o)
+                0x00003ff4       0xc4 build/z1/contiki-ng-z1.a(etimer.o)
  .any.text.add_timer
-                0x000040ae       0x40 build/z1/contiki-ng-z1.a(etimer.o)
+                0x000040b8       0x40 build/z1/contiki-ng-z1.a(etimer.o)
  .any.text.etimer_set
-                0x000040ee       0x12 build/z1/contiki-ng-z1.a(etimer.o)
-                0x000040ee                etimer_set
+                0x000040f8       0x12 build/z1/contiki-ng-z1.a(etimer.o)
+                0x000040f8                etimer_set
  .any.text.etimer_reset
-                0x00004100       0x12 build/z1/contiki-ng-z1.a(etimer.o)
-                0x00004100                etimer_reset
+                0x0000410a       0x12 build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000410a                etimer_reset
  .any.text.etimer_expired
-                0x00004112        0xe build/z1/contiki-ng-z1.a(etimer.o)
-                0x00004112                etimer_expired
+                0x0000411c        0xe build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000411c                etimer_expired
  .any.text.etimer_pending
-                0x00004120        0xc build/z1/contiki-ng-z1.a(etimer.o)
-                0x00004120                etimer_pending
+                0x0000412a        0xc build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000412a                etimer_pending
  .any.text.etimer_next_expiration_time
-                0x0000412c       0x16 build/z1/contiki-ng-z1.a(etimer.o)
-                0x0000412c                etimer_next_expiration_time
+                0x00004136       0x16 build/z1/contiki-ng-z1.a(etimer.o)
+                0x00004136                etimer_next_expiration_time
  .any.text.etimer_stop
-                0x00004142       0x3e build/z1/contiki-ng-z1.a(etimer.o)
-                0x00004142                etimer_stop
+                0x0000414c       0x3e build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000414c                etimer_stop
  .any.text.log_6addr
-                0x00004180       0x32 build/z1/contiki-ng-z1.a(log.o)
-                0x00004180                log_6addr
+                0x0000418a       0x32 build/z1/contiki-ng-z1.a(log.o)
+                0x0000418a                log_6addr
  .any.text.log_lladdr
-                0x000041b2       0x40 build/z1/contiki-ng-z1.a(log.o)
-                0x000041b2                log_lladdr
+                0x000041bc       0x40 build/z1/contiki-ng-z1.a(log.o)
+                0x000041bc                log_lladdr
  .any.text.rtimer_init
-                0x000041f2        0x6 build/z1/contiki-ng-z1.a(rtimer.o)
-                0x000041f2                rtimer_init
+                0x000041fc        0x6 build/z1/contiki-ng-z1.a(rtimer.o)
+                0x000041fc                rtimer_init
  .any.text.rtimer_run_next
-                0x000041f8       0x26 build/z1/contiki-ng-z1.a(rtimer.o)
-                0x000041f8                rtimer_run_next
+                0x00004202       0x26 build/z1/contiki-ng-z1.a(rtimer.o)
+                0x00004202                rtimer_run_next
  .any.text.node_id_init
-                0x0000421e       0x14 build/z1/contiki-ng-z1.a(node-id.o)
-                0x0000421e                node_id_init
+                0x00004228       0x14 build/z1/contiki-ng-z1.a(node-id.o)
+                0x00004228                node_id_init
  .any.text.call_process
-                0x00004232       0x40 build/z1/contiki-ng-z1.a(process.o)
+                0x0000423c       0x40 build/z1/contiki-ng-z1.a(process.o)
  .any.text.exit_process
-                0x00004272       0x88 build/z1/contiki-ng-z1.a(process.o)
+                0x0000427c       0x88 build/z1/contiki-ng-z1.a(process.o)
  .any.text.do_poll
-                0x000042fa       0x30 build/z1/contiki-ng-z1.a(process.o)
+                0x00004304       0x30 build/z1/contiki-ng-z1.a(process.o)
  .any.text.process_alloc_event
-                0x0000432a        0xe build/z1/contiki-ng-z1.a(process.o)
-                0x0000432a                process_alloc_event
+                0x00004334        0xe build/z1/contiki-ng-z1.a(process.o)
+                0x00004334                process_alloc_event
  .any.text.process_init
-                0x00004338       0x1c build/z1/contiki-ng-z1.a(process.o)
-                0x00004338                process_init
+                0x00004342       0x1c build/z1/contiki-ng-z1.a(process.o)
+                0x00004342                process_init
  .any.text.process_run
-                0x00004354       0x8c build/z1/contiki-ng-z1.a(process.o)
-                0x00004354                process_run
+                0x0000435e       0x8c build/z1/contiki-ng-z1.a(process.o)
+                0x0000435e                process_run
  .any.text.process_nevents
-                0x000043e0        0xe build/z1/contiki-ng-z1.a(process.o)
-                0x000043e0                process_nevents
+                0x000043ea        0xe build/z1/contiki-ng-z1.a(process.o)
+                0x000043ea                process_nevents
  .any.text.process_post
-                0x000043ee       0x4a build/z1/contiki-ng-z1.a(process.o)
-                0x000043ee                process_post
+                0x000043f8       0x4a build/z1/contiki-ng-z1.a(process.o)
+                0x000043f8                process_post
  .any.text.process_post_synch
-                0x00004438       0x12 build/z1/contiki-ng-z1.a(process.o)
-                0x00004438                process_post_synch
+                0x00004442       0x12 build/z1/contiki-ng-z1.a(process.o)
+                0x00004442                process_post_synch
  .any.text.process_start
-                0x0000444a       0x36 build/z1/contiki-ng-z1.a(process.o)
-                0x0000444a                process_start
+                0x00004454       0x36 build/z1/contiki-ng-z1.a(process.o)
+                0x00004454                process_start
  .any.text.process_poll
-                0x00004480       0x18 build/z1/contiki-ng-z1.a(process.o)
-                0x00004480                process_poll
+                0x0000448a       0x18 build/z1/contiki-ng-z1.a(process.o)
+                0x0000448a                process_poll
  .any.text.timer_set
-                0x00004498       0x1c build/z1/contiki-ng-z1.a(timer.o)
-                0x00004498                timer_set
+                0x000044a2       0x1c build/z1/contiki-ng-z1.a(timer.o)
+                0x000044a2                timer_set
  .any.text.timer_expired
-                0x000044b4       0x2a build/z1/contiki-ng-z1.a(timer.o)
-                0x000044b4                timer_expired
+                0x000044be       0x2a build/z1/contiki-ng-z1.a(timer.o)
+                0x000044be                timer_expired
  .any.text.timer_reset
-                0x000044de       0x1c build/z1/contiki-ng-z1.a(timer.o)
-                0x000044de                timer_reset
+                0x000044e8       0x1c build/z1/contiki-ng-z1.a(timer.o)
+                0x000044e8                timer_reset
  .any.text.stack_check_init
-                0x000044fa       0x2e build/z1/contiki-ng-z1.a(stack-check.o)
-                0x000044fa                stack_check_init
+                0x00004504       0x2e build/z1/contiki-ng-z1.a(stack-check.o)
+                0x00004504                stack_check_init
  .any.text.stack_check_get_usage
-                0x00004528       0x54 build/z1/contiki-ng-z1.a(stack-check.o)
-                0x00004528                stack_check_get_usage
+                0x00004532       0x54 build/z1/contiki-ng-z1.a(stack-check.o)
+                0x00004532                stack_check_get_usage
  .any.text.process_thread_stack_check_process
-                0x0000457c       0xd2 build/z1/contiki-ng-z1.a(stack-check.o)
+                0x00004586       0xd2 build/z1/contiki-ng-z1.a(stack-check.o)
  .any.text.list_init
-                0x0000464e        0x6 build/z1/contiki-ng-z1.a(list.o)
-                0x0000464e                list_init
+                0x00004658        0x6 build/z1/contiki-ng-z1.a(list.o)
+                0x00004658                list_init
  .any.text.list_head
-                0x00004654        0x4 build/z1/contiki-ng-z1.a(list.o)
-                0x00004654                list_head
+                0x0000465e        0x4 build/z1/contiki-ng-z1.a(list.o)
+                0x0000465e                list_head
  .any.text.list_tail
-                0x00004658       0x12 build/z1/contiki-ng-z1.a(list.o)
-                0x00004658                list_tail
+                0x00004662       0x12 build/z1/contiki-ng-z1.a(list.o)
+                0x00004662                list_tail
  .any.text.list_remove
-                0x0000466a       0x34 build/z1/contiki-ng-z1.a(list.o)
-                0x0000466a                list_remove
+                0x00004674       0x34 build/z1/contiki-ng-z1.a(list.o)
+                0x00004674                list_remove
  .any.text.list_push
-                0x0000469e       0x16 build/z1/contiki-ng-z1.a(list.o)
-                0x0000469e                list_push
+                0x000046a8       0x16 build/z1/contiki-ng-z1.a(list.o)
+                0x000046a8                list_push
  .any.text.list_add
-                0x000046b4       0x26 build/z1/contiki-ng-z1.a(list.o)
-                0x000046b4                list_add
+                0x000046be       0x26 build/z1/contiki-ng-z1.a(list.o)
+                0x000046be                list_add
  .any.text.list_length
-                0x000046da       0x10 build/z1/contiki-ng-z1.a(list.o)
-                0x000046da                list_length
+                0x000046e4       0x10 build/z1/contiki-ng-z1.a(list.o)
+                0x000046e4                list_length
  .any.text.list_item_next
-                0x000046ea        0xc build/z1/contiki-ng-z1.a(list.o)
-                0x000046ea                list_item_next
+                0x000046f4        0xc build/z1/contiki-ng-z1.a(list.o)
+                0x000046f4                list_item_next
  .any.text.random_init
-                0x000046f6        0x6 build/z1/contiki-ng-z1.a(random.o)
-                0x000046f6                random_init
+                0x00004700        0x6 build/z1/contiki-ng-z1.a(random.o)
+                0x00004700                random_init
  .any.text.random_rand
-                0x000046fc        0x6 build/z1/contiki-ng-z1.a(random.o)
-                0x000046fc                random_rand
+                0x00004706        0x6 build/z1/contiki-ng-z1.a(random.o)
+                0x00004706                random_rand
  .any.text.queuebuf_init
-                0x00004702       0x12 build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x00004702                queuebuf_init
+                0x0000470c       0x12 build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x0000470c                queuebuf_init
  .any.text.queuebuf_numfree
-                0x00004714        0xa build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x00004714                queuebuf_numfree
+                0x0000471e        0xa build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x0000471e                queuebuf_numfree
  .any.text.queuebuf_new_from_packetbuf
-                0x0000471e       0x4e build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x0000471e                queuebuf_new_from_packetbuf
+                0x00004728       0x4e build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x00004728                queuebuf_new_from_packetbuf
  .any.text.queuebuf_update_attr_from_packetbuf
-                0x0000476c       0x12 build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x0000476c                queuebuf_update_attr_from_packetbuf
+                0x00004776       0x12 build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x00004776                queuebuf_update_attr_from_packetbuf
  .any.text.queuebuf_free
-                0x0000477e       0x2a build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x0000477e                queuebuf_free
+                0x00004788       0x2a build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x00004788                queuebuf_free
  .any.text.queuebuf_to_packetbuf
-                0x000047a8       0x32 build/z1/contiki-ng-z1.a(queuebuf.o)
-                0x000047a8                queuebuf_to_packetbuf
+                0x000047b2       0x32 build/z1/contiki-ng-z1.a(queuebuf.o)
+                0x000047b2                queuebuf_to_packetbuf
  .any.text.packetbuf_hdrreduce
-                0x000047da       0x1a build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x000047da                packetbuf_hdrreduce
+                0x000047e4       0x1a build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x000047e4                packetbuf_hdrreduce
  .any.text.packetbuf_set_datalen
-                0x000047f4        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x000047f4                packetbuf_set_datalen
+                0x000047fe        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x000047fe                packetbuf_set_datalen
  .any.text.packetbuf_hdrptr
-                0x000047fa        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x000047fa                packetbuf_hdrptr
+                0x00004804        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004804                packetbuf_hdrptr
  .any.text.packetbuf_datalen
-                0x00004800        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004800                packetbuf_datalen
+                0x0000480a        0x6 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000480a                packetbuf_datalen
  .any.text.packetbuf_hdrlen
-                0x00004806        0xa build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004806                packetbuf_hdrlen
+                0x00004810        0xa build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004810                packetbuf_hdrlen
  .any.text.packetbuf_dataptr
-                0x00004810        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004810                packetbuf_dataptr
+                0x0000481a        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000481a                packetbuf_dataptr
  .any.text.packetbuf_copyto
-                0x0000481c       0x3a build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x0000481c                packetbuf_copyto
+                0x00004826       0x3a build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004826                packetbuf_copyto
  .any.text.packetbuf_totlen
-                0x00004856        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004856                packetbuf_totlen
+                0x00004860        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004860                packetbuf_totlen
  .any.text.packetbuf_hdralloc
-                0x00004862       0x3c build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004862                packetbuf_hdralloc
+                0x0000486c       0x3c build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000486c                packetbuf_hdralloc
  .any.text.packetbuf_attr_clear
-                0x0000489e       0x28 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x0000489e                packetbuf_attr_clear
+                0x000048a8       0x28 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x000048a8                packetbuf_attr_clear
  .any.text.packetbuf_clear
-                0x000048c6       0x12 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x000048c6                packetbuf_clear
+                0x000048d0       0x12 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x000048d0                packetbuf_clear
  .any.text.packetbuf_copyfrom
-                0x000048d8       0x2a build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x000048d8                packetbuf_copyfrom
+                0x000048e2       0x2a build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x000048e2                packetbuf_copyfrom
  .any.text.packetbuf_attr_copyto
-                0x00004902       0x22 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004902                packetbuf_attr_copyto
+                0x0000490c       0x22 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000490c                packetbuf_attr_copyto
  .any.text.packetbuf_attr_copyfrom
-                0x00004924       0x24 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004924                packetbuf_attr_copyfrom
+                0x0000492e       0x24 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000492e                packetbuf_attr_copyfrom
  .any.text.packetbuf_set_attr
-                0x00004948        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004948                packetbuf_set_attr
+                0x00004952        0xc build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004952                packetbuf_set_attr
  .any.text.packetbuf_attr
-                0x00004954        0xa build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004954                packetbuf_attr
+                0x0000495e        0xa build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000495e                packetbuf_attr
  .any.text.packetbuf_set_addr
-                0x0000495e       0x14 build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x0000495e                packetbuf_set_addr
+                0x00004968       0x14 build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x00004968                packetbuf_set_addr
  .any.text.packetbuf_addr
-                0x00004972        0xe build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004972                packetbuf_addr
+                0x0000497c        0xe build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000497c                packetbuf_addr
  .any.text.packetbuf_holds_broadcast
-                0x00004980        0xe build/z1/contiki-ng-z1.a(packetbuf.o)
-                0x00004980                packetbuf_holds_broadcast
+                0x0000498a        0xe build/z1/contiki-ng-z1.a(packetbuf.o)
+                0x0000498a                packetbuf_holds_broadcast
  .any.text.netstack_process_ip_callback
-                0x0000498e       0x46 build/z1/contiki-ng-z1.a(netstack.o)
-                0x0000498e                netstack_process_ip_callback
+                0x00004998       0x46 build/z1/contiki-ng-z1.a(netstack.o)
+                0x00004998                netstack_process_ip_callback
  .any.text.netstack_init
-                0x000049d4        0xe build/z1/contiki-ng-z1.a(netstack.o)
-                0x000049d4                netstack_init
+                0x000049de        0xe build/z1/contiki-ng-z1.a(netstack.o)
+                0x000049de                netstack_init
  .any.text.linkaddr_copy
-                0x000049e2        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
-                0x000049e2                linkaddr_copy
+                0x000049ec        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
+                0x000049ec                linkaddr_copy
  .any.text.linkaddr_cmp
-                0x000049ea       0x12 build/z1/contiki-ng-z1.a(linkaddr.o)
-                0x000049ea                linkaddr_cmp
+                0x000049f4       0x12 build/z1/contiki-ng-z1.a(linkaddr.o)
+                0x000049f4                linkaddr_cmp
  .any.text.linkaddr_set_node_addr
-                0x000049fc        0xc build/z1/contiki-ng-z1.a(linkaddr.o)
-                0x000049fc                linkaddr_set_node_addr
- .any.text.on   0x00004a08        0x6 build/z1/contiki-ng-z1.a(csma.o)
- .any.text.off  0x00004a0e        0x6 build/z1/contiki-ng-z1.a(csma.o)
+                0x00004a06        0xc build/z1/contiki-ng-z1.a(linkaddr.o)
+                0x00004a06                linkaddr_set_node_addr
+ .any.text.on   0x00004a12        0x6 build/z1/contiki-ng-z1.a(csma.o)
+ .any.text.off  0x00004a18        0x6 build/z1/contiki-ng-z1.a(csma.o)
  .any.text.max_payload
-                0x00004a14       0x38 build/z1/contiki-ng-z1.a(csma.o)
+                0x00004a1e       0x38 build/z1/contiki-ng-z1.a(csma.o)
  .any.text.send_packet
-                0x00004a4c        0x6 build/z1/contiki-ng-z1.a(csma.o)
+                0x00004a56        0x6 build/z1/contiki-ng-z1.a(csma.o)
  .any.text.init
-                0x00004a52       0x1c build/z1/contiki-ng-z1.a(csma.o)
+                0x00004a5c       0x1c build/z1/contiki-ng-z1.a(csma.o)
  .any.text.input_packet
-                0x00004a6e       0x58 build/z1/contiki-ng-z1.a(csma.o)
+                0x00004a78       0x58 build/z1/contiki-ng-z1.a(csma.o)
  .any.text.schedule_transmission
-                0x00004ac6       0x66 build/z1/contiki-ng-z1.a(csma-output.o)
+                0x00004ad0       0x66 build/z1/contiki-ng-z1.a(csma-output.o)
  .any.text.tx_done
-                0x00004b2c       0x86 build/z1/contiki-ng-z1.a(csma-output.o)
+                0x00004b36       0x86 build/z1/contiki-ng-z1.a(csma-output.o)
  .any.text.transmit_from_queue
-                0x00004bb2      0x1ac build/z1/contiki-ng-z1.a(csma-output.o)
+                0x00004bbc      0x1ac build/z1/contiki-ng-z1.a(csma-output.o)
  .any.text.csma_output_packet
-                0x00004d5e      0x174 build/z1/contiki-ng-z1.a(csma-output.o)
-                0x00004d5e                csma_output_packet
+                0x00004d68      0x174 build/z1/contiki-ng-z1.a(csma-output.o)
+                0x00004d68                csma_output_packet
  .any.text.csma_output_init
-                0x00004ed2       0x1a build/z1/contiki-ng-z1.a(csma-output.o)
-                0x00004ed2                csma_output_init
+                0x00004edc       0x1a build/z1/contiki-ng-z1.a(csma-output.o)
+                0x00004edc                csma_output_init
  .any.text.uip_ds6_default_prefix
-                0x00004eec        0x6 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00004eec                uip_ds6_default_prefix
+                0x00004ef6        0x6 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00004ef6                uip_ds6_default_prefix
  .any.text.uip_ds6_list_loop
-                0x00004ef2       0x72 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00004ef2                uip_ds6_list_loop
+                0x00004efc       0x72 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00004efc                uip_ds6_list_loop
  .any.text.uip_ds6_prefix_add
-                0x00004f64       0x70 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00004f64                uip_ds6_prefix_add
+                0x00004f6e       0x70 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00004f6e                uip_ds6_prefix_add
  .any.text.uip_ds6_is_addr_onlink
-                0x00004fd4       0x42 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00004fd4                uip_ds6_is_addr_onlink
+                0x00004fde       0x42 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00004fde                uip_ds6_is_addr_onlink
  .any.text.uip_ds6_addr_lookup
-                0x00005016       0x2a build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005016                uip_ds6_addr_lookup
+                0x00005020       0x2a build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005020                uip_ds6_addr_lookup
  .any.text.uip_ds6_get_link_local
-                0x00005040       0x3e build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005040                uip_ds6_get_link_local
+                0x0000504a       0x3e build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x0000504a                uip_ds6_get_link_local
  .any.text.uip_ds6_maddr_add
-                0x0000507e       0x48 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x0000507e                uip_ds6_maddr_add
+                0x00005088       0x48 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005088                uip_ds6_maddr_add
  .any.text.uip_ds6_addr_add
-                0x000050c6       0xb4 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x000050c6                uip_ds6_addr_add
+                0x000050d0       0xb4 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x000050d0                uip_ds6_addr_add
  .any.text.uip_ds6_maddr_rm
-                0x0000517a        0xa build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x0000517a                uip_ds6_maddr_rm
+                0x00005184        0xa build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005184                uip_ds6_maddr_rm
  .any.text.uip_ds6_maddr_lookup
-                0x00005184       0x2a build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005184                uip_ds6_maddr_lookup
+                0x0000518e       0x2a build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x0000518e                uip_ds6_maddr_lookup
  .any.text.uip_ds6_addr_rm
-                0x000051ae       0x54 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x000051ae                uip_ds6_addr_rm
+                0x000051b8       0x54 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x000051b8                uip_ds6_addr_rm
  .any.text.uip_ds6_periodic
-                0x00005202       0x46 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005202                uip_ds6_periodic
+                0x0000520c       0x46 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x0000520c                uip_ds6_periodic
  .any.text.uip_ds6_set_addr_iid
-                0x00005248       0x14 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005248                uip_ds6_set_addr_iid
+                0x00005252       0x14 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005252                uip_ds6_set_addr_iid
  .any.text.uip_ds6_set_lladdr_from_iid
-                0x0000525c       0x14 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x0000525c                uip_ds6_set_lladdr_from_iid
+                0x00005266       0x14 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005266                uip_ds6_set_lladdr_from_iid
  .any.text.get_match_length
-                0x00005270       0x3c build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005270                get_match_length
+                0x0000527a       0x3c build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x0000527a                get_match_length
  .any.text.uip_ds6_select_src
-                0x000052ac       0x9a build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x000052ac                uip_ds6_select_src
+                0x000052b6       0x9a build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x000052b6                uip_ds6_select_src
  .any.text.uip_ds6_compute_reachable_time
-                0x00005346       0x36 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x00005346                uip_ds6_compute_reachable_time
+                0x00005350       0x36 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005350                uip_ds6_compute_reachable_time
  .any.text.uip_ds6_init
-                0x0000537c      0x164 build/z1/contiki-ng-z1.a(uip-ds6.o)
-                0x0000537c                uip_ds6_init
+                0x00005386      0x164 build/z1/contiki-ng-z1.a(uip-ds6.o)
+                0x00005386                uip_ds6_init
  .any.text.uip_udp_packet_send
-                0x000054e0       0x2a build/z1/contiki-ng-z1.a(uip-udp-packet.)
-                0x000054e0                uip_udp_packet_send
+                0x000054ea       0x2a build/z1/contiki-ng-z1.a(uip-udp-packet.)
+                0x000054ea                uip_udp_packet_send
  .any.text.uip_ds6_route_init
-                0x0000550a       0x12 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x0000550a                uip_ds6_route_init
+                0x00005514       0x12 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x00005514                uip_ds6_route_init
  .any.text.uip_ds6_route_nexthop
-                0x0000551c        0x4 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x0000551c                uip_ds6_route_nexthop
+                0x00005526        0x4 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x00005526                uip_ds6_route_nexthop
  .any.text.uip_ds6_route_lookup
-                0x00005520        0x4 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x00005520                uip_ds6_route_lookup
+                0x0000552a        0x4 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x0000552a                uip_ds6_route_lookup
  .any.text.uip_ds6_route_rm
-                0x00005524        0x2 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x00005524                uip_ds6_route_rm
+                0x0000552e        0x2 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x0000552e                uip_ds6_route_rm
  .any.text.uip_ds6_defrt_rm
-                0x00005526       0x38 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x00005526                uip_ds6_defrt_rm
+                0x00005530       0x38 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x00005530                uip_ds6_defrt_rm
  .any.text.uip_ds6_defrt_lookup
-                0x0000555e       0x3c build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x0000555e                uip_ds6_defrt_lookup
+                0x00005568       0x3c build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x00005568                uip_ds6_defrt_lookup
  .any.text.uip_ds6_defrt_add
-                0x0000559a       0x66 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x0000559a                uip_ds6_defrt_add
+                0x000055a4       0x66 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x000055a4                uip_ds6_defrt_add
  .any.text.uip_ds6_defrt_choose
-                0x00005600       0x36 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x00005600                uip_ds6_defrt_choose
+                0x0000560a       0x36 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x0000560a                uip_ds6_defrt_choose
  .any.text.uip_ds6_defrt_periodic
-                0x00005636       0x38 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
-                0x00005636                uip_ds6_defrt_periodic
+                0x00005640       0x38 build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+                0x00005640                uip_ds6_defrt_periodic
  .any.text.uip_ds6_nbr_rm
-                0x0000566e       0x1e build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x0000566e                uip_ds6_nbr_rm
+                0x00005678       0x1e build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x00005678                uip_ds6_nbr_rm
  .any.text.uip_ds6_neighbors_init
-                0x0000568c       0x12 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x0000568c                uip_ds6_neighbors_init
+                0x00005696       0x12 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x00005696                uip_ds6_neighbors_init
  .any.text.uip_ds6_nbr_add
-                0x0000569e       0x36 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x0000569e                uip_ds6_nbr_add
+                0x000056a8       0x36 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000056a8                uip_ds6_nbr_add
  .any.text.uip_ds6_nbr_get_ll
-                0x000056d4        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000056d4                uip_ds6_nbr_get_ll
+                0x000056de        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000056de                uip_ds6_nbr_get_ll
  .any.text.uip_ds6_nbr_head
-                0x000056e0        0xa build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000056e0                uip_ds6_nbr_head
+                0x000056ea        0xa build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000056ea                uip_ds6_nbr_head
  .any.text.uip_ds6_nbr_next
-                0x000056ea        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000056ea                uip_ds6_nbr_next
+                0x000056f4        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000056f4                uip_ds6_nbr_next
  .any.text.uip_ds6_nbr_lookup
-                0x000056f6       0x36 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000056f6                uip_ds6_nbr_lookup
+                0x00005700       0x36 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x00005700                uip_ds6_nbr_lookup
  .any.text.uip_ds6_nbr_ll_lookup
-                0x0000572c        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x0000572c                uip_ds6_nbr_ll_lookup
+                0x00005736        0xc build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x00005736                uip_ds6_nbr_ll_lookup
  .any.text.uip_ds6_nbr_update_ll
-                0x00005738       0x6e build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x00005738                uip_ds6_nbr_update_ll
+                0x00005742       0x6e build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x00005742                uip_ds6_nbr_update_ll
  .any.text.uip_ds6_nbr_ipaddr_from_lladdr
-                0x000057a6        0x6 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000057a6                uip_ds6_nbr_ipaddr_from_lladdr
+                0x000057b0        0x6 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000057b0                uip_ds6_nbr_ipaddr_from_lladdr
  .any.text.uip_ds6_nbr_lladdr_from_ipaddr
-                0x000057ac       0x12 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000057ac                uip_ds6_nbr_lladdr_from_ipaddr
+                0x000057b6       0x12 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000057b6                uip_ds6_nbr_lladdr_from_ipaddr
  .any.text.uip_ds6_link_callback
-                0x000057be        0x2 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
-                0x000057be                uip_ds6_link_callback
+                0x000057c8        0x2 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+                0x000057c8                uip_ds6_link_callback
  .any.text.tcpip_output
-                0x000057c0       0x22 build/z1/contiki-ng-z1.a(tcpip.o)
-                0x000057c0                tcpip_output
+                0x000057ca       0x22 build/z1/contiki-ng-z1.a(tcpip.o)
+                0x000057ca                tcpip_output
  .any.text.udp_new
-                0x000057e2       0x1a build/z1/contiki-ng-z1.a(tcpip.o)
-                0x000057e2                udp_new
+                0x000057ec       0x1a build/z1/contiki-ng-z1.a(tcpip.o)
+                0x000057ec                udp_new
  .any.text.tcpip_input
-                0x000057fc       0x1e build/z1/contiki-ng-z1.a(tcpip.o)
-                0x000057fc                tcpip_input
+                0x00005806       0x1e build/z1/contiki-ng-z1.a(tcpip.o)
+                0x00005806                tcpip_input
  .any.text.tcpip_ipv6_output
-                0x0000581a      0x10c build/z1/contiki-ng-z1.a(tcpip.o)
-                0x0000581a                tcpip_ipv6_output
+                0x00005824      0x10c build/z1/contiki-ng-z1.a(tcpip.o)
+                0x00005824                tcpip_ipv6_output
  .any.text.packet_input.part.3
-                0x00005926       0x12 build/z1/contiki-ng-z1.a(tcpip.o)
+                0x00005930       0x12 build/z1/contiki-ng-z1.a(tcpip.o)
  .any.text.process_thread_tcpip_process
-                0x00005938       0xc2 build/z1/contiki-ng-z1.a(tcpip.o)
+                0x00005942       0xc2 build/z1/contiki-ng-z1.a(tcpip.o)
  .any.text.tcpip_uipcall
-                0x000059fa       0x2a build/z1/contiki-ng-z1.a(tcpip.o)
-                0x000059fa                tcpip_uipcall
+                0x00005a04       0x2a build/z1/contiki-ng-z1.a(tcpip.o)
+                0x00005a04                tcpip_uipcall
  .any.text.chksum
-                0x00005a24       0x32 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005a2e       0x32 build/z1/contiki-ng-z1.a(uip6.o)
  .any.text.upper_layer_chksum
-                0x00005a56       0x54 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005a60       0x54 build/z1/contiki-ng-z1.a(uip6.o)
  .any.text.ext_hdr_options_process
-                0x00005aaa       0x92 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005ab4       0x92 build/z1/contiki-ng-z1.a(uip6.o)
  .any.text.uip_check_mtu
-                0x00005b3c       0x1e build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005b46       0x1e build/z1/contiki-ng-z1.a(uip6.o)
  .any.text.uip_update_ttl
-                0x00005b5a       0x24 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005b64       0x24 build/z1/contiki-ng-z1.a(uip6.o)
  .any.text.uip_icmp6chksum
-                0x00005b7e        0xa build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005b7e                uip_icmp6chksum
- .any.text.uip_udpchksum
                 0x00005b88        0xa build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005b88                uip_udpchksum
+                0x00005b88                uip_icmp6chksum
+ .any.text.uip_udpchksum
+                0x00005b92        0xa build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005b92                uip_udpchksum
  .any.text.uip_init
-                0x00005b92       0x24 build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005b92                uip_init
+                0x00005b9c       0x24 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005b9c                uip_init
  .any.text.uip_remove_ext_hdr
-                0x00005bb6       0x5e build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005bb6                uip_remove_ext_hdr
+                0x00005bc0       0x5e build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005bc0                uip_remove_ext_hdr
  .any.text.uip_udp_new
-                0x00005c14       0x84 build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005c14                uip_udp_new
+                0x00005c1e       0x84 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005c1e                uip_udp_new
  .any.text.uip_process
-                0x00005c98      0x4b6 build/z1/contiki-ng-z1.a(uip6.o)
-                0x00005c98                uip_process
+                0x00005ca2      0x4b6 build/z1/contiki-ng-z1.a(uip6.o)
+                0x00005ca2                uip_process
  .any.text.uip_htonl
-                0x0000614e       0x2a build/z1/contiki-ng-z1.a(uip6.o)
-                0x0000614e                uip_htonl
+                0x00006158       0x2a build/z1/contiki-ng-z1.a(uip6.o)
+                0x00006158                uip_htonl
  .any.text.ns_input
-                0x00006178      0x27c build/z1/contiki-ng-z1.a(uip-nd6.o)
+                0x00006182      0x27c build/z1/contiki-ng-z1.a(uip-nd6.o)
  .any.text.uip_nd6_init
-                0x000063f4        0xa build/z1/contiki-ng-z1.a(uip-nd6.o)
-                0x000063f4                uip_nd6_init
+                0x000063fe        0xa build/z1/contiki-ng-z1.a(uip-nd6.o)
+                0x000063fe                uip_nd6_init
  .any.text.clear_fragments
-                0x000063fe       0x38 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006408       0x38 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.addr_context_lookup_by_number
-                0x00006436       0x16 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006440       0x16 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.sicslowpan_init
-                0x0000644c       0x18 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000644c                sicslowpan_init
+                0x00006456       0x18 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006456                sicslowpan_init
  .any.text.set_packet_attrs
-                0x00006464       0x66 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000646e       0x66 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.compress_addr_64
-                0x000064ca       0x9a build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x000064d4       0x9a build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.addr_context_lookup_by_prefix
-                0x00006564       0x20 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000656e       0x20 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.send_packet
-                0x00006584       0x1a build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000658e       0x1a build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.fragment_copy_payload_and_send
-                0x0000659e       0x5e build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x000065a8       0x5e build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.output
-                0x000065fc      0x772 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006606      0x772 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.packet_sent
-                0x00006d6e       0x4e build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006d78       0x4e build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.store_fragment
-                0x00006dbc       0x72 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006dc6       0x72 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.add_fragment
-                0x00006e2e      0x16a build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006e38      0x16a build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.uncompress_addr
-                0x00006f98       0x96 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00006fa2       0x96 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.input
-                0x0000702e      0x8d6 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x00007038      0x8d6 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .any.text.uiplib_ipaddr_snprint
-                0x00007904      0x114 build/z1/contiki-ng-z1.a(uiplib.o)
-                0x00007904                uiplib_ipaddr_snprint
+                0x0000790e      0x114 build/z1/contiki-ng-z1.a(uiplib.o)
+                0x0000790e                uiplib_ipaddr_snprint
  .any.text.uiplib_ipaddr_print
-                0x00007a18       0x32 build/z1/contiki-ng-z1.a(uiplib.o)
-                0x00007a18                uiplib_ipaddr_print
+                0x00007a22       0x32 build/z1/contiki-ng-z1.a(uiplib.o)
+                0x00007a22                uiplib_ipaddr_print
  .any.text.rpl_has_joined
-                0x00007a4a       0x12 build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007a4a                rpl_has_joined
+                0x00007a54       0x12 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a54                rpl_has_joined
  .any.text.rpl_is_reachable
-                0x00007a5c       0x12 build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007a5c                rpl_is_reachable
+                0x00007a66       0x12 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a66                rpl_is_reachable
  .any.text.neighbor_state_changed
-                0x00007a6e        0x2 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a78        0x2 build/z1/contiki-ng-z1.a(rpl.o)
  .any.text.drop_route
-                0x00007a70        0x2 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a7a        0x2 build/z1/contiki-ng-z1.a(rpl.o)
  .any.text.rpl_get_leaf_only
-                0x00007a72        0x6 build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007a72                rpl_get_leaf_only
+                0x00007a7c        0x6 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a7c                rpl_get_leaf_only
  .any.text.get_sr_node_ipaddr
-                0x00007a78       0x30 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007a82       0x30 build/z1/contiki-ng-z1.a(rpl.o)
  .any.text.init
-                0x00007aa8       0x66 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007ab2       0x66 build/z1/contiki-ng-z1.a(rpl.o)
  .any.text.set_ip_from_prefix
-                0x00007b0e       0x30 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007b18       0x30 build/z1/contiki-ng-z1.a(rpl.o)
  .any.text.rpl_link_callback
-                0x00007b3e       0x7c build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007b3e                rpl_link_callback
+                0x00007b48       0x7c build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007b48                rpl_link_callback
  .any.text.rpl_lollipop_greater_than
-                0x00007bba       0x3c build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007bba                rpl_lollipop_greater_than
+                0x00007bc4       0x3c build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007bc4                rpl_lollipop_greater_than
  .any.text.rpl_get_global_address
-                0x00007bf6       0x8c build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007bf6                rpl_get_global_address
+                0x00007c00       0x8c build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007c00                rpl_get_global_address
  .any.text.rpl_reset_prefix
-                0x00007c82       0x70 build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007c82                rpl_reset_prefix
+                0x00007c8c       0x70 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007c8c                rpl_reset_prefix
  .any.text.rpl_set_prefix_from_addr
-                0x00007cf2       0xe8 build/z1/contiki-ng-z1.a(rpl.o)
-                0x00007cf2                rpl_set_prefix_from_addr
+                0x00007cfc       0xe8 build/z1/contiki-ng-z1.a(rpl.o)
+                0x00007cfc                rpl_set_prefix_from_addr
  .any.text.get32
-                0x00007dda       0x3e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007de4       0x3e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.set32
-                0x00007e18       0x2a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007e22       0x2a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.get16
-                0x00007e42        0xe build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007e4c        0xe build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.set16
-                0x00007e50       0x10 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007e5a       0x10 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.dao_ack_input
-                0x00007e60       0xc4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007e6a       0xc4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.dao_input
-                0x00007f24      0x248 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00007f2e      0x248 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.dio_input
-                0x0000816c      0x454 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008176      0x454 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.dis_input
-                0x000085c0       0x88 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x000085ca       0x88 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .any.text.rpl_icmp6_update_nbr_table
-                0x00008648       0x98 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x00008648                rpl_icmp6_update_nbr_table
+                0x00008652       0x98 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008652                rpl_icmp6_update_nbr_table
  .any.text.rpl_icmp6_dis_output
-                0x000086e0       0x76 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x000086e0                rpl_icmp6_dis_output
+                0x000086ea       0x76 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x000086ea                rpl_icmp6_dis_output
  .any.text.rpl_icmp6_dio_output
-                0x00008756      0x2a2 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x00008756                rpl_icmp6_dio_output
+                0x00008760      0x2a2 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008760                rpl_icmp6_dio_output
  .any.text.rpl_icmp6_dao_output
-                0x000089f8      0x1f2 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x000089f8                rpl_icmp6_dao_output
+                0x00008a02      0x1f2 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008a02                rpl_icmp6_dao_output
  .any.text.rpl_icmp6_dao_ack_output
-                0x00008bea       0xa0 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x00008bea                rpl_icmp6_dao_ack_output
+                0x00008bf4       0xa0 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008bf4                rpl_icmp6_dao_ack_output
  .any.text.rpl_icmp6_init
-                0x00008c8a       0x22 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
-                0x00008c8a                rpl_icmp6_init
+                0x00008c94       0x22 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x00008c94                rpl_icmp6_init
  .any.text.init_dag
-                0x00008cac       0xc8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008cb6       0xc8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .any.text.process_dio_init_dag
-                0x00008d74      0x1a4 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008d7e      0x1a4 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .any.text.rpl_dag_state_to_str
-                0x00008f18       0x12 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00008f18                rpl_dag_state_to_str
+                0x00008f22       0x12 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008f22                rpl_dag_state_to_str
  .any.text.rpl_dag_get_root_ipaddr
-                0x00008f2a       0x1e build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00008f2a                rpl_dag_get_root_ipaddr
+                0x00008f34       0x1e build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008f34                rpl_dag_get_root_ipaddr
  .any.text.rpl_dag_leave
-                0x00008f48       0x98 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00008f48                rpl_dag_leave
+                0x00008f52       0x98 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008f52                rpl_dag_leave
  .any.text.rpl_dag_poison_and_leave
-                0x00008fe0        0xc build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00008fe0                rpl_dag_poison_and_leave
+                0x00008fea        0xc build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008fea                rpl_dag_poison_and_leave
  .any.text.rpl_dag_periodic
-                0x00008fec       0xb6 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00008fec                rpl_dag_periodic
+                0x00008ff6       0xb6 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00008ff6                rpl_dag_periodic
  .any.text.rpl_is_addr_in_our_dag
-                0x000090a2       0x26 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000090a2                rpl_is_addr_in_our_dag
+                0x000090ac       0x26 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x000090ac                rpl_is_addr_in_our_dag
  .any.text.rpl_local_repair
-                0x000090c8       0x56 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000090c8                rpl_local_repair
+                0x000090d2       0x56 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x000090d2                rpl_local_repair
  .any.text.rpl_global_repair
-                0x0000911e       0x74 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x0000911e                rpl_global_repair
+                0x00009128       0x74 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00009128                rpl_global_repair
  .any.text.rpl_dag_ready_to_advertise
-                0x00009192       0x22 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00009192                rpl_dag_ready_to_advertise
+                0x0000919c       0x22 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000919c                rpl_dag_ready_to_advertise
  .any.text.rpl_dag_update_state
-                0x000091b4      0x204 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000091b4                rpl_dag_update_state
+                0x000091be      0x204 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x000091be                rpl_dag_update_state
  .any.text.rpl_process_dio
-                0x000093b8      0x344 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000093b8                rpl_process_dio
+                0x000093c2      0x344 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x000093c2                rpl_process_dio
  .any.text.rpl_process_dis
-                0x000096fc       0x4e build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000096fc                rpl_process_dis
+                0x00009706       0x4e build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00009706                rpl_process_dis
  .any.text.rpl_process_dao
-                0x0000974a       0x8a build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x0000974a                rpl_process_dao
+                0x00009754       0x8a build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00009754                rpl_process_dao
  .any.text.rpl_process_dao_ack
-                0x000097d4       0x80 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x000097d4                rpl_process_dao_ack
+                0x000097de       0x80 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x000097de                rpl_process_dao_ack
  .any.text.rpl_process_hbh
-                0x00009854       0x26 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00009854                rpl_process_hbh
+                0x0000985e       0x26 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000985e                rpl_process_hbh
  .any.text.rpl_dag_init_root
-                0x0000987a       0xfe build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x0000987a                rpl_dag_init_root
+                0x00009884       0xfe build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00009884                rpl_dag_init_root
  .any.text.rpl_dag_init
-                0x00009978       0x10 build/z1/contiki-ng-z1.a(rpl-dag.o)
-                0x00009978                rpl_dag_init
+                0x00009982       0x10 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x00009982                rpl_dag_init
  .any.text.rpl_dag_root_set_prefix
-                0x00009988       0xf6 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
-                0x00009988                rpl_dag_root_set_prefix
+                0x00009992       0xf6 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x00009992                rpl_dag_root_set_prefix
  .any.text.rpl_dag_root_start
-                0x00009a7e       0xcc build/z1/contiki-ng-z1.a(rpl-dag-root.o)
-                0x00009a7e                rpl_dag_root_start
+                0x00009a88       0xcc build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x00009a88                rpl_dag_root_start
  .any.text.rpl_dag_root_is_root
-                0x00009b4a       0x14 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
-                0x00009b4a                rpl_dag_root_is_root
+                0x00009b54       0x14 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x00009b54                rpl_dag_root_is_root
  .any.text.rpl_dag_root_print_links
-                0x00009b5e       0xf0 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
-                0x00009b5e                rpl_dag_root_print_links
+                0x00009b68       0xf0 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x00009b68                rpl_dag_root_print_links
  .any.text.init_platform
-                0x00009c4e        0xc build/z1/contiki-ng-z1.a(contiki-z1-plat)
-                0x00009c4e                init_platform
+                0x00009c58        0xc build/z1/contiki-ng-z1.a(contiki-z1-plat)
+                0x00009c58                init_platform
  .any.text.leds_init
-                0x00009c5a        0x6 build/z1/contiki-ng-z1.a(leds.o)
-                0x00009c5a                leds_init
+                0x00009c64        0x6 build/z1/contiki-ng-z1.a(leds.o)
+                0x00009c64                leds_init
  .any.text.leds_on
-                0x00009c60       0x12 build/z1/contiki-ng-z1.a(leds.o)
-                0x00009c60                leds_on
+                0x00009c6a       0x12 build/z1/contiki-ng-z1.a(leds.o)
+                0x00009c6a                leds_on
  .any.text.leds_off
-                0x00009c72       0x12 build/z1/contiki-ng-z1.a(leds.o)
-                0x00009c72                leds_off
+                0x00009c7c       0x12 build/z1/contiki-ng-z1.a(leds.o)
+                0x00009c7c                leds_off
  .any.text.wait_ready
-                0x00009c84       0x46 build/z1/contiki-ng-z1.a(xmem.o)
+                0x00009c8e       0x46 build/z1/contiki-ng-z1.a(xmem.o)
  .any.text.xmem_init
-                0x00009cca       0x1e build/z1/contiki-ng-z1.a(xmem.o)
-                0x00009cca                xmem_init
+                0x00009cd4       0x1e build/z1/contiki-ng-z1.a(xmem.o)
+                0x00009cd4                xmem_init
  .any.text.xmem_pread
-                0x00009ce8       0x88 build/z1/contiki-ng-z1.a(xmem.o)
-                0x00009ce8                xmem_pread
+                0x00009cf2       0x88 build/z1/contiki-ng-z1.a(xmem.o)
+                0x00009cf2                xmem_pread
  .any.text.spi_init
-                0x00009d70       0x32 build/z1/contiki-ng-z1.a(spi-legacy.o)
-                0x00009d70                spi_init
+                0x00009d7a       0x32 build/z1/contiki-ng-z1.a(spi-legacy.o)
+                0x00009d7a                spi_init
  .any.text.get_object
-                0x00009da2        0x4 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009dac        0x4 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.set_object
-                0x00009da6        0x4 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009db0        0x4 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.strobe
-                0x00009daa       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009db4       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.getreg
-                0x00009dc4       0x46 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009dce       0x46 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.setreg
-                0x00009e0a       0x44 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009e14       0x44 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.write_ram
-                0x00009e4e       0x72 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009e58       0x72 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.write_fifo_buf
-                0x00009ec0       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009eca       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.get_status
-                0x00009ef8       0x1e build/z1/contiki-ng-z1.a(cc2420.o)
- .any.text.on   0x00009f16       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009f02       0x1e build/z1/contiki-ng-z1.a(cc2420.o)
+ .any.text.on   0x00009f20       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_receiving_packet
-                0x00009f30        0xa build/z1/contiki-ng-z1.a(cc2420.o)
- .any.text.pending_packet
                 0x00009f3a        0xa build/z1/contiki-ng-z1.a(cc2420.o)
+ .any.text.pending_packet
+                0x00009f44        0xa build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.wait_for_transmission
-                0x00009f44       0x22 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009f4e       0x22 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.wait_for_status
-                0x00009f66       0x24 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009f70       0x24 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.getrxdata
-                0x00009f8a       0x4c build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009f94       0x4c build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.flushrx
-                0x00009fd6       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
- .any.text.off  0x00009ff0       0x28 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x00009fe0       0x1a build/z1/contiki-ng-z1.a(cc2420.o)
+ .any.text.off  0x00009ffa       0x28 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.RELEASE_LOCK
-                0x0000a018       0x28 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a022       0x28 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.set_frame_filtering
-                0x0000a040       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a04a       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.set_auto_ack
-                0x0000a070       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a07a       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.set_poll_mode
-                0x0000a0a0       0x2c build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a0aa       0x2c build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_prepare
-                0x0000a0cc       0x42 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a0d6       0x42 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_on
-                0x0000a10e       0x22 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a10e                cc2420_on
+                0x0000a118       0x22 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a118                cc2420_on
  .any.text.cc2420_transmit
-                0x0000a130       0x66 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a13a       0x66 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_send
-                0x0000a196       0x12 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a1a0       0x12 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_off
-                0x0000a1a8       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a1a8                cc2420_off
+                0x0000a1b2       0x30 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a1b2                cc2420_off
  .any.text.cc2420_cca
-                0x0000a1d8       0x54 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a1e2       0x54 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_read
-                0x0000a22c       0xba build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a236       0xba build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.process_thread_cc2420_process
-                0x0000a2e6       0x62 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a2f0       0x62 build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_set_channel
-                0x0000a348       0x3a build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a348                cc2420_set_channel
+                0x0000a352       0x3a build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a352                cc2420_set_channel
  .any.text.cc2420_set_pan_addr
-                0x0000a382       0x4c build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a382                cc2420_set_pan_addr
+                0x0000a38c       0x4c build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a38c                cc2420_set_pan_addr
  .any.text.cc2420_interrupt
-                0x0000a3ce       0x16 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a3ce                cc2420_interrupt
+                0x0000a3d8       0x16 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a3d8                cc2420_interrupt
  .any.text.cc2420_set_txpower
-                0x0000a3e4       0x2c build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a3e4                cc2420_set_txpower
+                0x0000a3ee       0x2c build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a3ee                cc2420_set_txpower
  .any.text.cc2420_get_txpower
-                0x0000a410       0x1e build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a410                cc2420_get_txpower
+                0x0000a41a       0x1e build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a41a                cc2420_get_txpower
  .any.text.cc2420_rssi
-                0x0000a42e       0x48 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a42e                cc2420_rssi
+                0x0000a438       0x48 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a438                cc2420_rssi
  .any.text.get_value
-                0x0000a476      0x11e build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a480      0x11e build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_set_cca_threshold
-                0x0000a594       0x16 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a594                cc2420_set_cca_threshold
+                0x0000a59e       0x16 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a59e                cc2420_set_cca_threshold
  .any.text.set_value
-                0x0000a5aa      0x14a build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a5b4      0x14a build/z1/contiki-ng-z1.a(cc2420.o)
  .any.text.cc2420_init
-                0x0000a6f4       0xea build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000a6f4                cc2420_init
+                0x0000a6fe       0xea build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000a6fe                cc2420_init
  .any.text.cc2420_arch_init
-                0x0000a7de       0x1a build/z1/contiki-ng-z1.a(cc2420-arch.o)
-                0x0000a7de                cc2420_arch_init
+                0x0000a7e8       0x1a build/z1/contiki-ng-z1.a(cc2420-arch.o)
+                0x0000a7e8                cc2420_arch_init
  .any.text.node_id_z1_restore
-                0x0000a7f8       0x4c build/z1/contiki-ng-z1.a(node-id-z1.o)
-                0x0000a7f8                node_id_z1_restore
+                0x0000a802       0x4c build/z1/contiki-ng-z1.a(node-id-z1.o)
+                0x0000a802                node_id_z1_restore
  .any.text.process_thread_sensors_process
-                0x0000a844       0xc2 build/z1/contiki-ng-z1.a(sensors.o)
+                0x0000a84e       0xc2 build/z1/contiki-ng-z1.a(sensors.o)
  .any.text.sensors_changed
-                0x0000a906       0x2a build/z1/contiki-ng-z1.a(sensors.o)
-                0x0000a906                sensors_changed
+                0x0000a910       0x2a build/z1/contiki-ng-z1.a(sensors.o)
+                0x0000a910                sensors_changed
  .any.text.uart0_active
-                0x0000a930        0xe build/z1/contiki-ng-z1.a(uart0.o)
-                0x0000a930                uart0_active
+                0x0000a93a        0xe build/z1/contiki-ng-z1.a(uart0.o)
+                0x0000a93a                uart0_active
  .any.text.uart0_writeb
-                0x0000a93e       0x16 build/z1/contiki-ng-z1.a(uart0.o)
-                0x0000a93e                uart0_writeb
+                0x0000a948       0x16 build/z1/contiki-ng-z1.a(uart0.o)
+                0x0000a948                uart0_writeb
  .any.text.uart0_init
-                0x0000a954       0x4e build/z1/contiki-ng-z1.a(uart0.o)
-                0x0000a954                uart0_init
+                0x0000a95e       0x4e build/z1/contiki-ng-z1.a(uart0.o)
+                0x0000a95e                uart0_init
  .any.text.status
-                0x0000a9a2       0x12 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000a9ac       0x12 build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.accm_write_reg
-                0x0000a9b4       0x2e build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000a9be       0x2e build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.accm_write_stream
-                0x0000a9e2       0x2a build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000a9ec       0x2a build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.accm_read_reg
-                0x0000aa0c       0x54 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000aa16       0x54 build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.process_thread_accmeter_process
-                0x0000aa60       0x56 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000aa6a       0x56 build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.accm_read_axis.part.0
-                0x0000aab6       0x5a build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000aac0       0x5a build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.value
-                0x0000ab10       0x1e build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000ab1a       0x1e build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.accm_init
-                0x0000ab2e       0x78 build/z1/contiki-ng-z1.a(adxl345.o)
-                0x0000ab2e                accm_init
+                0x0000ab38       0x78 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000ab38                accm_init
  .any.text.accm_stop
-                0x0000aba6       0x32 build/z1/contiki-ng-z1.a(adxl345.o)
-                0x0000aba6                accm_stop
+                0x0000abb0       0x32 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000abb0                accm_stop
  .any.text.configure
-                0x0000abd8       0x26 build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000abe2       0x26 build/z1/contiki-ng-z1.a(adxl345.o)
  .any.text.status
-                0x0000abfe       0x12 build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ac08       0x12 build/z1/contiki-ng-z1.a(tmp102.o)
  .any.text.tmp102_init
-                0x0000ac10       0x24 build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000ac10                tmp102_init
+                0x0000ac1a       0x24 build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ac1a                tmp102_init
  .any.text.tmp102_stop
-                0x0000ac34        0xa build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000ac34                tmp102_stop
+                0x0000ac3e        0xa build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ac3e                tmp102_stop
  .any.text.configure
-                0x0000ac3e       0x26 build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ac48       0x26 build/z1/contiki-ng-z1.a(tmp102.o)
  .any.text.tmp102_read_reg
-                0x0000ac64       0x5e build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000ac64                tmp102_read_reg
+                0x0000ac6e       0x5e build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ac6e                tmp102_read_reg
  .any.text.tmp102_read_temp_x100
-                0x0000acc2       0x58 build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000acc2                tmp102_read_temp_x100
+                0x0000accc       0x58 build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000accc                tmp102_read_temp_x100
  .any.text.value
-                0x0000ad1a        0x6 build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000ad24        0x6 build/z1/contiki-ng-z1.a(tmp102.o)
  .any.text.leds_arch_init
-                0x0000ad20        0xe build/z1/contiki-ng-z1.a(leds-arch.o)
-                0x0000ad20                leds_arch_init
+                0x0000ad2a        0xe build/z1/contiki-ng-z1.a(leds-arch.o)
+                0x0000ad2a                leds_arch_init
  .any.text.leds_arch_get
-                0x0000ad2e       0x34 build/z1/contiki-ng-z1.a(leds-arch.o)
-                0x0000ad2e                leds_arch_get
+                0x0000ad38       0x34 build/z1/contiki-ng-z1.a(leds-arch.o)
+                0x0000ad38                leds_arch_get
  .any.text.leds_arch_set
-                0x0000ad62       0x3e build/z1/contiki-ng-z1.a(leds-arch.o)
-                0x0000ad62                leds_arch_set
+                0x0000ad6c       0x3e build/z1/contiki-ng-z1.a(leds-arch.o)
+                0x0000ad6c                leds_arch_set
  .any.text.rtimer_arch_init
-                0x0000ada0        0xe build/z1/contiki-ng-z1.a(rtimer-arch.o)
-                0x0000ada0                rtimer_arch_init
+                0x0000adaa        0xe build/z1/contiki-ng-z1.a(rtimer-arch.o)
+                0x0000adaa                rtimer_arch_init
  .any.text.rtimer_arch_now
-                0x0000adae        0xe build/z1/contiki-ng-z1.a(rtimer-arch.o)
-                0x0000adae                rtimer_arch_now
+                0x0000adb8        0xe build/z1/contiki-ng-z1.a(rtimer-arch.o)
+                0x0000adb8                rtimer_arch_now
  .any.text.rtimer_arch_schedule
-                0x0000adbc        0x6 build/z1/contiki-ng-z1.a(rtimer-arch.o)
-                0x0000adbc                rtimer_arch_schedule
+                0x0000adc6        0x6 build/z1/contiki-ng-z1.a(rtimer-arch.o)
+                0x0000adc6                rtimer_arch_schedule
  .any.text.stimer_set
-                0x0000adc2       0x1c build/z1/contiki-ng-z1.a(stimer.o)
-                0x0000adc2                stimer_set
+                0x0000adcc       0x1c build/z1/contiki-ng-z1.a(stimer.o)
+                0x0000adcc                stimer_set
  .any.text.stimer_expired
-                0x0000adde       0x30 build/z1/contiki-ng-z1.a(stimer.o)
-                0x0000adde                stimer_expired
+                0x0000ade8       0x30 build/z1/contiki-ng-z1.a(stimer.o)
+                0x0000ade8                stimer_expired
  .any.text.memb_init
-                0x0000ae0e       0x36 build/z1/contiki-ng-z1.a(memb.o)
-                0x0000ae0e                memb_init
+                0x0000ae18       0x36 build/z1/contiki-ng-z1.a(memb.o)
+                0x0000ae18                memb_init
  .any.text.memb_alloc
-                0x0000ae44       0x3e build/z1/contiki-ng-z1.a(memb.o)
-                0x0000ae44                memb_alloc
+                0x0000ae4e       0x3e build/z1/contiki-ng-z1.a(memb.o)
+                0x0000ae4e                memb_alloc
  .any.text.memb_free
-                0x0000ae82       0x32 build/z1/contiki-ng-z1.a(memb.o)
-                0x0000ae82                memb_free
+                0x0000ae8c       0x32 build/z1/contiki-ng-z1.a(memb.o)
+                0x0000ae8c                memb_free
  .any.text.memb_inmemb
-                0x0000aeb4       0x2a build/z1/contiki-ng-z1.a(memb.o)
-                0x0000aeb4                memb_inmemb
+                0x0000aebe       0x2a build/z1/contiki-ng-z1.a(memb.o)
+                0x0000aebe                memb_inmemb
  .any.text.memb_numfree
-                0x0000aede       0x26 build/z1/contiki-ng-z1.a(memb.o)
-                0x0000aede                memb_numfree
+                0x0000aee8       0x26 build/z1/contiki-ng-z1.a(memb.o)
+                0x0000aee8                memb_numfree
  .any.text.item_from_index
-                0x0000af04       0x2a build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000af0e       0x2a build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.index_from_key
-                0x0000af2e       0x26 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000af38       0x26 build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.index_from_item
-                0x0000af54       0x1e build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000af5e       0x1e build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.nbr_set_bit
-                0x0000af72       0x50 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000af7c       0x50 build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.index_from_lladdr
-                0x0000afc2       0x3e build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000afcc       0x3e build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.nbr_get_bit.constprop.0
-                0x0000b000       0x2c build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b00a       0x2c build/z1/contiki-ng-z1.a(nbr-table.o)
  .any.text.nbr_table_is_registered
-                0x0000b02c       0x22 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b02c                nbr_table_is_registered
+                0x0000b036       0x22 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b036                nbr_table_is_registered
  .any.text.nbr_table_register
-                0x0000b04e       0x3c build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b04e                nbr_table_register
+                0x0000b058       0x3c build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b058                nbr_table_register
  .any.text.nbr_table_next
-                0x0000b08a       0x4c build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b08a                nbr_table_next
+                0x0000b094       0x4c build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b094                nbr_table_next
  .any.text.nbr_table_head
-                0x0000b0d6       0x36 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b0d6                nbr_table_head
+                0x0000b0e0       0x36 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b0e0                nbr_table_head
  .any.text.nbr_table_add_lladdr
-                0x0000b10c      0x14e build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b10c                nbr_table_add_lladdr
+                0x0000b116      0x14e build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b116                nbr_table_add_lladdr
  .any.text.nbr_table_get_from_lladdr
-                0x0000b25a       0x28 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b25a                nbr_table_get_from_lladdr
+                0x0000b264       0x28 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b264                nbr_table_get_from_lladdr
  .any.text.nbr_table_remove
-                0x0000b282       0x2a build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b282                nbr_table_remove
+                0x0000b28c       0x2a build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b28c                nbr_table_remove
  .any.text.nbr_table_lock
-                0x0000b2ac       0x10 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b2ac                nbr_table_lock
+                0x0000b2b6       0x10 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b2b6                nbr_table_lock
  .any.text.nbr_table_unlock
-                0x0000b2bc       0x10 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b2bc                nbr_table_unlock
+                0x0000b2c6       0x10 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b2c6                nbr_table_unlock
  .any.text.nbr_table_get_lladdr
-                0x0000b2cc       0x20 build/z1/contiki-ng-z1.a(nbr-table.o)
-                0x0000b2cc                nbr_table_get_lladdr
+                0x0000b2d6       0x20 build/z1/contiki-ng-z1.a(nbr-table.o)
+                0x0000b2d6                nbr_table_get_lladdr
  .any.text.periodic
-                0x0000b2ec       0x2c build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b2f6       0x2c build/z1/contiki-ng-z1.a(link-stats.o)
  .any.text.link_stats_from_lladdr
-                0x0000b318        0xc build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b318                link_stats_from_lladdr
+                0x0000b322        0xc build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b322                link_stats_from_lladdr
  .any.text.link_stats_is_fresh
-                0x0000b324       0x30 build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b324                link_stats_is_fresh
+                0x0000b32e       0x30 build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b32e                link_stats_is_fresh
  .any.text.guess_etx_from_rssi
-                0x0000b354       0x42 build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b354                guess_etx_from_rssi
+                0x0000b35e       0x42 build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b35e                guess_etx_from_rssi
  .any.text.link_stats_packet_sent
-                0x0000b396       0xcc build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b396                link_stats_packet_sent
+                0x0000b3a0       0xcc build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b3a0                link_stats_packet_sent
  .any.text.link_stats_input_callback
-                0x0000b462       0xaa build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b462                link_stats_input_callback
+                0x0000b46c       0xaa build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b46c                link_stats_input_callback
  .any.text.link_stats_reset
-                0x0000b50c       0x2a build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b50c                link_stats_reset
+                0x0000b516       0x2a build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b516                link_stats_reset
  .any.text.link_stats_init
-                0x0000b536       0x22 build/z1/contiki-ng-z1.a(link-stats.o)
-                0x0000b536                link_stats_init
+                0x0000b540       0x22 build/z1/contiki-ng-z1.a(link-stats.o)
+                0x0000b540                link_stats_init
  .any.text.mac_sequence_is_duplicate
-                0x0000b558       0x6e build/z1/contiki-ng-z1.a(mac-sequence.o)
-                0x0000b558                mac_sequence_is_duplicate
+                0x0000b562       0x6e build/z1/contiki-ng-z1.a(mac-sequence.o)
+                0x0000b562                mac_sequence_is_duplicate
  .any.text.mac_sequence_register_seqno
-                0x0000b5c6       0x86 build/z1/contiki-ng-z1.a(mac-sequence.o)
-                0x0000b5c6                mac_sequence_register_seqno
+                0x0000b5d0       0x86 build/z1/contiki-ng-z1.a(mac-sequence.o)
+                0x0000b5d0                mac_sequence_register_seqno
  .any.text.mac_call_sent_callback
-                0x0000b64c       0x14 build/z1/contiki-ng-z1.a(mac.o)
-                0x0000b64c                mac_call_sent_callback
+                0x0000b656       0x14 build/z1/contiki-ng-z1.a(mac.o)
+                0x0000b656                mac_call_sent_callback
  .any.text.parse
-                0x0000b660       0x9c build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000b66a       0x9c build/z1/contiki-ng-z1.a(framer-802154.o)
  .any.text.framer_802154_setup_params
-                0x0000b6fc       0xb0 build/z1/contiki-ng-z1.a(framer-802154.o)
-                0x0000b6fc                framer_802154_setup_params
+                0x0000b706       0xb0 build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000b706                framer_802154_setup_params
  .any.text.create_frame
-                0x0000b7ac       0xda build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000b7b6       0xda build/z1/contiki-ng-z1.a(framer-802154.o)
  .any.text.create
-                0x0000b886        0x8 build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000b890        0x8 build/z1/contiki-ng-z1.a(framer-802154.o)
  .any.text.hdr_length
-                0x0000b88e        0x8 build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000b898        0x8 build/z1/contiki-ng-z1.a(framer-802154.o)
  .any.text.frame802154_get_pan_id
-                0x0000b896        0x6 build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000b896                frame802154_get_pan_id
+                0x0000b8a0        0x6 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000b8a0                frame802154_get_pan_id
  .any.text.frame802154_has_panid
-                0x0000b89c       0xe0 build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000b89c                frame802154_has_panid
+                0x0000b8a6       0xe0 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000b8a6                frame802154_has_panid
  .any.text.field_len
-                0x0000b97c       0xa8 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000b986       0xa8 build/z1/contiki-ng-z1.a(frame802154.o)
  .any.text.frame802154_is_broadcast_addr
-                0x0000ba24       0x28 build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000ba24                frame802154_is_broadcast_addr
+                0x0000ba2e       0x28 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000ba2e                frame802154_is_broadcast_addr
  .any.text.frame802154_hdrlen
-                0x0000ba4c       0x32 build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000ba4c                frame802154_hdrlen
+                0x0000ba56       0x32 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000ba56                frame802154_hdrlen
  .any.text.frame802154_create_fcf
-                0x0000ba7e       0x6e build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000ba7e                frame802154_create_fcf
+                0x0000ba88       0x6e build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000ba88                frame802154_create_fcf
  .any.text.frame802154_create
-                0x0000baec       0xd4 build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000baec                frame802154_create
+                0x0000baf6       0xd4 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000baf6                frame802154_create
  .any.text.frame802154_parse_fcf
-                0x0000bbc0       0x8c build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000bbc0                frame802154_parse_fcf
+                0x0000bbca       0x8c build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000bbca                frame802154_parse_fcf
  .any.text.frame802154_parse
-                0x0000bc4c      0x15c build/z1/contiki-ng-z1.a(frame802154.o)
-                0x0000bc4c                frame802154_parse
+                0x0000bc56      0x15c build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000bc56                frame802154_parse
  .any.text.csma_security_create_frame
-                0x0000bda8       0x10 build/z1/contiki-ng-z1.a(csma-security.o)
-                0x0000bda8                csma_security_create_frame
+                0x0000bdb2       0x10 build/z1/contiki-ng-z1.a(csma-security.o)
+                0x0000bdb2                csma_security_create_frame
  .any.text.csma_security_parse_frame
-                0x0000bdb8        0x6 build/z1/contiki-ng-z1.a(csma-security.o)
-                0x0000bdb8                csma_security_parse_frame
+                0x0000bdc2        0x6 build/z1/contiki-ng-z1.a(csma-security.o)
+                0x0000bdc2                csma_security_parse_frame
  .any.text.uipbuf_add_ext_hdr
-                0x0000bdbe       0x1c build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bdbe                uipbuf_add_ext_hdr
+                0x0000bdc8       0x1c build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bdc8                uipbuf_add_ext_hdr
  .any.text.uipbuf_set_len
-                0x0000bdda       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bdda                uipbuf_set_len
+                0x0000bde4       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bde4                uipbuf_set_len
  .any.text.uipbuf_set_len_field
-                0x0000bdec        0xe build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bdec                uipbuf_set_len_field
+                0x0000bdf6        0xe build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bdf6                uipbuf_set_len_field
  .any.text.uipbuf_get_len_field
-                0x0000bdfa        0xe build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bdfa                uipbuf_get_len_field
+                0x0000be04        0xe build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000be04                uipbuf_get_len_field
  .any.text.uipbuf_get_next_header
-                0x0000be08       0x5a build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000be08                uipbuf_get_next_header
+                0x0000be12       0x5a build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000be12                uipbuf_get_next_header
  .any.text.uipbuf_get_last_header
-                0x0000be62       0x36 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000be62                uipbuf_get_last_header
+                0x0000be6c       0x36 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000be6c                uipbuf_get_last_header
  .any.text.uipbuf_search_header
-                0x0000be98       0x46 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000be98                uipbuf_search_header
+                0x0000bea2       0x46 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bea2                uipbuf_search_header
  .any.text.uipbuf_get_attr
-                0x0000bede       0x14 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bede                uipbuf_get_attr
+                0x0000bee8       0x14 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bee8                uipbuf_get_attr
  .any.text.uipbuf_clear_attr
-                0x0000bef2       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bef2                uipbuf_clear_attr
+                0x0000befc       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000befc                uipbuf_clear_attr
  .any.text.uipbuf_clear
-                0x0000bf04       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bf04                uipbuf_clear
+                0x0000bf0e       0x12 build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bf0e                uipbuf_clear
  .any.text.uipbuf_init
-                0x0000bf16       0x1a build/z1/contiki-ng-z1.a(uipbuf.o)
-                0x0000bf16                uipbuf_init
+                0x0000bf20       0x1a build/z1/contiki-ng-z1.a(uipbuf.o)
+                0x0000bf20                uipbuf_init
  .any.text.echo_reply_input
-                0x0000bf30       0x60 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000bf3a       0x60 build/z1/contiki-ng-z1.a(uip-icmp6.o)
  .any.text.echo_request_input
-                0x0000bf90       0x86 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000bf9a       0x86 build/z1/contiki-ng-z1.a(uip-icmp6.o)
  .any.text.uip_icmp6_input
-                0x0000c016       0x44 build/z1/contiki-ng-z1.a(uip-icmp6.o)
-                0x0000c016                uip_icmp6_input
+                0x0000c020       0x44 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000c020                uip_icmp6_input
  .any.text.uip_icmp6_register_input_handler
-                0x0000c05a        0xc build/z1/contiki-ng-z1.a(uip-icmp6.o)
-                0x0000c05a                uip_icmp6_register_input_handler
+                0x0000c064        0xc build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000c064                uip_icmp6_register_input_handler
  .any.text.uip_icmp6_error_output
-                0x0000c066      0x136 build/z1/contiki-ng-z1.a(uip-icmp6.o)
-                0x0000c066                uip_icmp6_error_output
+                0x0000c070      0x136 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000c070                uip_icmp6_error_output
  .any.text.uip_icmp6_send
-                0x0000c19c       0x82 build/z1/contiki-ng-z1.a(uip-icmp6.o)
-                0x0000c19c                uip_icmp6_send
+                0x0000c1a6       0x82 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000c1a6                uip_icmp6_send
  .any.text.uip_icmp6_init
-                0x0000c21e       0x12 build/z1/contiki-ng-z1.a(uip-icmp6.o)
-                0x0000c21e                uip_icmp6_init
+                0x0000c228       0x12 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+                0x0000c228                uip_icmp6_init
  .any.text.node_matches_address.part.0
-                0x0000c230       0x2e build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c23a       0x2e build/z1/contiki-ng-z1.a(uip-sr.o)
  .any.text.uip_sr_num_nodes
-                0x0000c25e        0x6 build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c25e                uip_sr_num_nodes
+                0x0000c268        0x6 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c268                uip_sr_num_nodes
  .any.text.uip_sr_get_node
-                0x0000c264       0x3c build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c264                uip_sr_get_node
+                0x0000c26e       0x3c build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c26e                uip_sr_get_node
  .any.text.uip_sr_is_addr_reachable
-                0x0000c2a0       0x4a build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c2a0                uip_sr_is_addr_reachable
+                0x0000c2aa       0x4a build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c2aa                uip_sr_is_addr_reachable
  .any.text.uip_sr_expire_parent
-                0x0000c2ea       0x3a build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c2ea                uip_sr_expire_parent
+                0x0000c2f4       0x3a build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c2f4                uip_sr_expire_parent
  .any.text.uip_sr_update_node
-                0x0000c324       0xac build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c324                uip_sr_update_node
+                0x0000c32e       0xac build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c32e                uip_sr_update_node
  .any.text.uip_sr_init
-                0x0000c3d0       0x16 build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c3d0                uip_sr_init
+                0x0000c3da       0x16 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c3da                uip_sr_init
  .any.text.uip_sr_node_head
-                0x0000c3e6        0xa build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c3e6                uip_sr_node_head
+                0x0000c3f0        0xa build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c3f0                uip_sr_node_head
  .any.text.uip_sr_node_next
-                0x0000c3f0        0x6 build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c3f0                uip_sr_node_next
+                0x0000c3fa        0x6 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c3fa                uip_sr_node_next
  .any.text.uip_sr_periodic
-                0x0000c3f6       0x8a build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c3f6                uip_sr_periodic
+                0x0000c400       0x8a build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c400                uip_sr_periodic
  .any.text.uip_sr_free_all
-                0x0000c480       0x38 build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c480                uip_sr_free_all
+                0x0000c48a       0x38 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c48a                uip_sr_free_all
  .any.text.uip_sr_link_snprint
-                0x0000c4b8       0xc8 build/z1/contiki-ng-z1.a(uip-sr.o)
-                0x0000c4b8                uip_sr_link_snprint
+                0x0000c4c2       0xc8 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000c4c2                uip_sr_link_snprint
  .any.text.update_state
-                0x0000c580       0x98 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000c58a       0x98 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
  .any.text.rpl_nbr_policy_find_removable
-                0x0000c618       0xd8 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
-                0x0000c618                rpl_nbr_policy_find_removable
+                0x0000c622       0xd8 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000c622                rpl_nbr_policy_find_removable
  .any.text.max_acceptable_rank
-                0x0000c6f0       0x26 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c6fa       0x26 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .any.text.remove_neighbor
-                0x0000c716       0x24 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c720       0x24 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .any.text.rpl_neighbor_count
-                0x0000c73a       0x2c build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c73a                rpl_neighbor_count
+                0x0000c744       0x2c build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c744                rpl_neighbor_count
  .any.text.rpl_neighbor_get_from_lladdr
-                0x0000c766        0xc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c766                rpl_neighbor_get_from_lladdr
+                0x0000c770        0xc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c770                rpl_neighbor_get_from_lladdr
  .any.text.rpl_neighbor_is_acceptable_parent
-                0x0000c772       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c772                rpl_neighbor_is_acceptable_parent
+                0x0000c77c       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c77c                rpl_neighbor_is_acceptable_parent
  .any.text.rpl_neighbor_get_link_metric
-                0x0000c78a       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c78a                rpl_neighbor_get_link_metric
+                0x0000c794       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c794                rpl_neighbor_get_link_metric
  .any.text.rpl_neighbor_rank_via_nbr
-                0x0000c7a2       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c7a2                rpl_neighbor_rank_via_nbr
+                0x0000c7ac       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c7ac                rpl_neighbor_rank_via_nbr
  .any.text.rpl_neighbor_get_lladdr
-                0x0000c7ba        0xc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c7ba                rpl_neighbor_get_lladdr
+                0x0000c7c4        0xc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c7c4                rpl_neighbor_get_lladdr
  .any.text.rpl_neighbor_get_ipaddr
-                0x0000c7c6        0xa build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c7c6                rpl_neighbor_get_ipaddr
- .any.text.rpl_neighbor_get_link_stats
                 0x0000c7d0        0xa build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c7d0                rpl_neighbor_get_link_stats
- .any.text.rpl_neighbor_is_fresh
+                0x0000c7d0                rpl_neighbor_get_ipaddr
+ .any.text.rpl_neighbor_get_link_stats
                 0x0000c7da        0xa build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c7da                rpl_neighbor_is_fresh
+                0x0000c7da                rpl_neighbor_get_link_stats
+ .any.text.rpl_neighbor_is_fresh
+                0x0000c7e4        0xa build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c7e4                rpl_neighbor_is_fresh
  .any.text.best_parent
-                0x0000c7e4       0x7e build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c7ee       0x7e build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .any.text.rpl_neighbor_snprint
-                0x0000c862      0x1da build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000c862                rpl_neighbor_snprint
+                0x0000c86c      0x1da build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000c86c                rpl_neighbor_snprint
  .any.text.rpl_neighbor_print_list
-                0x0000ca3c      0x122 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000ca3c                rpl_neighbor_print_list
+                0x0000ca46      0x122 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000ca46                rpl_neighbor_print_list
  .any.text.rpl_neighbor_is_parent
-                0x0000cb5e       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cb5e                rpl_neighbor_is_parent
+                0x0000cb68       0x18 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cb68                rpl_neighbor_is_parent
  .any.text.rpl_neighbor_set_preferred_parent
-                0x0000cb76       0xb8 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cb76                rpl_neighbor_set_preferred_parent
+                0x0000cb80       0xb8 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cb80                rpl_neighbor_set_preferred_parent
  .any.text.rpl_neighbor_remove_all
-                0x0000cc2e       0x54 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cc2e                rpl_neighbor_remove_all
+                0x0000cc38       0x54 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cc38                rpl_neighbor_remove_all
  .any.text.rpl_neighbor_get_from_ipaddr
-                0x0000cc82       0x14 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cc82                rpl_neighbor_get_from_ipaddr
+                0x0000cc8c       0x14 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cc8c                rpl_neighbor_get_from_ipaddr
  .any.text.rpl_neighbor_select_best
-                0x0000cc96       0x9c build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cc96                rpl_neighbor_select_best
+                0x0000cca0       0x9c build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cca0                rpl_neighbor_select_best
  .any.text.rpl_neighbor_init
-                0x0000cd32        0xe build/z1/contiki-ng-z1.a(rpl-neighbor.o)
-                0x0000cd32                rpl_neighbor_init
+                0x0000cd3c        0xe build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000cd3c                rpl_neighbor_init
  .any.text.handle_state_update
-                0x0000cd40        0x6 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cd4a        0x6 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.handle_leaving_timer
-                0x0000cd46        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cd50        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.schedule_dao_retransmission
-                0x0000cd52       0x30 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cd5c       0x30 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.new_dio_interval
-                0x0000cd82       0x86 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cd8c       0x86 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.handle_unicast_dio_timer
-                0x0000ce08       0x12 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000ce12       0x12 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.send_new_dao
-                0x0000ce1a       0x28 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000ce24       0x28 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.resend_dao
-                0x0000ce42       0x24 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000ce4c       0x24 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.handle_dao_ack_timer
-                0x0000ce66       0x12 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000ce70       0x12 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.handle_dio_timer
-                0x0000ce78       0x6e build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000ce82       0x6e build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.rpl_timers_schedule_periodic_dis
-                0x0000cee6       0x3c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000cee6                rpl_timers_schedule_periodic_dis
+                0x0000cef0       0x3c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cef0                rpl_timers_schedule_periodic_dis
  .any.text.handle_periodic_timer
-                0x0000cf22       0x52 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cf2c       0x52 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.handle_dis_timer
-                0x0000cf74       0x26 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cf7e       0x26 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.rpl_timers_dio_reset
-                0x0000cf9a       0x5c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000cf9a                rpl_timers_dio_reset
+                0x0000cfa4       0x5c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000cfa4                rpl_timers_dio_reset
  .any.text.rpl_timers_schedule_unicast_dio
-                0x0000cff6       0x20 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000cff6                rpl_timers_schedule_unicast_dio
+                0x0000d000       0x20 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d000                rpl_timers_schedule_unicast_dio
  .any.text.rpl_timers_schedule_dao
-                0x0000d016       0x38 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d016                rpl_timers_schedule_dao
+                0x0000d020       0x38 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d020                rpl_timers_schedule_dao
  .any.text.rpl_timers_schedule_dao_ack
-                0x0000d04e       0x34 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d04e                rpl_timers_schedule_dao_ack
+                0x0000d058       0x34 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d058                rpl_timers_schedule_dao_ack
  .any.text.rpl_timers_notify_dao_ack
-                0x0000d082       0x7e build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d082                rpl_timers_notify_dao_ack
+                0x0000d08c       0x7e build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d08c                rpl_timers_notify_dao_ack
  .any.text.get_probing_delay
-                0x0000d100       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d100                get_probing_delay
+                0x0000d10a       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d10a                get_probing_delay
  .any.text.get_probing_target
-                0x0000d11c       0xda build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d11c                get_probing_target
+                0x0000d126       0xda build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d126                get_probing_target
  .any.text.rpl_schedule_probing
-                0x0000d1f6       0x20 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d1f6                rpl_schedule_probing
+                0x0000d200       0x20 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d200                rpl_schedule_probing
  .any.text.handle_probing_timer
-                0x0000d216       0xc6 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d220       0xc6 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .any.text.rpl_schedule_probing_now
-                0x0000d2dc       0x24 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d2dc                rpl_schedule_probing_now
+                0x0000d2e6       0x24 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d2e6                rpl_schedule_probing_now
  .any.text.rpl_timers_unschedule_leaving
-                0x0000d300       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d300                rpl_timers_unschedule_leaving
+                0x0000d30a       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d30a                rpl_timers_unschedule_leaving
  .any.text.rpl_timers_schedule_leaving
-                0x0000d31c       0x2a build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d31c                rpl_timers_schedule_leaving
+                0x0000d326       0x2a build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d326                rpl_timers_schedule_leaving
  .any.text.rpl_timers_init
-                0x0000d346       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d346                rpl_timers_init
+                0x0000d350       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d350                rpl_timers_init
  .any.text.rpl_timers_stop_dag_timers
-                0x0000d362       0x4c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d362                rpl_timers_stop_dag_timers
+                0x0000d36c       0x4c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d36c                rpl_timers_stop_dag_timers
  .any.text.rpl_timers_unschedule_state_update
-                0x0000d3ae       0x10 build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d3ae                rpl_timers_unschedule_state_update
+                0x0000d3b8       0x10 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d3b8                rpl_timers_unschedule_state_update
  .any.text.rpl_timers_schedule_state_update
-                0x0000d3be       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
-                0x0000d3be                rpl_timers_schedule_state_update
+                0x0000d3c8       0x1c build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000d3c8                rpl_timers_schedule_state_update
  .any.text.update_hbh_header
-                0x0000d3da       0x98 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d3e4       0x98 build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .any.text.rpl_ext_header_srh_get_next_hop
-                0x0000d472       0xa0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
-                0x0000d472                rpl_ext_header_srh_get_next_hop
+                0x0000d47c       0xa0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d47c                rpl_ext_header_srh_get_next_hop
  .any.text.rpl_ext_header_srh_update
-                0x0000d512      0x1f2 build/z1/contiki-ng-z1.a(rpl-ext-header.)
-                0x0000d512                rpl_ext_header_srh_update
+                0x0000d51c      0x1f2 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d51c                rpl_ext_header_srh_update
  .any.text.rpl_ext_header_hbh_update
-                0x0000d704      0x1b0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
-                0x0000d704                rpl_ext_header_hbh_update
+                0x0000d70e      0x1b0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d70e                rpl_ext_header_hbh_update
  .any.text.rpl_ext_header_remove
-                0x0000d8b4       0xc0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
-                0x0000d8b4                rpl_ext_header_remove
+                0x0000d8be       0xc0 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d8be                rpl_ext_header_remove
  .any.text.rpl_ext_header_update
-                0x0000d974      0x438 build/z1/contiki-ng-z1.a(rpl-ext-header.)
-                0x0000d974                rpl_ext_header_update
+                0x0000d97e      0x438 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000d97e                rpl_ext_header_update
  .any.text.update_metric_container
-                0x0000ddac        0x6 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000ddb6        0x6 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.nbr_link_metric
-                0x0000ddb2       0x12 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000ddbc       0x12 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.nbr_has_usable_link
-                0x0000ddc4       0x14 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000ddce       0x14 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.nbr_path_cost
-                0x0000ddd8       0x34 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000dde2       0x34 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.within_hysteresis
-                0x0000de0c       0x4c build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000de16       0x4c build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.nbr_is_acceptable_parent
-                0x0000de58       0x28 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000de62       0x28 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.rank_via_nbr
-                0x0000de80       0x40 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000de8a       0x40 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.best_parent
-                0x0000dec0       0x74 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000deca       0x74 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.reset
-                0x0000df34       0x26 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+                0x0000df3e       0x26 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
  .any.text.i2c_receiveinit
-                0x0000df5a       0x36 build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000df5a                i2c_receiveinit
+                0x0000df64       0x36 build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000df64                i2c_receiveinit
  .any.text.i2c_transmitinit
-                0x0000df90       0x30 build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000df90                i2c_transmitinit
+                0x0000df9a       0x30 build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000df9a                i2c_transmitinit
  .any.text.i2c_receive_n
-                0x0000dfc0       0x3e build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000dfc0                i2c_receive_n
+                0x0000dfca       0x3e build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000dfca                i2c_receive_n
  .any.text.i2c_busy
-                0x0000dffe        0xa build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000dffe                i2c_busy
+                0x0000e008        0xa build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000e008                i2c_busy
  .any.text.i2c_enable
-                0x0000e008       0x22 build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000e008                i2c_enable
+                0x0000e012       0x22 build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000e012                i2c_enable
  .any.text.i2c_transmit_n
-                0x0000e02a       0x14 build/z1/contiki-ng-z1.a(i2cmaster.o)
-                0x0000e02a                i2c_transmit_n
+                0x0000e034       0x14 build/z1/contiki-ng-z1.a(i2cmaster.o)
+                0x0000e034                i2c_transmit_n
  .any.text.status
-                0x0000e03e       0x18 build/z1/contiki-ng-z1.a(button-sensor.o)
+                0x0000e048       0x18 build/z1/contiki-ng-z1.a(button-sensor.o)
  .any.text.value
-                0x0000e056       0x20 build/z1/contiki-ng-z1.a(button-sensor.o)
+                0x0000e060       0x20 build/z1/contiki-ng-z1.a(button-sensor.o)
  .any.text.configure
-                0x0000e076       0x4e build/z1/contiki-ng-z1.a(button-sensor.o)
+                0x0000e080       0x4e build/z1/contiki-ng-z1.a(button-sensor.o)
  .any.text.printf
-                0x0000e0c4       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(printf.o)
-                0x0000e0c4                printf
+                0x0000e0ce       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(printf.o)
+                0x0000e0ce                printf
  .any.text.append
-                0x0000e0d4       0x22 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
+                0x0000e0de       0x22 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
  .any.text.call_vuprintf
-                0x0000e0f6       0x36 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
+                0x0000e100       0x36 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
  .any.text.sprintf
-                0x0000e12c       0x1a /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
-                0x0000e12c                sprintf
+                0x0000e136       0x1a /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
+                0x0000e136                sprintf
  .any.text.snprintf
-                0x0000e146       0x1c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
-                0x0000e146                snprintf
+                0x0000e150       0x1c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(sprintf.o)
+                0x0000e150                snprintf
  .any.text.print_field
-                0x0000e162      0x176 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
+                0x0000e16c      0x176 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
  .any.text.puts
-                0x0000e2d8       0x2c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(puts.o)
-                0x0000e2d8                puts
+                0x0000e2e2       0x2c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(puts.o)
+                0x0000e2e2                puts
  .any.text.rand
-                0x0000e304       0x26 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(rand.o)
-                0x0000e304                rand
+                0x0000e30e       0x26 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(rand.o)
+                0x0000e30e                rand
  .any.text.srand
-                0x0000e32a        0xa /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(rand.o)
-                0x0000e32a                srand
+                0x0000e334        0xa /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(rand.o)
+                0x0000e334                srand
  .any.text.memcmp
-                0x0000e334       0x2c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memcmp.o)
-                0x0000e334                memcmp
+                0x0000e33e       0x2c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memcmp.o)
+                0x0000e33e                memcmp
  .any.text.memcpy
-                0x0000e360       0xe8 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memcpy.o)
-                0x0000e360                memcpy
- .any.text.memset
-                0x0000e448       0x5c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memset.o)
-                0x0000e448                memset
+                0x0000e36a       0xe8 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memcpy.o)
+                0x0000e36a                memcpy
+ .any.text.memmove
+                0x0000e452       0xe8 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memmove.o)
+                0x0000e452                memmove
 
-.rodata         0x0000e4a4     0x1949
-                0x0000e4a4                . = ALIGN (0x2)
+.rodata         0x0000e53c     0x1939
+                0x0000e53c                . = ALIGN (0x2)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.process_thread_udp_server_process
-                0x0000e4a4      0x19c temperature-sensor.o
+                0x0000e53c      0x18a temperature-sensor.o
  .rodata.autostart_processes
-                0x0000e640        0x4 temperature-sensor.o
-                0x0000e640                autostart_processes
- .rodata        0x0000e644       0x13 temperature-sensor.o
- .rodata        0x0000e657       0xf3 build/z1/obj/contiki-main.o
+                0x0000e6c6        0x4 temperature-sensor.o
+                0x0000e6c6                autostart_processes
+ .rodata        0x0000e6ca       0x13 temperature-sensor.o
+ .rodata        0x0000e6dd       0xf3 build/z1/obj/contiki-main.o
  .rodata.platform_init_stage_three
-                0x0000e74a       0x30 build/z1/contiki-ng-z1.a(platform.o)
- .rodata        0x0000e77a        0xf build/z1/contiki-ng-z1.a(ctimer.o)
- .rodata        0x0000e789        0xc build/z1/contiki-ng-z1.a(etimer.o)
+                0x0000e7d0       0x30 build/z1/contiki-ng-z1.a(platform.o)
+ .rodata        0x0000e800        0xf build/z1/contiki-ng-z1.a(ctimer.o)
+ .rodata        0x0000e80f        0xc build/z1/contiki-ng-z1.a(etimer.o)
  .rodata.log_6addr
-                0x0000e795        0x3 build/z1/contiki-ng-z1.a(log.o)
+                0x0000e81b        0x3 build/z1/contiki-ng-z1.a(log.o)
  .rodata.log_lladdr
-                0x0000e798       0x14 build/z1/contiki-ng-z1.a(log.o)
+                0x0000e81e       0x14 build/z1/contiki-ng-z1.a(log.o)
  .rodata.process_thread_stack_check_process
-                0x0000e7ac       0x5e build/z1/contiki-ng-z1.a(stack-check.o)
- .rodata        0x0000e80a        0xc build/z1/contiki-ng-z1.a(stack-check.o)
+                0x0000e832       0x5e build/z1/contiki-ng-z1.a(stack-check.o)
+ .rodata        0x0000e890        0xc build/z1/contiki-ng-z1.a(stack-check.o)
  .rodata.linkaddr_null
-                0x0000e816        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
-                0x0000e816                linkaddr_null
- .rodata        0x0000e81e        0x5 build/z1/contiki-ng-z1.a(csma.o)
- *fill*         0x0000e823        0x1 00
+                0x0000e89c        0x8 build/z1/contiki-ng-z1.a(linkaddr.o)
+                0x0000e89c                linkaddr_null
+ .rodata        0x0000e8a4        0x5 build/z1/contiki-ng-z1.a(csma.o)
+ *fill*         0x0000e8a9        0x1 00
  .rodata.csma_driver
-                0x0000e824       0x1a build/z1/contiki-ng-z1.a(csma.o)
-                0x0000e824                csma_driver
- .rodata        0x0000e83e        0xd build/z1/contiki-ng-z1.a(tcpip.o)
- .rodata        0x0000e84b        0xb build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8aa       0x1a build/z1/contiki-ng-z1.a(csma.o)
+                0x0000e8aa                csma_driver
+ .rodata        0x0000e8c4        0xd build/z1/contiki-ng-z1.a(tcpip.o)
+ .rodata        0x0000e8d1        0xb build/z1/contiki-ng-z1.a(sicslowpan.o)
  .rodata.sicslowpan_driver
-                0x0000e856        0xe build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e856                sicslowpan_driver
+                0x0000e8dc        0xe build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8dc                sicslowpan_driver
  .rodata.llprefix
-                0x0000e864        0x2 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e864                llprefix
+                0x0000e8ea        0x2 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8ea                llprefix
  .rodata.unc_mxconf
-                0x0000e866        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e866                unc_mxconf
+                0x0000e8ec        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8ec                unc_mxconf
  .rodata.unc_ctxconf
-                0x0000e86a        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e86a                unc_ctxconf
+                0x0000e8f0        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8f0                unc_ctxconf
  .rodata.unc_llconf
-                0x0000e86e        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
-                0x0000e86e                unc_llconf
+                0x0000e8f4        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8f4                unc_llconf
  .rodata.ttl_values
-                0x0000e872        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
+                0x0000e8f8        0x4 build/z1/contiki-ng-z1.a(sicslowpan.o)
  .rodata.uiplib_ipaddr_snprint
-                0x0000e876       0x2a build/z1/contiki-ng-z1.a(uiplib.o)
+                0x0000e8fc       0x2a build/z1/contiki-ng-z1.a(uiplib.o)
  .rodata.uiplib_ipaddr_print
-                0x0000e8a0        0x3 build/z1/contiki-ng-z1.a(uiplib.o)
- .rodata.init   0x0000e8a3       0x25 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e926        0x3 build/z1/contiki-ng-z1.a(uiplib.o)
+ .rodata.init   0x0000e929       0x25 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_link_callback
-                0x0000e8c8       0x38 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e94e       0x38 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_reset_prefix
-                0x0000e900       0x1c build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e986       0x1c build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_set_prefix_from_addr
-                0x0000e91c       0x4d build/z1/contiki-ng-z1.a(rpl.o)
- .rodata        0x0000e969        0x9 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e9a2       0x4d build/z1/contiki-ng-z1.a(rpl.o)
+ .rodata        0x0000e9ef        0x9 build/z1/contiki-ng-z1.a(rpl.o)
  .rodata.rpl_lite_driver
-                0x0000e972       0x52 build/z1/contiki-ng-z1.a(rpl.o)
-                0x0000e972                rpl_lite_driver
+                0x0000e9f8       0x52 build/z1/contiki-ng-z1.a(rpl.o)
+                0x0000e9f8                rpl_lite_driver
  .rodata.dao_ack_input
-                0x0000e9c4       0x8a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ea4a       0x8a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dao_input
-                0x0000ea4e       0xb4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ead4       0xb4 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dio_input
-                0x0000eb02      0x20e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000eb88      0x20e build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.dis_input
-                0x0000ed10       0x40 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ed96       0x40 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_update_nbr_table
-                0x0000ed50       0x24 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000edd6       0x24 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dis_output
-                0x0000ed74       0x12 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000edfa       0x12 build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dio_output
-                0x0000ed86       0x5c build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ee0c       0x5c build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dao_output
-                0x0000ede2      0x11a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ee68      0x11a build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.rpl_icmp6_dao_ack_output
-                0x0000eefc       0x2f build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+                0x0000ef82       0x2f build/z1/contiki-ng-z1.a(rpl-icmp6.o)
  .rodata.init_dag
-                0x0000ef2b       0x55 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000efb1       0x55 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.process_dio_init_dag
-                0x0000ef80       0xcd build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f006       0xcd build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_state_to_str
-                0x0000f04d        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f0d3        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_leave
-                0x0000f055       0x1c build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f0db       0x1c build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_periodic
-                0x0000f071       0x58 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f0f7       0x58 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_local_repair
-                0x0000f0c9       0x20 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f14f       0x20 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_global_repair
-                0x0000f0e9       0x59 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f16f       0x59 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_update_state
-                0x0000f142       0xe8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f1c8       0xe8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dio
-                0x0000f22a      0x1ae build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f2b0      0x1ae build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dis
-                0x0000f3d8       0x2b build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f45e       0x2b build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dao
-                0x0000f403       0x23 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f489       0x23 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_process_dao_ack
-                0x0000f426       0x48 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f4ac       0x48 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_init_root
-                0x0000f46e       0x3e build/z1/contiki-ng-z1.a(rpl-dag.o)
- .rodata        0x0000f4ac       0x27 build/z1/contiki-ng-z1.a(rpl-dag.o)
- *fill*         0x0000f4d3        0x1 00
+                0x0000f4f4       0x3e build/z1/contiki-ng-z1.a(rpl-dag.o)
+ .rodata        0x0000f532       0x27 build/z1/contiki-ng-z1.a(rpl-dag.o)
+ *fill*         0x0000f559        0x1 00
  .rodata.CSWTCH.34
-                0x0000f4d4        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
+                0x0000f55a        0x8 build/z1/contiki-ng-z1.a(rpl-dag.o)
  .rodata.rpl_dag_root_set_prefix
-                0x0000f4dc       0x2c build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x0000f562       0x2c build/z1/contiki-ng-z1.a(rpl-dag-root.o)
  .rodata.rpl_dag_root_start
-                0x0000f508       0x39 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+                0x0000f58e       0x39 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
  .rodata.rpl_dag_root_print_links
-                0x0000f541       0x56 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
- *fill*         0x0000f597        0x1 00
+                0x0000f5c7       0x56 build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+ *fill*         0x0000f61d        0x3 00
  .rodata.get_value
-                0x0000f598       0x64 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f620       0x64 build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.set_value
-                0x0000f5fc       0x20 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f684       0x20 build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.cc2420_driver
-                0x0000f61c       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
-                0x0000f61c                cc2420_driver
- .rodata        0x0000f654        0xe build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f6a4       0x38 build/z1/contiki-ng-z1.a(cc2420.o)
+                0x0000f6a4                cc2420_driver
+ .rodata        0x0000f6dc        0xe build/z1/contiki-ng-z1.a(cc2420.o)
  .rodata.output_power
-                0x0000f662       0x10 build/z1/contiki-ng-z1.a(cc2420.o)
- .rodata        0x0000f672        0x8 build/z1/contiki-ng-z1.a(sensors.o)
- .rodata        0x0000f67a       0x25 build/z1/contiki-ng-z1.a(adxl345.o)
- *fill*         0x0000f69f        0x1 00
+                0x0000f6ea       0x10 build/z1/contiki-ng-z1.a(cc2420.o)
+ .rodata        0x0000f6fa        0x8 build/z1/contiki-ng-z1.a(sensors.o)
+ .rodata        0x0000f702       0x25 build/z1/contiki-ng-z1.a(adxl345.o)
+ *fill*         0x0000f727        0x1 00
  .rodata.adxl345
-                0x0000f6a0        0xe build/z1/contiki-ng-z1.a(adxl345.o)
-                0x0000f6a0                adxl345
- .rodata        0x0000f6ae        0xe build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000f728        0xe build/z1/contiki-ng-z1.a(adxl345.o)
+                0x0000f728                adxl345
+ .rodata        0x0000f736        0xe build/z1/contiki-ng-z1.a(tmp102.o)
  .rodata.tmp102
-                0x0000f6bc        0xe build/z1/contiki-ng-z1.a(tmp102.o)
-                0x0000f6bc                tmp102
+                0x0000f744        0xe build/z1/contiki-ng-z1.a(tmp102.o)
+                0x0000f744                tmp102
  .rodata.framer_802154
-                0x0000f6ca        0xc build/z1/contiki-ng-z1.a(framer-802154.o)
-                0x0000f6ca                framer_802154
+                0x0000f752        0xc build/z1/contiki-ng-z1.a(framer-802154.o)
+                0x0000f752                framer_802154
  .rodata.CSWTCH.16
-                0x0000f6d6        0x2 build/z1/contiki-ng-z1.a(frame802154.o)
+                0x0000f75e        0x2 build/z1/contiki-ng-z1.a(frame802154.o)
  .rodata.uip_sr_link_snprint
-                0x0000f6d8       0x44 build/z1/contiki-ng-z1.a(uip-sr.o)
+                0x0000f760       0x44 build/z1/contiki-ng-z1.a(uip-sr.o)
  .rodata.update_state
-                0x0000f71c       0x3a build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000f7a4       0x3a build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
  .rodata.rpl_nbr_policy_find_removable
-                0x0000f756       0xa6 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+                0x0000f7de       0xa6 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
  .rodata.rpl_neighbor_snprint
-                0x0000f7fc       0x58 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f884       0x58 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_print_list
-                0x0000f854       0x9a build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f8dc       0x9a build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_set_preferred_parent
-                0x0000f8ee       0x15 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f976       0x15 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_remove_all
-                0x0000f903       0x17 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f98b       0x17 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.rpl_neighbor_select_best
-                0x0000f91a       0x36 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+                0x0000f9a2       0x36 build/z1/contiki-ng-z1.a(rpl-neighbor.o)
  .rodata.resend_dao
-                0x0000f950        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f9d8        0xc build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.handle_periodic_timer
-                0x0000f95c        0x9 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f9e4        0x9 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.rpl_timers_dio_reset
-                0x0000f965       0x2e build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000f9ed       0x2e build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.handle_probing_timer
-                0x0000f993       0x45 build/z1/contiki-ng-z1.a(rpl-timers.o)
+                0x0000fa1b       0x45 build/z1/contiki-ng-z1.a(rpl-timers.o)
  .rodata.update_hbh_header
-                0x0000f9d8       0x8d build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fa60       0x8d build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_srh_get_next_hop
-                0x0000fa65       0x11 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000faed       0x11 build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_srh_update
-                0x0000fa76       0xbe build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fafe       0xbe build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_hbh_update
-                0x0000fb34       0xcf build/z1/contiki-ng-z1.a(rpl-ext-header.)
+                0x0000fbbc       0xcf build/z1/contiki-ng-z1.a(rpl-ext-header.)
  .rodata.rpl_ext_header_update
-                0x0000fc03      0x1a9 build/z1/contiki-ng-z1.a(rpl-ext-header.)
- .rodata.reset  0x0000fdac       0x24 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
- .rodata        0x0000fdd0        0x7 build/z1/contiki-ng-z1.a(button-sensor.o)
- *fill*         0x0000fdd7        0x1 00
+                0x0000fc8b      0x1a9 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+ .rodata.reset  0x0000fe34       0x24 build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+ .rodata        0x0000fe58        0x7 build/z1/contiki-ng-z1.a(button-sensor.o)
+ *fill*         0x0000fe5f        0x1 00
  .rodata.button_sensor
-                0x0000fdd8        0xe build/z1/contiki-ng-z1.a(button-sensor.o)
-                0x0000fdd8                button_sensor
+                0x0000fe60        0xe build/z1/contiki-ng-z1.a(button-sensor.o)
+                0x0000fe60                button_sensor
  .rodata.vuprintf
-                0x0000fde6        0x7 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
+                0x0000fe6e        0x7 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
  *(.near.rodata .near.rodata.*)
-                0x0000fdee                . = ALIGN (0x2)
-                0x0000fdee                _etext = .
+                0x0000fe76                . = ALIGN (0x2)
+                0x0000fe76                _etext = .
 
-.data           0x00001100      0x148 load address 0x0000fdee
+.data           0x00001100      0x148 load address 0x0000fe76
                 0x00001100                . = ALIGN (0x2)
                 0x00001100                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -2913,10 +2913,10 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
  *(.near.data .near.data.*)
                 0x00001248                . = ALIGN (0x2)
                 0x00001248                _edata = .
-                0x0000fdee                __data_load_start = LOADADDR (.data)
+                0x0000fe76                __data_load_start = LOADADDR (.data)
                 0x00000148                __data_size = SIZEOF (.data)
 
-.bss            0x00001248     0x16ec load address 0x0000ff36
+.bss            0x00001248     0x16ec load address 0x0000ffbe
                 0x00001248                __bss_start = .
  *(.bss .bss.*)
  .bss.server_conn
@@ -3241,7 +3241,7 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
                 0x00002934                __bss_end = .
                 0x000016ec                __bss_size = SIZEOF (.bss)
 
-.noinit         0x00002934        0x2 load address 0x0000ff36
+.noinit         0x00002934        0x2 load address 0x0000ffbe
                 0x00002934                . = ALIGN (0x2)
                 0x00002934                __noinit_start = .
  *(.noinit .noinit.*)
@@ -3319,32 +3319,32 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
                 0x00010000                . = ALIGN (0x2)
  *(.fartext .fartext.*)
 
-.far.text       0x00010000      0x82a
+.far.text       0x00010000      0x79e
                 0x00010000                . = ALIGN (0x2)
  *(.far.text .far.text.*)
  .any.text.vuprintf
                 0x00010000      0x742 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
                 0x00010000                vuprintf
- .any.text.memmove
-                0x00010742       0xe8 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memmove.o)
-                0x00010742                memmove
+ .any.text.memset
+                0x00010742       0x5c /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memset.o)
+                0x00010742                memset
 
-.far.rodata     0x0001082a        0x0
-                0x0001082a                . = ALIGN (0x2)
+.far.rodata     0x0001079e        0x0
+                0x0001079e                . = ALIGN (0x2)
  *(.far.rodata .far.rodata.*)
-                0x0001082a                . = ALIGN (0x2)
-                0x0001082a                _efartext = .
+                0x0001079e                . = ALIGN (0x2)
+                0x0001079e                _efartext = .
 
-.far.data       0x00000000        0x0 load address 0x0001082a
+.far.data       0x00000000        0x0 load address 0x0001079e
                 0x00000000                . = ALIGN (0x2)
                 0x00000000                __far_data_start = .
  *(.far.data .far.data.*)
                 0x00000000                . = ALIGN (0x2)
                 0x00000000                _efardata = .
-                0x0001082a                __far_data_load_start = LOADADDR (.far.data)
+                0x0001079e                __far_data_load_start = LOADADDR (.far.data)
                 0x00000000                __far_data_size = SIZEOF (.far.data)
 
-.far.bss        0x00000000        0x0 load address 0x0001082a
+.far.bss        0x00000000        0x0 load address 0x0001079e
                 0x00000000                . = ALIGN (0x2)
                 0x00000000                __far_bss_start = .
  *(.far.bss .far.bss.*)
@@ -3357,153 +3357,153 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
 .profiler
  *(.profiler)
 
-.stab           0x00000000    0x2cc58
+.stab           0x00000000    0x2cc88
  *(.stab)
- .stab          0x00000000     0x15a8 temperature-sensor.o
- .stab          0x000015a8      0xe88 build/z1/obj/contiki-main.o
+ .stab          0x00000000     0x15d8 temperature-sensor.o
+ .stab          0x000015d8      0xe88 build/z1/obj/contiki-main.o
                                0x1bcc (size before relaxing)
- .stab          0x00002430      0x228 build/z1/contiki-ng-z1.a(uart0-putchar.o)
+ .stab          0x00002460      0x228 build/z1/contiki-ng-z1.a(uart0-putchar.o)
                                 0x714 (size before relaxing)
- .stab          0x00002658     0x105c build/z1/contiki-ng-z1.a(platform.o)
+ .stab          0x00002688     0x105c build/z1/contiki-ng-z1.a(platform.o)
                                0x159c (size before relaxing)
- .stab          0x000036b4      0x558 build/z1/contiki-ng-z1.a(msp430.o)
+ .stab          0x000036e4      0x558 build/z1/contiki-ng-z1.a(msp430.o)
                                 0x894 (size before relaxing)
- .stab          0x00003c0c      0x900 build/z1/contiki-ng-z1.a(clock.o)
+ .stab          0x00003c3c      0x900 build/z1/contiki-ng-z1.a(clock.o)
                                 0xc60 (size before relaxing)
- .stab          0x0000450c      0x3b4 build/z1/contiki-ng-z1.a(watchdog.o)
+ .stab          0x0000453c      0x3b4 build/z1/contiki-ng-z1.a(watchdog.o)
                                 0x6f0 (size before relaxing)
- .stab          0x000048c0      0x2ac build/z1/contiki-ng-z1.a(autostart.o)
+ .stab          0x000048f0      0x2ac build/z1/contiki-ng-z1.a(autostart.o)
                                 0x5e8 (size before relaxing)
- .stab          0x00004b6c      0x804 build/z1/contiki-ng-z1.a(ctimer.o)
+ .stab          0x00004b9c      0x804 build/z1/contiki-ng-z1.a(ctimer.o)
                                 0xb58 (size before relaxing)
- .stab          0x00005370      0x270 build/z1/contiki-ng-z1.a(energest.o)
+ .stab          0x000053a0      0x270 build/z1/contiki-ng-z1.a(energest.o)
                                 0x5d0 (size before relaxing)
- .stab          0x000055e0      0xa98 build/z1/contiki-ng-z1.a(etimer.o)
+ .stab          0x00005610      0xa98 build/z1/contiki-ng-z1.a(etimer.o)
                                 0xdd4 (size before relaxing)
- .stab          0x00006078      0x8e8 build/z1/contiki-ng-z1.a(log.o)
+ .stab          0x000060a8      0x8e8 build/z1/contiki-ng-z1.a(log.o)
                                0x1098 (size before relaxing)
- .stab          0x00006960      0x348 build/z1/contiki-ng-z1.a(rtimer.o)
+ .stab          0x00006990      0x348 build/z1/contiki-ng-z1.a(rtimer.o)
                                 0x684 (size before relaxing)
- .stab          0x00006ca8      0x264 build/z1/contiki-ng-z1.a(node-id.o)
+ .stab          0x00006cd8      0x264 build/z1/contiki-ng-z1.a(node-id.o)
                                 0x9d8 (size before relaxing)
- .stab          0x00006f0c      0xbb8 build/z1/contiki-ng-z1.a(process.o)
+ .stab          0x00006f3c      0xbb8 build/z1/contiki-ng-z1.a(process.o)
                                0x10e0 (size before relaxing)
- .stab          0x00007ac4      0x3b4 build/z1/contiki-ng-z1.a(timer.o)
+ .stab          0x00007af4      0x3b4 build/z1/contiki-ng-z1.a(timer.o)
                                 0x6f0 (size before relaxing)
- .stab          0x00007e78      0x5f4 build/z1/contiki-ng-z1.a(stack-check.o)
+ .stab          0x00007ea8      0x5f4 build/z1/contiki-ng-z1.a(stack-check.o)
                                 0xd98 (size before relaxing)
- .stab          0x0000846c      0x954 build/z1/contiki-ng-z1.a(list.o)
+ .stab          0x0000849c      0x954 build/z1/contiki-ng-z1.a(list.o)
                                 0xe58 (size before relaxing)
- .stab          0x00008dc0      0x1d4 build/z1/contiki-ng-z1.a(random.o)
+ .stab          0x00008df0      0x1d4 build/z1/contiki-ng-z1.a(random.o)
                                 0x534 (size before relaxing)
- .stab          0x00008f94      0x96c build/z1/contiki-ng-z1.a(queuebuf.o)
+ .stab          0x00008fc4      0x96c build/z1/contiki-ng-z1.a(queuebuf.o)
                                0x1758 (size before relaxing)
- .stab          0x00009900      0xc48 build/z1/contiki-ng-z1.a(packetbuf.o)
+ .stab          0x00009930      0xc48 build/z1/contiki-ng-z1.a(packetbuf.o)
                                0x1a40 (size before relaxing)
- .stab          0x0000a548      0x4a4 build/z1/contiki-ng-z1.a(netstack.o)
+ .stab          0x0000a578      0x4a4 build/z1/contiki-ng-z1.a(netstack.o)
                                 0x8d0 (size before relaxing)
- .stab          0x0000a9ec      0x30c build/z1/contiki-ng-z1.a(linkaddr.o)
+ .stab          0x0000aa1c      0x30c build/z1/contiki-ng-z1.a(linkaddr.o)
                                 0x810 (size before relaxing)
- .stab          0x0000acf8      0x924 build/z1/contiki-ng-z1.a(csma.o)
+ .stab          0x0000ad28      0x924 build/z1/contiki-ng-z1.a(csma.o)
                                 0xf00 (size before relaxing)
- .stab          0x0000b61c      0xc18 build/z1/contiki-ng-z1.a(csma-output.o)
+ .stab          0x0000b64c      0xc18 build/z1/contiki-ng-z1.a(csma-output.o)
                                0x15a8 (size before relaxing)
- .stab          0x0000c234     0x1548 build/z1/contiki-ng-z1.a(uip-ds6.o)
+ .stab          0x0000c264     0x1548 build/z1/contiki-ng-z1.a(uip-ds6.o)
                                0x216c (size before relaxing)
- .stab          0x0000d77c      0x42c build/z1/contiki-ng-z1.a(uip-udp-packet.)
+ .stab          0x0000d7ac      0x42c build/z1/contiki-ng-z1.a(uip-udp-packet.)
                                 0xc30 (size before relaxing)
- .stab          0x0000dba8      0xaec build/z1/contiki-ng-z1.a(uip-ds6-route.o)
+ .stab          0x0000dbd8      0xaec build/z1/contiki-ng-z1.a(uip-ds6-route.o)
                                0x1710 (size before relaxing)
- .stab          0x0000e694      0xec4 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
+ .stab          0x0000e6c4      0xec4 build/z1/contiki-ng-z1.a(uip-ds6-nbr.o)
                                0x17e8 (size before relaxing)
- .stab          0x0000f558      0xbe8 build/z1/contiki-ng-z1.a(tcpip.o)
+ .stab          0x0000f588      0xbe8 build/z1/contiki-ng-z1.a(tcpip.o)
                                0x198c (size before relaxing)
- .stab          0x00010140     0x1524 build/z1/contiki-ng-z1.a(uip6.o)
+ .stab          0x00010170     0x1524 build/z1/contiki-ng-z1.a(uip6.o)
                                0x219c (size before relaxing)
- .stab          0x00011664      0x768 build/z1/contiki-ng-z1.a(uip-nd6.o)
+ .stab          0x00011694      0x768 build/z1/contiki-ng-z1.a(uip-nd6.o)
                                0x13e0 (size before relaxing)
- .stab          0x00011dcc     0x2f88 build/z1/contiki-ng-z1.a(sicslowpan.o)
+ .stab          0x00011dfc     0x2f88 build/z1/contiki-ng-z1.a(sicslowpan.o)
                                0x3c60 (size before relaxing)
- .stab          0x00014d54      0x858 build/z1/contiki-ng-z1.a(uiplib.o)
+ .stab          0x00014d84      0x858 build/z1/contiki-ng-z1.a(uiplib.o)
                                0x1008 (size before relaxing)
- .stab          0x000155ac      0xedc build/z1/contiki-ng-z1.a(rpl.o)
+ .stab          0x000155dc      0xedc build/z1/contiki-ng-z1.a(rpl.o)
                                0x1b00 (size before relaxing)
- .stab          0x00016488     0x1aac build/z1/contiki-ng-z1.a(rpl-icmp6.o)
+ .stab          0x000164b8     0x1aac build/z1/contiki-ng-z1.a(rpl-icmp6.o)
                                0x28ec (size before relaxing)
- .stab          0x00017f34     0x19bc build/z1/contiki-ng-z1.a(rpl-dag.o)
+ .stab          0x00017f64     0x19bc build/z1/contiki-ng-z1.a(rpl-dag.o)
                                0x2754 (size before relaxing)
- .stab          0x000198f0      0x8ac build/z1/contiki-ng-z1.a(rpl-dag-root.o)
+ .stab          0x00019920      0x8ac build/z1/contiki-ng-z1.a(rpl-dag-root.o)
                                0x1764 (size before relaxing)
- .stab          0x0001a19c      0x228 build/z1/contiki-ng-z1.a(contiki-z1-plat)
+ .stab          0x0001a1cc      0x228 build/z1/contiki-ng-z1.a(contiki-z1-plat)
                                 0x564 (size before relaxing)
- .stab          0x0001a3c4      0x468 build/z1/contiki-ng-z1.a(leds.o)
+ .stab          0x0001a3f4      0x468 build/z1/contiki-ng-z1.a(leds.o)
                                 0x840 (size before relaxing)
- .stab          0x0001a82c      0x954 build/z1/contiki-ng-z1.a(xmem.o)
+ .stab          0x0001a85c      0x954 build/z1/contiki-ng-z1.a(xmem.o)
                                 0xe7c (size before relaxing)
- .stab          0x0001b180      0x264 build/z1/contiki-ng-z1.a(spi-legacy.o)
+ .stab          0x0001b1b0      0x264 build/z1/contiki-ng-z1.a(spi-legacy.o)
                                 0x5a0 (size before relaxing)
- .stab          0x0001b3e4     0x27b4 build/z1/contiki-ng-z1.a(cc2420.o)
+ .stab          0x0001b414     0x27b4 build/z1/contiki-ng-z1.a(cc2420.o)
                                0x2fd0 (size before relaxing)
- .stab          0x0001db98      0x3d8 build/z1/contiki-ng-z1.a(cc2420-arch.o)
+ .stab          0x0001dbc8      0x3d8 build/z1/contiki-ng-z1.a(cc2420-arch.o)
                                0x117c (size before relaxing)
- .stab          0x0001df70      0x354 build/z1/contiki-ng-z1.a(node-id-z1.o)
+ .stab          0x0001dfa0      0x354 build/z1/contiki-ng-z1.a(node-id-z1.o)
                                 0x840 (size before relaxing)
- .stab          0x0001e2c4      0x66c build/z1/contiki-ng-z1.a(sensors.o)
+ .stab          0x0001e2f4      0x66c build/z1/contiki-ng-z1.a(sensors.o)
                                 0xb88 (size before relaxing)
- .stab          0x0001e930      0x4bc build/z1/contiki-ng-z1.a(uart0.o)
+ .stab          0x0001e960      0x4bc build/z1/contiki-ng-z1.a(uart0.o)
                                 0x9d8 (size before relaxing)
- .stab          0x0001edec      0x390 build/z1/contiki-ng-z1.a(z1-sensors.o)
+ .stab          0x0001ee1c      0x390 build/z1/contiki-ng-z1.a(z1-sensors.o)
                                 0x75c (size before relaxing)
- .stab          0x0001f17c      0xd20 build/z1/contiki-ng-z1.a(adxl345.o)
+ .stab          0x0001f1ac      0xd20 build/z1/contiki-ng-z1.a(adxl345.o)
                                0x1344 (size before relaxing)
- .stab          0x0001fe9c      0x7f8 build/z1/contiki-ng-z1.a(tmp102.o)
+ .stab          0x0001fecc      0x7f8 build/z1/contiki-ng-z1.a(tmp102.o)
                                 0xd38 (size before relaxing)
- .stab          0x00020694      0x384 build/z1/contiki-ng-z1.a(leds-arch.o)
+ .stab          0x000206c4      0x384 build/z1/contiki-ng-z1.a(leds-arch.o)
                                 0x75c (size before relaxing)
- .stab          0x00020a18      0x378 build/z1/contiki-ng-z1.a(rtimer-arch.o)
+ .stab          0x00020a48      0x378 build/z1/contiki-ng-z1.a(rtimer-arch.o)
                                 0x6b4 (size before relaxing)
- .stab          0x00020d90      0x42c build/z1/contiki-ng-z1.a(stimer.o)
+ .stab          0x00020dc0      0x42c build/z1/contiki-ng-z1.a(stimer.o)
                                 0x780 (size before relaxing)
- .stab          0x000211bc      0x5ac build/z1/contiki-ng-z1.a(memb.o)
+ .stab          0x000211ec      0x5ac build/z1/contiki-ng-z1.a(memb.o)
                                 0xac8 (size before relaxing)
- .stab          0x00021768      0xf84 build/z1/contiki-ng-z1.a(nbr-table.o)
+ .stab          0x00021798      0xf84 build/z1/contiki-ng-z1.a(nbr-table.o)
                                0x1614 (size before relaxing)
- .stab          0x000226ec      0x8a0 build/z1/contiki-ng-z1.a(link-stats.o)
+ .stab          0x0002271c      0x8a0 build/z1/contiki-ng-z1.a(link-stats.o)
                                0x1278 (size before relaxing)
- .stab          0x00022f8c      0x588 build/z1/contiki-ng-z1.a(mac-sequence.o)
+ .stab          0x00022fbc      0x588 build/z1/contiki-ng-z1.a(mac-sequence.o)
                                0x1380 (size before relaxing)
- .stab          0x00023514      0x4bc build/z1/contiki-ng-z1.a(mac.o)
+ .stab          0x00023544      0x4bc build/z1/contiki-ng-z1.a(mac.o)
                                 0xaf8 (size before relaxing)
- .stab          0x000239d0      0x7a4 build/z1/contiki-ng-z1.a(framer-802154.o)
+ .stab          0x00023a00      0x7a4 build/z1/contiki-ng-z1.a(framer-802154.o)
                                0x1008 (size before relaxing)
- .stab          0x00024174     0x117c build/z1/contiki-ng-z1.a(frame802154.o)
+ .stab          0x000241a4     0x117c build/z1/contiki-ng-z1.a(frame802154.o)
                                0x1944 (size before relaxing)
- .stab          0x000252f0      0x39c build/z1/contiki-ng-z1.a(csma-security.o)
+ .stab          0x00025320      0x39c build/z1/contiki-ng-z1.a(csma-security.o)
                                 0xcfc (size before relaxing)
- .stab          0x0002568c      0xad4 build/z1/contiki-ng-z1.a(uipbuf.o)
+ .stab          0x000256bc      0xad4 build/z1/contiki-ng-z1.a(uipbuf.o)
                                0x1230 (size before relaxing)
- .stab          0x00026160      0xb10 build/z1/contiki-ng-z1.a(uip-icmp6.o)
+ .stab          0x00026190      0xb10 build/z1/contiki-ng-z1.a(uip-icmp6.o)
                                0x17c4 (size before relaxing)
- .stab          0x00026c70      0xcd8 build/z1/contiki-ng-z1.a(uip-sr.o)
+ .stab          0x00026ca0      0xcd8 build/z1/contiki-ng-z1.a(uip-sr.o)
                                0x17e8 (size before relaxing)
- .stab          0x00027948      0x5f4 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
+ .stab          0x00027978      0x5f4 build/z1/contiki-ng-z1.a(rpl-nbr-policy.)
                                0x1338 (size before relaxing)
- .stab          0x00027f3c     0x12fc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
+ .stab          0x00027f6c     0x12fc build/z1/contiki-ng-z1.a(rpl-neighbor.o)
                                0x2064 (size before relaxing)
- .stab          0x00029238     0x138c build/z1/contiki-ng-z1.a(rpl-timers.o)
+ .stab          0x00029268     0x138c build/z1/contiki-ng-z1.a(rpl-timers.o)
                                0x2118 (size before relaxing)
- .stab          0x0002a5c4     0x1158 build/z1/contiki-ng-z1.a(rpl-ext-header.)
+ .stab          0x0002a5f4     0x1158 build/z1/contiki-ng-z1.a(rpl-ext-header.)
                                0x1f74 (size before relaxing)
- .stab          0x0002b71c      0x8dc build/z1/contiki-ng-z1.a(rpl-mrhof.o)
+ .stab          0x0002b74c      0x8dc build/z1/contiki-ng-z1.a(rpl-mrhof.o)
                                0x1650 (size before relaxing)
- .stab          0x0002bff8      0x834 build/z1/contiki-ng-z1.a(i2cmaster.o)
+ .stab          0x0002c028      0x834 build/z1/contiki-ng-z1.a(i2cmaster.o)
                                 0xb70 (size before relaxing)
- .stab          0x0002c82c      0x42c build/z1/contiki-ng-z1.a(button-sensor.o)
+ .stab          0x0002c85c      0x42c build/z1/contiki-ng-z1.a(button-sensor.o)
                                 0x780 (size before relaxing)
 
-.stabstr        0x00000000    0x1ca09
+.stabstr        0x00000000    0x1ca1b
  *(.stabstr)
- .stabstr       0x00000000    0x1ca09 temperature-sensor.o
+ .stabstr       0x00000000    0x1ca1b temperature-sensor.o
 
 .stab.excl
  *(.stab.excl)
@@ -3802,8 +3802,8 @@ LOAD /usr/local/bin/../lib/gcc/msp430/4.7.2/mcpu-430x/mmpy-16/msr20/mc20/libcrt0
  .debug_ranges  0x000000e8       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memmove.o)
  .debug_ranges  0x000000f8       0x10 /usr/local/bin/../lib/gcc/msp430/4.7.2/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memset.o)
                 0x00003100                PROVIDE (__stack, (ORIGIN (ram) + 0x2000))
-                0x0000fdee                __data_start_rom = _etext
-                0x0000ff36                __data_end_rom = (_etext + SIZEOF (.data))
+                0x0000fe76                __data_start_rom = _etext
+                0x0000ffbe                __data_end_rom = (_etext + SIZEOF (.data))
 OUTPUT(build/z1/temperature-sensor.z1 elf32-msp430)
 
 .gnu.attributes

@@ -62,37 +62,3 @@ void print_dtg(datagram* dtg_received)
     printf("%d\n", dtg_received->id);
     printf("%s\n", dtg_received->payload);
 }
-
-/*
-int main()
-{
-    // test encode et decode
-
-    //create datagram to encode
-    datagram* dtg = calloc(1,sizeof(datagram));
-    dtg->code = 1;
-    dtg->type_info = 10;
-    dtg->id = 9;
-    sprintf(dtg->payload,"1234");
-
-    // encoding
-    char* buf = calloc(1,sizeof(datagram));
-    datagram_encode(dtg, buf);
-
-    datagram* rcvd = calloc(1,sizeof(datagram));
-    datagram_decode(buf, rcvd);
-
-    // is equal ?
-    printf("%d - %d\n",     dtg->code,           rcvd->code);
-    printf("%d - %d\n",     dtg->type_info,      rcvd->type_info);
-    printf("%d - %d\n",     dtg->id,             rcvd->id);
-    printf("%s - %s \n",    dtg->payload,        rcvd->payload);
-
-    
-    exit(EXIT_SUCCESS);
-    return 1;
-}
-
-
-*/
-//gcc -o test datagram.c && ./test

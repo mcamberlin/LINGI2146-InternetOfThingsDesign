@@ -1,3 +1,5 @@
+//gcc -Wall -Werror -o server datagram.h datagram.c server.c -lpthread && ./server
+#include <pthread.h>
 #include "datagram.h"
 #include <stdio.h> 
 #include <stdint.h>
@@ -14,9 +16,29 @@
 #include <errno.h> // pour le detail des erreurs
 
 
+#define cursup    "\033[A"
+#define curshome  "\033[0;0H"
+
+char addressBorderRouter[] = "bbbb::c30c:0:0:2";
 char addressTemperatureSensor[] = "bbbb::c30c:0:0:3";
 char addressLampSensor[] = "bbbb::204:4:4:4";
 char addressProximitySensor[] = "bbbb::205:5:5:5";
+
+static int lampState = 0;
+static int proximity = 0;
+static int temperature = 0;
+static int doorState = 0;
+int input=0;
+pthread_mutex_t lock_data;
+
+
+void speakToBorderRouter()
+{
+    char query [200];
+    sprintf(query,"echo hello | nc -u %s 3000 &", addressBorderRouter);
+    //printf("%s\n",query);
+    system(query);
+}
 
 void askTemperature(int i)
 {
@@ -197,8 +219,8 @@ int create_socket(struct sockaddr_in6 *source_addr, int src_port, struct sockadd
 
 int connection()
 {
-    char* hostname = "localhost"; 
-    int src_port = 3000;//???;
+    char* hostname = "fd00::1"; 
+    int src_port = 3008;
 
     // src_addr = our machine
     struct sockaddr_in6 src_addr;	
@@ -219,9 +241,8 @@ int connection()
     return sfd;
 }
 
-int main()
+void server(void* ptr)
 {
-    printf("Start SERVER\n");
 
     // ====== SOCKET CREATION ================
     int sfd = connection(); // source file descriptor
@@ -246,7 +267,7 @@ int main()
 		if(p == -1)
 		{
 			fprintf(stderr, "Erreur dans poll read_write_loop(): %s \n", strerror(errno));
-			return -1;
+			return;
 		}
 
 
@@ -261,7 +282,7 @@ int main()
             if(r_socket == -1)
             {
                 fprintf(stderr, "Erreur lecture socket : %s \n", strerror(errno));
-                return -1;
+                return;
             }
             
             // 2. TRANSFORMER le buffer en un paquet avec decode
@@ -269,7 +290,15 @@ int main()
             datagram_decode( (char*) buffer_socket, dtg_received);
 
             // 3. Datagram recu
-            print_dtg(dtg_received);
+            //print_dtg(dtg_received);
+            
+            if(dtg_received->type_info == 4)
+            // temperature data received
+            {
+                pthread_mutex_lock(&lock_data);
+                memcpy(&temperature, dtg_received->payload,4);
+                pthread_mutex_unlock(&lock_data);
+            }
 		}
         else 
         {
@@ -285,7 +314,98 @@ int main()
             */
         }
     }
-    exit(EXIT_SUCCESS);
-    return 1;
 }
-// gcc -Wall -Werror -o server datagram.h datagram.c server.c && ./server > server.txt
+
+void PrintValues(void* ptr) {
+    printf("Hello in thread\n");
+    sleep(1);
+    printf("==============================\n");
+    printf("Proximity sensor : 1\n");
+    printf("Lamp state : 2\n");
+    printf("Temperature : 3\n");
+    printf("Door state : 4\n");
+    printf("Proximity = %d\n",proximity);
+    printf("Lamp = %d\n",lampState);
+    printf("Temperature = %d\n",temperature);
+    printf("Door = %d\n",doorState);
+    while(1)
+    {
+        sleep(1);
+        pthread_mutex_lock(&lock_data);
+        switch (input)
+        {
+            case 1:
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Proximity = %d",proximity);
+                printf("\n\n\n\n");
+                input=0;
+                break;
+            case 2:
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Lamp = %d",lampState);
+                printf("\n\n\n");
+                input=0;
+                break;
+            case 3:
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Temperature = %d",temperature);
+                printf("\n\n");
+                input=0;
+                break;
+            case 4:
+                printf(cursup);
+                printf("\r");
+                printf("Door = %d",doorState);
+                printf("\n");
+                input=0;
+                break;
+            case 5:
+                return;
+            default:
+                break;
+        }
+        pthread_mutex_unlock(&lock_data);
+        fflush(stdout);  //comment this, to see the difference in O/P
+    }
+}
+
+void Input(void* ptr)
+{
+    printf("Hello from Input");
+    sleep(1);
+    while(1)
+    {
+        scanf("%d", &input);
+        printf("\b");
+        printf(cursup);
+    }
+}
+
+int main(void) 
+{
+    if (pthread_mutex_init(&lock_data, NULL) != 0) 
+    {
+        printf("\n mutex init has failed\n");
+        return 1;
+    }
+    int* ptr;
+    pthread_t tid_print;
+    pthread_t tid_input;
+    pthread_t tid_server;
+    printf("creating a new thread\n");
+    pthread_create(&tid_print, NULL, (void*)PrintValues, 0);
+    pthread_create(&tid_input, NULL, (void*)Input, 0);
+    pthread_create(&tid_server, NULL, (void*)server, 0);
+    pthread_join(tid_print, (void**) &ptr);
+    printf("joined..!!\n");
+    return 0;
+}
