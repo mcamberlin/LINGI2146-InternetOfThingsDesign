@@ -1,53 +1,95 @@
 //gcc -Wall -Werror -o server datagram.h datagram.c server.c -lpthread && ./server
-#include <pthread.h>
 #include "datagram.h"
 #include <stdio.h> 
 #include <stdint.h>
 #include <stdlib.h> 
 #include <unistd.h>
 #include <fcntl.h>
-
-#include <sys/types.h> // pour connect() 
-#include <sys/socket.h> // pour getaddrinfo()
-#include <netdb.h> // pour getaddrinfo()
-#include <string.h>  // Pour memset()
-#include <poll.h> // pour pollfd
-#include <unistd.h> // pour read(), write() et close()
-#include <errno.h> // pour le detail des erreurs
-
+#include <sys/types.h> 
+#include <sys/socket.h> 
+#include <netdb.h> 
+#include <string.h> 
+#include <poll.h> 
+#include <pthread.h>
+#include <errno.h> 
 
 #define cursup    "\033[A"
 #define curshome  "\033[0;0H"
 
-char addressBorderRouter[] = "bbbb::c30c:0:0:2";
-char addressTemperatureSensor[] = "bbbb::c30c:0:0:3";
-char addressLampSensor[] = "bbbb::204:4:4:4";
-char addressProximitySensor[] = "bbbb::205:5:5:5";
+// PORT NUMBER OF THE SERVER TO LISTEN TO ANSWER OF MOTES
+#define PORT_NUMBER 3016
 
-static int lampState = 0;
-static int proximity = 0;
-static int temperature = 0;
-static int doorState = 0;
+char addressBorderRouter[] = "bbbb::c30c:0:0:1";
+
+char addressProximitySensor[]   = "bbbb::202:2:2:2";
+char addressLampSensor[]        = "bbbb::203:3:3:3";
+char addressTemperatureSensor[] = "bbbb::204:4:4:4";
+char addressDoorSensor[]        = "bbbb::205:5:5:5";
+
+
+static char proximity [4]   = "0";
+static char lampState [4]   = "0";
+static char temperature [4] = "0";
+static char doorState [4]   = "0";
+
 int input=0;
+int stop = 0;
 pthread_mutex_t lock_data;
 
-
-void speakToBorderRouter()
+/* First arg of the 4 following functions is the ID of
+ the sensor to request a data or to change its state */
+void askDistance(int i)
 {
-    char query [200];
-    sprintf(query,"echo hello | nc -u %s 3000 &", addressBorderRouter);
+    //create datagram to encode
+    datagram* dtg = calloc(1,sizeof(datagram));
+    dtg->code = 1;                  // query code
+    dtg->type_info = 1;             // type_info proximity_sensor
+    dtg->id = i;                    // ask to the ith temperature sensor     
+    sprintf(dtg->payload,"---");    // empty payload
+
+    // encoding
+    char* buf = calloc(1,sizeof(datagram) + 4);
+    datagram_encode(dtg, buf);
+    free(dtg);
+
+    char query[120];
+    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressProximitySensor);
     //printf("%s\n",query);
+
     system(query);
+    free(buf);
+}
+
+void changeLampState(int i)
+{
+    //create datagram to encode
+    datagram* dtg = calloc(1,sizeof(datagram));
+    dtg->code = 1;                  // query code
+    dtg->type_info = 2;             // type_info lamp state 
+    dtg->id = i;                    // ask to the ith lamp      
+    sprintf(dtg->payload,"---");    // empty payload
+
+    // encoding
+    char* buf = calloc(1,sizeof(datagram) + 4);
+    datagram_encode(dtg, buf);
+    free(dtg);
+
+    char query[120];
+    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressLampSensor);
+    //printf("%s\n",query);
+
+    system(query);
+    free(buf);
 }
 
 void askTemperature(int i)
 {
     //create datagram to encode
     datagram* dtg = calloc(1,sizeof(datagram));
-    dtg->code = 1;
-    dtg->type_info = 4; // type_info temperature
-    dtg->id = i;        // ask to the ith temperature sensor     
-    sprintf(dtg->payload,"---");
+    dtg->code = 1;                  // query code
+    dtg->type_info = 3;             // type_info temperature 
+    dtg->id = i;                    // ask to the ith temperature sensor     
+    sprintf(dtg->payload,"---");    // empty payload  
 
     // encoding
     char* buf = calloc(1,sizeof(datagram) + 4);
@@ -62,14 +104,14 @@ void askTemperature(int i)
     free(buf);
 }
 
-void askLampState(int i)
+void changeDoorState(int i)
 {
     //create datagram to encode
     datagram* dtg = calloc(1,sizeof(datagram));
-    dtg->code = 1;
-    dtg->type_info = 3; // type_info temperature
-    dtg->id = i;        // ask to the ith temperature sensor     
-    sprintf(dtg->payload,"---");
+    dtg->code = 1;                  // query code
+    dtg->type_info = 4;             // type_info door sensor
+    dtg->id = i;                    // ask to the ith door sensor     
+    sprintf(dtg->payload,"---");    // empty payload
 
     // encoding
     char* buf = calloc(1,sizeof(datagram) + 4);
@@ -77,51 +119,7 @@ void askLampState(int i)
     free(dtg);
 
     char query[120];
-    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressLampSensor);
-    //printf("%s\n",query);
-
-    system(query);
-    free(buf);
-}
-
-void changeLampState(int i)
-{
-    //create datagram to encode
-    datagram* dtg = calloc(1,sizeof(datagram));
-    dtg->code = 1;
-    dtg->type_info = 2; // type_info temperature
-    dtg->id = i;        // ask to the ith temperature sensor     
-    sprintf(dtg->payload,"---");
-
-    // encoding
-    char* buf = calloc(1,sizeof(datagram) + 4);
-    datagram_encode(dtg, buf);
-    free(dtg);
-
-    char query[120];
-    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressLampSensor);
-    //printf("%s\n",query);
-
-    system(query);
-    free(buf);
-}
-
-void askDistance(int i)
-{
-    //create datagram to encode
-    datagram* dtg = calloc(1,sizeof(datagram));
-    dtg->code = 1;
-    dtg->type_info = 4; // type_info proximity_sensor
-    dtg->id = i;        // ask to the ith temperature sensor     
-    sprintf(dtg->payload,"---");
-
-    // encoding
-    char* buf = calloc(1,sizeof(datagram) + 4);
-    datagram_encode(dtg, buf);
-    free(dtg);
-
-    char query[120];
-    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressProximitySensor);
+    sprintf(query,"echo %s | nc -u %s 3000 &", buf, addressDoorSensor);
     //printf("%s\n",query);
 
     system(query);
@@ -177,7 +175,8 @@ int create_socket(struct sockaddr_in6 *source_addr, int src_port, struct sockadd
 	if (fd == -1)
 	{  
 		fprintf(stderr, "Erreur creation de socket dans create_socket(): %s , errno %d\n", strerror(fd), fd);
-		return -1;
+        stop =1;
+        return -1;
 	}
 
 	if(src_port > 0)
@@ -198,6 +197,7 @@ int create_socket(struct sockaddr_in6 *source_addr, int src_port, struct sockadd
 		{
 		    //close(fd); la fermeture des fd se fera tout a la fin de receiver.c
 		    fprintf(stderr,"Erreur dans bind() : %s\n", strerror(errno));
+            stop = 1;
 		    return -1;
 		}   
 	}
@@ -220,7 +220,7 @@ int create_socket(struct sockaddr_in6 *source_addr, int src_port, struct sockadd
 int connection()
 {
     char* hostname = "fd00::1"; 
-    int src_port = 3008;
+    int src_port = PORT_NUMBER;
 
     // src_addr = our machine
     struct sockaddr_in6 src_addr;	
@@ -241,13 +241,95 @@ int connection()
     return sfd;
 }
 
+const char theHelpMessage[] = { 
+                                "\n-----------------------------\n"
+                                " TYPE   :  ACTION \n"
+                                "   1    : to update proximity \n"
+                                "   2    : to update lamp state \n"
+                                "   3    : to update temperature \n"
+                                "   4    : to update door state\n"
+                                "   5    : to exit \n"
+                             };
+
+void PrintValues(void* ptr) {
+    printf("\n======= INTERNET OF THINGS =======================\n");
+    printf("%s\n", theHelpMessage);
+    printf("==============================\n");
+    printf("Proximity sensor: 1 \t \n");
+    printf("Lamp state      : 2\n");
+    printf("Temperature     : 3\n");
+    printf("Door state      : 4\n");
+    printf("Proximity   = %s\n",proximity);
+    printf("Lamp        = %s\n",lampState);
+    printf("Temperature = %s\n",temperature);
+    printf("Door        = %s\n",doorState);
+    printf("==============================\n");
+    while(1)
+    {
+        sleep(1);
+        pthread_mutex_lock(&lock_data);
+        switch (input)
+        {
+            case 1:
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Proximity = %s",proximity);
+                printf("\n\n\n\n");
+                input=0;
+                break;
+            case 2:
+                printf(cursup);
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Lamp = %s",lampState);
+                printf("\n\n\n");
+                input=0;
+                break;
+            case 3:
+                printf(cursup);
+                printf(cursup);
+                printf("\r");
+                printf("Temperature = %s",temperature);
+                printf("\n\n");
+                input=0;
+                break;
+            case 4:
+                printf(cursup);
+                printf("\r");
+                printf("Door = %s",doorState);
+                printf("\n");
+                input=0;
+                break;
+            case 5:
+                stop = 1;
+                return;
+            default:
+                break;
+        }
+        pthread_mutex_unlock(&lock_data);
+        fflush(stdout);  //comment this, to see the difference in O/P
+    }
+}
+
+void Input(void* ptr)
+{
+    sleep(1);
+    while(1)
+    {
+        scanf("%d", &input);
+        printf("\b");
+        printf(cursup);
+    }
+}
+
 void server(void* ptr)
 {
-
-    // ====== SOCKET CREATION ================
-    int sfd = connection(); // source file descriptor
-    // =======================================
-
+    stop = 0;
+    int sfd = connection(); 
 
     int MAXSIZE = sizeof(datagram);
 	char buffer_socket[MAXSIZE];
@@ -260,7 +342,7 @@ void server(void* ptr)
 	
 	int timeout = 0; //poll() shall wait for an event to occur 
 
-	while(1)
+	while(!stop)
 	{
 		int p = poll(filedescriptors,nfds, timeout); 
 		// int poll(struct pollfd fds[], nfds_t nfds, int timeout);
@@ -278,7 +360,6 @@ void server(void* ptr)
             //1. Lire le socket
             memset(buffer_socket,0,MAXSIZE); // Remettre le buffer à 0 avant d'écrire dedans
             ssize_t r_socket = read(sfd, buffer_socket, MAXSIZE); 
-            //ssize_t read(int fd, void *buf, size_t count)
             if(r_socket == -1)
             {
                 fprintf(stderr, "Erreur lecture socket : %s \n", strerror(errno));
@@ -289,105 +370,63 @@ void server(void* ptr)
             datagram* dtg_received = calloc(1,sizeof(datagram));
             datagram_decode( (char*) buffer_socket, dtg_received);
 
-            // 3. Datagram recu
+            // 3. Datagram recu => update the corresponding maintained states
             //print_dtg(dtg_received);
-            
-            if(dtg_received->type_info == 4)
+            if(dtg_received->type_info == 1)
+            // proximity data received
+            {
+                pthread_mutex_lock(&lock_data);
+                memcpy(proximity, dtg_received->payload,4);
+                pthread_mutex_unlock(&lock_data);
+                printf("\t\t\t\t\t\t\t\t proximity: %s\n", proximity);
+            }
+            else if(dtg_received->type_info == 2)
+            // lamp state received
+            {
+                pthread_mutex_lock(&lock_data);
+                memcpy(lampState, dtg_received->payload,4);
+                pthread_mutex_unlock(&lock_data);
+                printf("\t\t\t\t\t\t\t\t lamp state: %s\n", lampState);
+
+            }
+            else if(dtg_received->type_info == 3)
             // temperature data received
             {
                 pthread_mutex_lock(&lock_data);
-                memcpy(&temperature, dtg_received->payload,4);
+                memcpy(temperature, dtg_received->payload,4);
                 pthread_mutex_unlock(&lock_data);
+                printf("\t\t\t\t\t\t\t\t temperature: %s\n", temperature);
+            }
+            else if(dtg_received->type_info == 4)
+            // door state received
+            {
+                pthread_mutex_lock(&lock_data);
+                memcpy(doorState, dtg_received->payload,4);
+                pthread_mutex_unlock(&lock_data);
+                printf("\t\t\t\t\t\t\t\t door state: %s\n", doorState);
             }
 		}
+        // ====== NO DATAGRAM RECEIVED => ASK UPDATES ================
         else 
-        {
-            //askDistance(1);
+        {   
+            askDistance(1);
             sleep(1);
+            if(atoi(proximity) < 100)
+            {
+                changeLampState(1);
+                sleep(1);
+            }
             askTemperature(1);
             sleep(1);
-            /*
-            askLampState(1);
-            sleep(1);
-            changeLampState(1);
-            sleep(1);
-            */
+            if(atoi(temperature) > 18)
+            {
+                changeDoorState(1);
+                sleep(1);
+            }
         }
     }
-}
-
-void PrintValues(void* ptr) {
-    printf("Hello in thread\n");
-    sleep(1);
-    printf("==============================\n");
-    printf("Proximity sensor : 1\n");
-    printf("Lamp state : 2\n");
-    printf("Temperature : 3\n");
-    printf("Door state : 4\n");
-    printf("Proximity = %d\n",proximity);
-    printf("Lamp = %d\n",lampState);
-    printf("Temperature = %d\n",temperature);
-    printf("Door = %d\n",doorState);
-    while(1)
-    {
-        sleep(1);
-        pthread_mutex_lock(&lock_data);
-        switch (input)
-        {
-            case 1:
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Proximity = %d",proximity);
-                printf("\n\n\n\n");
-                input=0;
-                break;
-            case 2:
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Lamp = %d",lampState);
-                printf("\n\n\n");
-                input=0;
-                break;
-            case 3:
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Temperature = %d",temperature);
-                printf("\n\n");
-                input=0;
-                break;
-            case 4:
-                printf(cursup);
-                printf("\r");
-                printf("Door = %d",doorState);
-                printf("\n");
-                input=0;
-                break;
-            case 5:
-                return;
-            default:
-                break;
-        }
-        pthread_mutex_unlock(&lock_data);
-        fflush(stdout);  //comment this, to see the difference in O/P
-    }
-}
-
-void Input(void* ptr)
-{
-    printf("Hello from Input");
-    sleep(1);
-    while(1)
-    {
-        scanf("%d", &input);
-        printf("\b");
-        printf(cursup);
-    }
+    close(sfd);
+    return;
 }
 
 int main(void) 
@@ -401,11 +440,9 @@ int main(void)
     pthread_t tid_print;
     pthread_t tid_input;
     pthread_t tid_server;
-    printf("creating a new thread\n");
     pthread_create(&tid_print, NULL, (void*)PrintValues, 0);
     pthread_create(&tid_input, NULL, (void*)Input, 0);
     pthread_create(&tid_server, NULL, (void*)server, 0);
     pthread_join(tid_print, (void**) &ptr);
-    printf("joined..!!\n");
     return 0;
 }
