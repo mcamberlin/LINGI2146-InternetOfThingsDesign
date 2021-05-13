@@ -463,11 +463,10 @@ int main(void)
         printf("\n mutex init has failed\n");
         return 1;
     }
+    PrintValues();
     int* ptr;
-    pthread_t tid_print;
     pthread_t tid_input;
     pthread_t tid_server;
-    pthread_create(&tid_print, NULL, (void*)PrintValues, 0);
     pthread_create(&tid_input, NULL, (void*)Input, 0);
     pthread_create(&tid_server, NULL, (void*)server, 0);
     pthread_join(tid_server, (void**) &ptr);
