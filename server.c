@@ -17,7 +17,7 @@
 #define curshome  "\033[0;0H"
 
 // PORT NUMBER OF THE SERVER TO LISTEN TO ANSWER OF MOTES
-#define PORT_NUMBER 3016
+#define PORT_NUMBER 3023
 
 char addressBorderRouter[] = "bbbb::c30c:0:0:1";
 
@@ -251,6 +251,48 @@ const char theHelpMessage[] = {
                                 "   5    : to exit \n"
                              };
 
+void printProximity()
+{
+    printf(cursup);
+    printf(cursup);
+    printf(cursup);
+    printf(cursup);
+    printf("\r");
+    printf("Proximity = %s",proximity);
+    printf("\n\n\n\n");
+    fflush(stdout);  //comment this, to see the difference in O/P
+}
+
+void printLamp()
+{
+    printf(cursup);
+    printf(cursup);
+    printf(cursup);
+    printf("\r");
+    printf("Lamp = %s",lampState);
+    printf("\n\n\n");
+    fflush(stdout);  //comment this, to see the difference in O/P
+}
+
+void printTemperature()
+{
+    printf(cursup);
+    printf(cursup);
+    printf("\r");
+    printf("Temperature = %s",temperature);
+    printf("\n\n");
+    fflush(stdout);  //comment this, to see the difference in O/P
+}
+
+void printDoor()
+{
+    printf(cursup);
+    printf("\r");
+    printf("Door = %s",doorState);
+    printf("\n");
+    fflush(stdout);  //comment this, to see the difference in O/P
+}
+
 void PrintValues(void* ptr) {
     printf("\n======= INTERNET OF THINGS =======================\n");
     printf("%s\n", theHelpMessage);
@@ -259,60 +301,10 @@ void PrintValues(void* ptr) {
     printf("Lamp state      : 2\n");
     printf("Temperature     : 3\n");
     printf("Door state      : 4\n");
-    printf("Proximity   = %s\n",proximity);
-    printf("Lamp        = %s\n",lampState);
+    printf("Proximity = %s\n",proximity);
+    printf("Lamp = %s\n",lampState);
     printf("Temperature = %s\n",temperature);
-    printf("Door        = %s\n",doorState);
-    printf("==============================\n");
-    while(1)
-    {
-        sleep(1);
-        pthread_mutex_lock(&lock_data);
-        switch (input)
-        {
-            case 1:
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Proximity = %s",proximity);
-                printf("\n\n\n\n");
-                input=0;
-                break;
-            case 2:
-                printf(cursup);
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Lamp = %s",lampState);
-                printf("\n\n\n");
-                input=0;
-                break;
-            case 3:
-                printf(cursup);
-                printf(cursup);
-                printf("\r");
-                printf("Temperature = %s",temperature);
-                printf("\n\n");
-                input=0;
-                break;
-            case 4:
-                printf(cursup);
-                printf("\r");
-                printf("Door = %s",doorState);
-                printf("\n");
-                input=0;
-                break;
-            case 5:
-                stop = 1;
-                return;
-            default:
-                break;
-        }
-        pthread_mutex_unlock(&lock_data);
-        fflush(stdout);  //comment this, to see the difference in O/P
-    }
+    printf("Door = %s\n",doorState);
 }
 
 void Input(void* ptr)
@@ -321,6 +313,12 @@ void Input(void* ptr)
     while(1)
     {
         scanf("%d", &input);
+        sleep(0.5);
+        if(input == 5)
+        {
+            stop = 1;
+            return;
+        }
         printf("\b");
         printf(cursup);
     }
@@ -377,16 +375,23 @@ void server(void* ptr)
             {
                 pthread_mutex_lock(&lock_data);
                 memcpy(proximity, dtg_received->payload,4);
+                printProximity();
+                if(atoi(proximity) > 20)
+                {
+                    changeLampState(1);
+                }
                 pthread_mutex_unlock(&lock_data);
-                printf("\t\t\t\t\t\t\t\t proximity: %s\n", proximity);
+                //printf("\n\t\t\t\t\t\t\t\t proximity: %d\n", atoi(proximity));
+
             }
             else if(dtg_received->type_info == 2)
             // lamp state received
             {
                 pthread_mutex_lock(&lock_data);
                 memcpy(lampState, dtg_received->payload,4);
+                printLamp();
                 pthread_mutex_unlock(&lock_data);
-                printf("\t\t\t\t\t\t\t\t lamp state: %s\n", lampState);
+                //printf("\t\t\t\t\t\t\t\t lamp state: %s\n", lampState);
 
             }
             else if(dtg_received->type_info == 3)
@@ -394,34 +399,56 @@ void server(void* ptr)
             {
                 pthread_mutex_lock(&lock_data);
                 memcpy(temperature, dtg_received->payload,4);
+                printTemperature();
+                if(atoi(temperature) > 18)
+                {
+                    changeDoorState(1);
+                }
                 pthread_mutex_unlock(&lock_data);
-                printf("\t\t\t\t\t\t\t\t temperature: %s\n", temperature);
+                //printf("\t\t\t\t\t\t\t\t temperature: %s\n", temperature);
             }
             else if(dtg_received->type_info == 4)
             // door state received
             {
                 pthread_mutex_lock(&lock_data);
                 memcpy(doorState, dtg_received->payload,4);
+                printDoor();
                 pthread_mutex_unlock(&lock_data);
-                printf("\t\t\t\t\t\t\t\t door state: %s\n", doorState);
+                //printf("\t\t\t\t\t\t\t\t door state: %s\n", doorState);
             }
 		}
         // ====== NO DATAGRAM RECEIVED => ASK UPDATES ================
         else 
         {   
-            askDistance(1);
-            sleep(1);
-            if(atoi(proximity) < 100)
+            switch (input)
             {
-                changeLampState(1);
-                sleep(1);
-            }
-            askTemperature(1);
-            sleep(1);
-            if(atoi(temperature) > 18)
-            {
-                changeDoorState(1);
-                sleep(1);
+                case 1:
+                    askDistance(1);
+                    pthread_mutex_lock(&lock_data);
+                    input = 0;
+                    pthread_mutex_unlock(&lock_data);
+                    break;
+                case 2:
+                    changeLampState(1);
+                    pthread_mutex_lock(&lock_data);
+                    input = 0;
+                    pthread_mutex_unlock(&lock_data);
+                    break;
+                case 3:
+                    askTemperature(1);
+                    pthread_mutex_lock(&lock_data);
+                    input = 0;
+                    pthread_mutex_unlock(&lock_data);
+                    break;
+                case 4:
+                    changeDoorState(1);
+                    pthread_mutex_lock(&lock_data);
+                    input = 0;
+                    pthread_mutex_unlock(&lock_data);
+                    break;
+                case 5:
+                    stop = 1;
+                    break;
             }
         }
     }
@@ -443,6 +470,6 @@ int main(void)
     pthread_create(&tid_print, NULL, (void*)PrintValues, 0);
     pthread_create(&tid_input, NULL, (void*)Input, 0);
     pthread_create(&tid_server, NULL, (void*)server, 0);
-    pthread_join(tid_print, (void**) &ptr);
+    pthread_join(tid_server, (void**) &ptr);
     return 0;
 }

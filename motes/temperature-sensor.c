@@ -35,7 +35,7 @@
     static uip_ipaddr_t ipaddr;
 #endif
 
-#define PORT_NUMBER_TO_RESPOND 3016
+#define PORT_NUMBER_TO_RESPOND 3023
 
 /**
  * datagram -> buffer

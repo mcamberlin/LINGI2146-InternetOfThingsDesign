@@ -34,7 +34,7 @@
     static uip_ipaddr_t ipaddr;
 #endif
 
-#define PORT_NUMBER_TO_RESPOND 3016
+#define PORT_NUMBER_TO_RESPOND 3023
 
 
 /**
@@ -133,8 +133,10 @@ static void response_from_proximity_sensor()
     response.type_info = 1;        // type_info proximity 
     response.id = current_id;      // id of sensor
 
-    int distance = rand()%200; // random proximity 
+    int distance = 17 + rand()%7; // random proximity between 17 and 24 [cm]
+
     sprintf(response.payload, "%d", distance);
+
 
     datagram_encode(&response,message);
     
