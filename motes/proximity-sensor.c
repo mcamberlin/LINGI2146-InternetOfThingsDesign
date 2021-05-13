@@ -133,7 +133,7 @@ static void response_from_proximity_sensor()
     response.type_info = 1;        // type_info proximity 
     response.id = current_id;      // id of sensor
 
-    int distance = 17 + rand()%7; // random proximity between 17 and 24 [cm]
+    int distance = 17 + rand()%7;  // random proximity between 17 and 24 [cm]
 
     sprintf(response.payload, "%d", distance);
 

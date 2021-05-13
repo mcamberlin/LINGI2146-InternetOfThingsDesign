@@ -376,7 +376,8 @@ void server(void* ptr)
                 pthread_mutex_lock(&lock_data);
                 memcpy(proximity, dtg_received->payload,4);
                 printProximity();
-                if(atoi(proximity) > 20)
+                if(atoi(proximity) < 20)
+                // proximity measure bellow 20 [cm]
                 {
                     changeLampState(1);
                 }
@@ -400,7 +401,8 @@ void server(void* ptr)
                 pthread_mutex_lock(&lock_data);
                 memcpy(temperature, dtg_received->payload,4);
                 printTemperature();
-                if(atoi(temperature) > 18)
+                if(atoi(temperature) > 20)
+                // temperature is above 20
                 {
                     changeDoorState(1);
                 }
