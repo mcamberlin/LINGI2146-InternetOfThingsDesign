@@ -1,5 +1,5 @@
 To run the project,
-0. Place this folder in the contiki-ng
+0. Place this folder in the contiki-ng, the folder should be called: LINGI2146-InternetOfThingsDesign
 1. Open a terminal and RUN: contiker cooja 
 2. Load project_simu.csc in contiki
 3. Start simulation
@@ -8,7 +8,7 @@ To run the project,
     (
         Execute the next command to retrieve the name (<container-name>) of the current docker container running contiki :
             docker ps
-        Execute the next command to search the ip address (<container-ip> : 172.17.0.1) of this container:
+        Execute the next command to search the ip address (<container-ip>) of this container:
             docker container inspect <container-name>
     )   
-5. Open a new terminal and RUN: gcc -Wall -Werror -o server datagram.h datagram.c server.c -lpthread && ./server
+5. Open a new terminal and RUN: gcc -Wall -Werror -o server datagram.h datagram.c server.c -lpthread && ./server in the same folder as previously
